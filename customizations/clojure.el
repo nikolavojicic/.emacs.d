@@ -23,6 +23,5 @@
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-repl-history-display-duplicates nil)
 
-(define-key cider-mode-map      (kbd "C-c C-v C-e") #'cider-visit-error-buffer)
 (define-key cider-repl-mode-map (kbd "RET")         #'cider-repl-newline-and-indent)
 (define-key cider-repl-mode-map (kbd "C-<return>")  #'cider-repl-return)
