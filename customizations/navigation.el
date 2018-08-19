@@ -4,7 +4,6 @@
 (require 'ido-vertical-mode)
 
 (which-key-mode)
-(projectile-mode)
 (smex-initialize)
 (global-company-mode)
 
@@ -12,6 +11,7 @@
 (recentf-mode        1)
 (flx-ido-mode        1)
 (ido-everywhere      1)
+(projectile-mode     1)
 (ido-vertical-mode   1)
 (ido-ubiquitous-mode 1)
 
@@ -26,6 +26,8 @@
 
 (global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
+
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; yes/no -> y/n
 (fset 'yes-or-no-p 'y-or-n-p)
