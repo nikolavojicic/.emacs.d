@@ -22,6 +22,3 @@
       cider-repl-use-pretty-printing        t
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-repl-history-display-duplicates nil)
-
-(define-key cider-repl-mode-map (kbd "RET")         #'cider-repl-newline-and-indent)
-(define-key cider-repl-mode-map (kbd "C-<return>")  #'cider-repl-return)
