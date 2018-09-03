@@ -1,12 +1,5 @@
 (require 'cider-mode)
-(require 'clj-refactor)
 (require 'clojure-mode-extra-font-locking)
-
-(add-hook 'clojure-mode-hook
-          (lambda ()
-            (yas-minor-mode    1)
-            (clj-refactor-mode 1)
-            (cljr-add-keybindings-with-prefix "C-c M-r")))
 
 (dolist (hook '(clojure-mode-hook cider-repl-mode-hook))
   (add-hook hook #'paredit-mode)

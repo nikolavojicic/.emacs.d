@@ -3,7 +3,6 @@
 (require 'uniquify)
 (require 'ido-vertical-mode)
 
-(which-key-mode)
 (smex-initialize)
 (global-company-mode)
 

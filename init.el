@@ -16,9 +16,7 @@
                    company
                    flx-ido
                    paredit
-                   which-key
                    projectile
-                   clj-refactor
                    clojure-mode
                    zenburn-theme
                    ido-ubiquitous
