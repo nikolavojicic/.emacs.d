@@ -32,13 +32,13 @@ C-M-v | scroll other window  || C-x C-x | swap point and mark
 ### Text
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
-C-space | set mark         || C-M-h | select function
-M-w     | copy selected    || M-;   | (un)comment selected
+C-space | set mark         || C-M-h | select frm
+M-w     | copy selected    || C-x h | select all
 C-y     | paste latest cut || M-y   | replace C-y with previous cut
 C-d     | delete char      || C-j   | new line + indent
-M-d     | cut word         || M-/   | autocomplete
-C-k     | cut line         || C-x h | select all
-M-k     | cut sentence     || M-h   | select sentence
+M-d     | cut word         || M-;   | (un)comment selected
+C-k     | cut line         || M-/   | autocomplete
+M-k     | cut sentence     || M-\   | clear spaces around point
 C-w     | cut selected     || M-%   | replace
 ### Paredit
 Key binding | Description |    | Key binding | Description
@@ -81,7 +81,7 @@ C-c C-p     | eval, popup pprint result       || C-c C-.     | go to ns on class
 C-c C-m     | popup macroexpand-1             || M-,         | return to previous location
 C-c M-m     | popup macroexpand-all           || C-u C-c C-c | debug frm
 C-c M-p     | copy frm to repl                || C-c C-t C-n | run ns tests
-C-c C-d C-d | display doc string              || C-c M-r     | [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki)
+C-c C-d C-d | display doc string              || TAB         | do autocomplete
 ## Installation (Windows)
 1. [Download the latest version](http://ftp.gnu.org/gnu/emacs/windows/) (`i686` for 32-bit, `x86_64` for 64-bit) and extract it to `C:\emacs-version`
 2. Computer -> Properties -> Advanced system settings -> Environment Variables  
