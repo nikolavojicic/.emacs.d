@@ -1,4 +1,3 @@
-(require 'cider-mode)
 (require 'clojure-mode-extra-font-locking)
 
 (dolist (hook '(clojure-mode-hook cider-repl-mode-hook))
