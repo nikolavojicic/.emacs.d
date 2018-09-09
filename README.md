@@ -59,14 +59,6 @@ M-p       | previous choice
 M-(digit) | nth choice
 f1        | see docs for selected
 C-w       | see source for selected
-### Projectile
-Key binding | Description |    | Key binding | Description
------------ | ----------- | -- | ----------- | -----------
-C-c p p | known projects      || C-c p z | add file to cache
-C-c p f | project files       || C-c p i | invalidate project cache
-C-c p d | project directories || C-c p k | kill all project buffers
-C-c p l | directory files     || C-c p t | jump to test ns or back
-C-c p b | project buffers     || C-c p S | save all project buffers
 ### Cider
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------

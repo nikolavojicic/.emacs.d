@@ -16,7 +16,6 @@
                    company
                    flx-ido
                    paredit
-                   projectile
                    clojure-mode
                    zenburn-theme
                    ido-ubiquitous
@@ -43,9 +42,7 @@
       smex-save-file                 "~/.emacs.d/generated/smex-items"
       save-place-file                "~/.emacs.d/generated/places"
       recentf-save-file              "~/.emacs.d/generated/recentf"
-      projectile-cache-file          "~/.emacs.d/generated/projectile.cache"
-      ido-save-directory-list-file   "~/.emacs.d/generated/ido.last"
-      projectile-known-projects-file "~/.emacs.d/generated/projectile-bookmarks.eld")
+      ido-save-directory-list-file   "~/.emacs.d/generated/ido.last")
 
 (add-to-list 'load-path "~/.emacs.d/generated")
 (add-to-list 'load-path "~/.emacs.d/customizations")
