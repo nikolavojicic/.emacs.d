@@ -1,5 +1,3 @@
-(require 'clojure-mode-extra-font-locking)
-
 (dolist (hook '(clojure-mode-hook cider-repl-mode-hook))
   (add-hook hook #'paredit-mode)
   (add-hook hook #'subword-mode)
