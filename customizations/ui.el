@@ -1,5 +1,3 @@
-(global-linum-mode)
-
 (load-theme 'zenburn t)
 
 (menu-bar-mode    -1)
