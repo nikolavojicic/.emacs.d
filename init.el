@@ -19,7 +19,6 @@
                    clojure-mode
                    zenburn-theme
                    ido-ubiquitous
-                   aggressive-indent
                    ido-vertical-mode
                    rainbow-delimiters
                    clojure-mode-extra-font-locking))

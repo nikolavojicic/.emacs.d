@@ -73,7 +73,7 @@ C-c C-p     | eval, popup pprint result       || C-c C-.     | go to ns on class
 C-c C-m     | popup macroexpand-1             || M-,         | return to previous location
 C-c M-m     | popup macroexpand-all           || C-u C-c C-c | debug frm
 C-c M-p     | copy frm to repl                || C-c C-t C-n | run ns tests
-C-c C-d C-d | display doc string              || TAB         | do autocomplete
+C-c C-d C-d | display doc string              || C-c C-d C-j | display JavaDoc
 ## Installation (Windows)
 1. [Download the latest version](http://ftp.gnu.org/gnu/emacs/windows/) (`i686` for 32-bit, `x86_64` for 64-bit) and extract it to `C:\emacs-version`
 2. Computer -> Properties -> Advanced system settings -> Environment Variables  
