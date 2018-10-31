@@ -32,14 +32,16 @@ C-M-v | scroll other window  || C-x C-x | swap point and mark
 ### Text
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
-C-space | set mark         || C-M-h | select frm
-M-w     | copy selected    || C-x h | select all
-C-y     | paste latest cut || M-y   | replace C-y with previous cut
-C-d     | delete char      || C-j   | new line + indent
-M-d     | cut word         || M-;   | (un)comment selected
-C-k     | cut line         || M-/   | autocomplete
-M-k     | cut sentence     || M-\   | clear spaces around point
-C-w     | cut selected     || M-%   | replace
+C-space | set mark         || C-M-h     | select frm
+M-w     | copy selected    || C-x h     | select all
+C-y     | paste latest cut || M-y       | replace C-y with previous cut
+C-d     | delete char      || C-j       | new line + indent
+M-d     | cut word         || M-;       | (un)comment selected
+C-k     | cut line         || M-/       | autocomplete
+M-k     | cut sentence     || M-\       | clear spaces around point
+C-w     | cut selected     || M-%       | replace
+M-u     | uppercase word   || M-l       | lowercase word
+C-x r t | string rectangle || C-x space | rectangle region
 ### Paredit
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
