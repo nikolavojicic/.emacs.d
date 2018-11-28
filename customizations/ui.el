@@ -1,9 +1,10 @@
 (load-theme 'zenburn t)
 
-(menu-bar-mode    -1)
-(tool-bar-mode    -1)
-(scroll-bar-mode  -1)
-(blink-cursor-mode 0)
+(menu-bar-mode          -1)
+(tool-bar-mode          -1)
+(scroll-bar-mode        -1)
+(blink-cursor-mode       0)
+(global-visual-line-mode 1)
 
 (setq ring-bell-function             'ignore
       scroll-conservatively          101
