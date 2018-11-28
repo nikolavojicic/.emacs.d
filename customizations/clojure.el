@@ -3,6 +3,8 @@
   (add-hook hook #'subword-mode)
   (add-hook hook #'rainbow-delimiters-mode))
 
+(add-hook 'cider-mode-hook #'eldoc-mode)
+
 (setq cider-repl-wrap-history               t
       cider-save-file-on-load               t
       cider-show-error-buffer               nil
