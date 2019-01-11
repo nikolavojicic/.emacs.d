@@ -13,5 +13,9 @@
       mouse-wheel-scroll-amount      '(1)
       mouse-wheel-progressive-speed  nil)
 
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute
+  'default nil
+  :height 140
+  :family "Consolas")
+
 (set-frame-parameter nil 'fullscreen 'fullboth)
