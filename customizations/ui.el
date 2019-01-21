@@ -14,8 +14,16 @@
       mouse-wheel-progressive-speed  nil)
 
 (set-face-attribute
-  'default nil
-  :height 140
-  :family "Consolas")
+ 'default nil
+ :height 140
+ :family "Consolas")
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
+
+(add-hook
+ 'prog-mode-hook
+ (lambda ()
+   (font-lock-add-keywords
+    nil
+    '(("\\<\\(FIXME\\|TODO\\|BUG\\)" 1
+       font-lock-warning-face t)))))
