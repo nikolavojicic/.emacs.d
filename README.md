@@ -46,13 +46,13 @@ C-x r t | string rectangle || C-x space | rectangle region
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
 (      | open and close delimiter     || )     | go through closing delimiters
-M-(    | wrap with delimiters         || M-s   | remove delimiters
+M-([{" | wrap with delimiters         || M-s   | remove delimiters
 C-(    | move opening delimiter left  || C-)   | move closing delimiter right
 C-{    | move opening delimiter right || C-}   | move closing delimiter left
 M-down | remove next and unwrap       || M-up  | remove previous and unwrap
 M-S    | split delimiters             || M-J   | join delimiters
 C-M-f  | jump to closing delimiter    || C-M-b | jump to opening delimiter
-- delimiters: `() [] {} <> ""`
+- delimiters: `() [] {} ""`
 ### Company
 Key binding | Description
 ----------- | -----------
