@@ -27,5 +27,7 @@
 
 (global-set-key (kbd "M-/") #'hippie-expand)
 
-(define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
-(define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
+(eval-after-load "paredit"
+  '(progn
+     (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
+     (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)))
