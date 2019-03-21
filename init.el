@@ -35,13 +35,13 @@
 (unless (file-exists-p "~/.emacs.d/generated")
   (make-directory "~/.emacs.d/generated"))
 
-(setq backup-directory-alist         nil
-      auto-save-list-file-prefix     nil
-      custom-file                    "~/.emacs.d/generated/custom.el"
-      smex-save-file                 "~/.emacs.d/generated/smex-items"
-      save-place-file                "~/.emacs.d/generated/places"
-      recentf-save-file              "~/.emacs.d/generated/recentf"
-      ido-save-directory-list-file   "~/.emacs.d/generated/ido.last")
+(setq backup-directory-alist       nil
+      auto-save-list-file-prefix   nil
+      custom-file                  "~/.emacs.d/generated/custom.el"
+      smex-save-file               "~/.emacs.d/generated/smex-items"
+      save-place-file              "~/.emacs.d/generated/places"
+      recentf-save-file            "~/.emacs.d/generated/recentf"
+      ido-save-directory-list-file "~/.emacs.d/generated/ido.last")
 
 (add-to-list 'load-path "~/.emacs.d/generated")
 (add-to-list 'load-path "~/.emacs.d/customizations")
