@@ -6,12 +6,13 @@
 (blink-cursor-mode       0)
 (global-visual-line-mode 1)
 
-(setq ring-bell-function             'ignore
-      scroll-conservatively          101
-      inhibit-startup-message        t
-      initial-scratch-message        ""
-      mouse-wheel-scroll-amount      '(1)
-      mouse-wheel-progressive-speed  nil)
+(setq ring-bell-function              'ignore
+      scroll-conservatively           101
+      inhibit-startup-message         t
+      initial-scratch-message         ""
+      mouse-wheel-scroll-amount       '(1)
+      mouse-wheel-progressive-speed   nil
+      eldoc-echo-area-use-multiline-p nil)
 
 (set-face-attribute
  'default nil
@@ -25,5 +26,5 @@
  (lambda ()
    (font-lock-add-keywords
     nil
-    '(("\\<\\(FIXME\\|TODO\\|BUG\\)" 1
+    '(("\\(FIXME\\|TODO\\)" 1
        font-lock-warning-face t)))))
