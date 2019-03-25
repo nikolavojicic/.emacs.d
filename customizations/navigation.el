@@ -25,5 +25,4 @@
 (global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
-;; yes/no -> y/n
 (fset 'yes-or-no-p 'y-or-n-p)
