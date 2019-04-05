@@ -18,17 +18,17 @@ C-x 0 | close current || C-x 3 | split west-east
 ### Move
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
-C-f   | next char            || C-b     | previous char
-M-f   | next word            || M-b     | previous word
-C-n   | next line            || C-p     | previous line
-C-a   | line start           || C-e     | line end
-M-e   | next sentence        || M-a     | previous sentence
-C-v   | next screen          || M-v     | previous screen
-M-<   | buffer start         || M->     | buffer end
-C-s   | search forward       || C-r     | search backward
-C-M-s | search forward regex || C-M-r   | search backward regex
-M-g g | jump to line         || C-l     | center / top / bottom
-C-M-v | scroll other window  || C-x C-x | swap point and mark
+C-f   | next char            || C-b   | previous char
+M-f   | next word            || M-b   | previous word
+C-n   | next line            || C-p   | previous line
+C-a   | line start           || C-e   | line end
+M-e   | next sentence        || M-a   | previous sentence
+C-v   | next screen          || M-v   | previous screen
+M-<   | buffer start         || M->   | buffer end
+C-s   | search forward       || C-r   | search backward
+C-M-s | search forward regex || C-M-r | search backward regex
+M-g g | jump to line         || C-l   | center / top / bottom
+C-M-v | scroll other window  || C-M-l | scroll heuristically
 ### Text
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
