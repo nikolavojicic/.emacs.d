@@ -20,7 +20,6 @@
                    zenburn-theme
                    ido-ubiquitous
                    ido-vertical-mode
-                   rainbow-delimiters
                    clojure-mode-extra-font-locking))
   (unless (package-installed-p package)
     (package-install package)))

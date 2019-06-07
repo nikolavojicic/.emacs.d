@@ -1,7 +1,6 @@
 (dolist (hook '(clojure-mode-hook cider-repl-mode-hook))
   (add-hook hook #'paredit-mode)
-  (add-hook hook #'subword-mode)
-  (add-hook hook #'rainbow-delimiters-mode))
+  (add-hook hook #'subword-mode))
 
 (add-hook 'cider-mode-hook #'eldoc-mode)
 
