@@ -41,6 +41,7 @@ C-k     | cut line         || M-/       | autocomplete
 M-k     | cut sentence     || M-\       | clear spaces around point
 C-w     | cut selected     || M-%       | replace
 M-u     | uppercase word   || M-l       | lowercase word
+C-x C-u | uppercase region || C-x C-l   | lowercase region
 C-x r t | string rectangle || C-x space | rectangle region
 ### Paredit
 Key binding | Description |    | Key binding | Description
