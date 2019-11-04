@@ -12,9 +12,10 @@ C-x C-b | list buffers  || C-x C- + | zoom in
 ### Window
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
-q     | quit help     || C-x 1 | close all but current
-C-x o | jump to next  || C-x 2 | split north-south
-C-x 0 | close current || C-x 3 | split west-east
+q       | quit help     || C-x 1   | close all but current
+C-x o   | jump to next  || C-x 2   | split north-south
+C-x 0   | close current || C-x 3   | split west-east
+C-x 5 2 | new frame     || C-x 5 o | jump to next frame
 ### Move
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
