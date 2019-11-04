@@ -16,8 +16,8 @@
 
 (set-face-attribute
  'default nil
- :height 140
- :family "Consolas")
+ :height  140
+ :family  "Consolas")
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
