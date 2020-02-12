@@ -188,16 +188,17 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;;  _ _
+;; | (_)___ _ __
+;; | | / __| '_ \
+;; | | \__ \ |_) |
+;; |_|_|___/ .__/
+;;         |_|
 
-;;       _        _
-;;   ___| | ___  (_)_   _ _ __ ___
-;;  / __| |/ _ \ | | | | | '__/ _ \
-;; | (__| | (_) || | |_| | | |  __/
-;;  \___|_|\___/_/ |\__,_|_|  \___|
-;;             |__/
 
-
-(dolist (hook '(clojure-mode-hook cider-repl-mode-hook))
+(dolist (hook '(clojure-mode-hook
+                cider-repl-mode-hook
+                emacs-lisp-mode-hook))
   (add-hook hook #'paredit-mode)
   (add-hook hook #'subword-mode)
   (add-hook hook #'idle-highlight-mode))
