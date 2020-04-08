@@ -33,7 +33,7 @@ C-M-v | scroll other window  || C-M-l | scroll heuristically
 ### Text
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
-C-space | set mark         || C-M-h     | select frm
+C-space | set mark         || C-M-h     | select form
 M-w     | copy selected    || C-x h     | select all
 C-y     | paste latest cut || M-y       | replace C-y with previous cut
 C-d     | delete char      || C-j       | new line + indent
@@ -67,25 +67,20 @@ C-w       | see source for selected
 ### Cider
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
-C-c C-k     | eval buffer                     || C-c M-j     | run and open
-C-c M-z     | eval buffer, go to repl         || C-c C-b     | kill process
-C-c C-c     | eval top-level frm, show result || C-u C-c C-o | clear buffer
-C-c C-e     | eval, show result               || C-c M-n M-n | switch repl ns
-C-u C-c C-e | eval, write result              || C-c M-s     | cider selector
-C-c C-v w   | eval, replace with result       || C-c C-z     | go to repl or back
-C-c M-e     | eval, show result in repl       || M-.         | go to symbol definition
-C-c C-p     | eval, popup pprint result       || C-c C-.     | go to ns on classpath
-C-c C-m     | popup macroexpand-1             || M-,         | return to previous location
-C-c M-m     | popup macroexpand-all           || C-u C-c C-c | debug frm
-C-c M-p     | copy frm to repl                || C-c C-t C-n | run ns tests
-C-c C-d C-d | display doc string              || C-c C-t C-p | run project tests
-C-c C-u     | undefine symbol                 || C-c M-i     | inspect frm
+C-c C-k     | eval buffer      || C-c M-j     | run and open
+C-c C-e     | eval form, show  || C-c M-n M-n | switch repl ns
+C-u C-c C-e | eval form, write || C-u C-c C-o | clear buffer
+C-c C-b     | kill eval        || C-c C-z     | go to repl or back
+C-c M-i     | inspect form     || C-u C-c C-c | debug form
+M-.         | go to symbol def || M-,         | return back
+C-c C-t C-n | run ns tests     || C-c C-t C-p | run project tests
+C-c C-d C-d | display doc      || C-c C-u     | undefine symbol
 ## Installation (Windows)
 1. [Download the latest version](http://ftp.gnu.org/gnu/emacs/windows/) (`i686` for 32-bit, `x86_64` for 64-bit) and extract it to `C:\emacs-version`
-2. Computer -> Properties -> Advanced system settings -> Environment Variables  
+2. Computer -> Properties -> Advanced system settings -> Environment Variables
    -> System variables -> Path -> Edit -> add `C:\emacs-version\bin`
 3. Create folder `C:\home`
-4. Computer -> Properties -> Advanced system settings -> Environment Variables  
+4. Computer -> Properties -> Advanced system settings -> Environment Variables
    -> System variables -> New -> Variable name: `HOME` Variable value: `C:\home`
 5. Clone or download this repository to `C:\home\.emacs.d`
 6. `C:\emacs-version\bin\runemacs.exe` -> Send to -> Desktop (create shortcut)
