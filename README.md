@@ -68,10 +68,10 @@ C-w       | see source for selected
 Key binding | Description |    | Key binding | Description
 ----------- | ----------- | -- | ----------- | -----------
 C-c C-k     | eval buffer                     || C-c M-j     | run and open
-C-c M-z     | eval buffer, go to repl         || C-c C-c     | kill process
+C-c M-z     | eval buffer, go to repl         || C-c C-b     | kill process
 C-c C-c     | eval top-level frm, show result || C-u C-c C-o | clear buffer
-C-x C-e     | eval, show result               || C-c M-n M-n | switch repl ns
-C-u C-x C-e | eval, write result              || C-c M-s     | cider selector
+C-c C-e     | eval, show result               || C-c M-n M-n | switch repl ns
+C-u C-c C-e | eval, write result              || C-c M-s     | cider selector
 C-c C-v w   | eval, replace with result       || C-c C-z     | go to repl or back
 C-c M-e     | eval, show result in repl       || M-.         | go to symbol definition
 C-c C-p     | eval, popup pprint result       || C-c C-.     | go to ns on classpath
@@ -79,6 +79,7 @@ C-c C-m     | popup macroexpand-1             || M-,         | return to previou
 C-c M-m     | popup macroexpand-all           || C-u C-c C-c | debug frm
 C-c M-p     | copy frm to repl                || C-c C-t C-n | run ns tests
 C-c C-d C-d | display doc string              || C-c C-t C-p | run project tests
+C-c C-u     | undefine symbol                 || C-c M-i     | inspect frm
 ## Installation (Windows)
 1. [Download the latest version](http://ftp.gnu.org/gnu/emacs/windows/) (`i686` for 32-bit, `x86_64` for 64-bit) and extract it to `C:\emacs-version`
 2. Computer -> Properties -> Advanced system settings -> Environment Variables  
