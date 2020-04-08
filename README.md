@@ -77,10 +77,10 @@ C-c C-t C-n | run ns tests     || C-c C-t C-p | run project tests
 C-c C-d C-d | display doc      || C-c C-u     | undefine symbol
 ## Installation (Windows)
 1. [Download the latest version](http://ftp.gnu.org/gnu/emacs/windows/) (`i686` for 32-bit, `x86_64` for 64-bit) and extract it to `C:\emacs-version`
-2. Computer -> Properties -> Advanced system settings -> Environment Variables
+2. Computer -> Properties -> Advanced system settings -> Environment Variables  
    -> System variables -> Path -> Edit -> add `C:\emacs-version\bin`
 3. Create folder `C:\home`
-4. Computer -> Properties -> Advanced system settings -> Environment Variables
+4. Computer -> Properties -> Advanced system settings -> Environment Variables  
    -> System variables -> New -> Variable name: `HOME` Variable value: `C:\home`
 5. Clone or download this repository to `C:\home\.emacs.d`
 6. `C:\emacs-version\bin\runemacs.exe` -> Send to -> Desktop (create shortcut)
