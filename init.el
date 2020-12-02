@@ -31,14 +31,6 @@
     (package-install package)))
 
 
-;; remove ido compile warnings
-(defvar predicate            nil)
-(defvar ido-cur-item         nil)
-(defvar ido-cur-list         nil)
-(defvar ido-default-item     nil)
-(defvar inherit-input-method nil)
-
-
 (unless (file-exists-p "~/.emacs.d/generated")
   (make-directory "~/.emacs.d/generated"))
 
