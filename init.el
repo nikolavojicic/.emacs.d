@@ -210,6 +210,7 @@
       cider-auto-select-error-buffer        nil
       cider-repl-use-pretty-printing        t
       cider-repl-pop-to-buffer-on-connect   'display-only
+      cider-auto-select-test-report-buffer  nil
       cider-repl-history-display-duplicates nil)
 
 
