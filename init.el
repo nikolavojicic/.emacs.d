@@ -23,9 +23,9 @@
                    paredit
                    clojure-mode
                    zenburn-theme
-                   ido-ubiquitous
                    ido-vertical-mode
-                   idle-highlight-mode))
+                   idle-highlight-mode
+                   ido-completing-read+))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -159,6 +159,7 @@
 (require 'recentf)
 (require 'uniquify)
 (require 'ido-vertical-mode)
+(require 'ido-completing-read+)
 
 
 (smex-initialize)
