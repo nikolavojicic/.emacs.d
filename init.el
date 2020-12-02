@@ -205,10 +205,9 @@
 
 (setq cider-repl-wrap-history               t
       cider-save-file-on-load               t
-      cider-show-error-buffer               nil
       cider-prompt-for-symbol               nil
       cider-font-lock-dynamically           '(macro core function var)
-      cider-auto-select-error-buffer        t
+      cider-auto-select-error-buffer        nil
       cider-repl-use-pretty-printing        t
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-repl-history-display-duplicates nil)
