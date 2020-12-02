@@ -25,8 +25,7 @@
                    zenburn-theme
                    ido-ubiquitous
                    ido-vertical-mode
-                   idle-highlight-mode
-                   clojure-mode-extra-font-locking))
+                   idle-highlight-mode))
   (unless (package-installed-p package)
     (package-install package)))
 
