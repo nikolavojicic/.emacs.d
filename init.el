@@ -203,7 +203,8 @@
 (add-hook 'cider-mode-hook #'eldoc-mode)
 
 
-(setq cider-repl-wrap-history               t
+(setq cider-use-overlays                    t
+      cider-repl-wrap-history               t
       cider-save-file-on-load               t
       cider-prompt-for-symbol               nil
       cider-font-lock-dynamically           '(macro core function var)
@@ -212,7 +213,6 @@
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-auto-select-test-report-buffer  nil
       cider-repl-history-display-duplicates nil)
-
 
 (require 'clojure-mode)
 
