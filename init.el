@@ -45,6 +45,7 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/generated")
+(add-to-list 'exec-path "C:/Program Files/7-Zip") ;; For Windows only
 
 
 ;;        _
@@ -213,6 +214,7 @@
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-auto-select-test-report-buffer  nil
       cider-repl-history-display-duplicates nil)
+
 
 (require 'clojure-mode)
 
