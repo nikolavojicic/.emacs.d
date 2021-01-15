@@ -15,7 +15,8 @@
   (package-refresh-contents))
 
 
-(dolist (package '(smex
+(dolist (package '(org
+                   smex
                    cider
                    magit
                    beacon
