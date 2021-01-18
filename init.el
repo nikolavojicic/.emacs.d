@@ -181,7 +181,7 @@
 
 (global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
-
+(global-set-key (kbd "C-c C-a") #'org-agenda)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
