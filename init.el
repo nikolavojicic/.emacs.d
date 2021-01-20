@@ -24,7 +24,6 @@
                    flx-ido
                    paredit
                    clojure-mode
-                   zenburn-theme
                    ido-vertical-mode
                    idle-highlight-mode
                    ido-completing-read+))
@@ -56,9 +55,6 @@
 ;;  \__,_|_|
 
 
-(load-theme 'zenburn t)
-
-
 (beacon-mode             1)
 (menu-bar-mode          -1)
 (tool-bar-mode          -1)
@@ -78,7 +74,7 @@
 
 (set-face-attribute
  'default nil
- :height  120
+ :height  110
  :family  "Monaco")
 
 
