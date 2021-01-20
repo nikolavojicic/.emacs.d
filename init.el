@@ -64,6 +64,7 @@
 
 
 (setq ring-bell-function              'ignore
+      global-hl-line-mode             nil
       scroll-conservatively           101
       inhibit-startup-message         t
       initial-scratch-message         ""
