@@ -64,7 +64,6 @@
 
 
 (setq ring-bell-function              'ignore
-      global-hl-line-mode             nil
       scroll-conservatively           101
       inhibit-startup-message         t
       initial-scratch-message         ""
@@ -99,9 +98,8 @@
 ;;                           |___/
 
 
-(show-paren-mode     1)
-(save-place-mode     1)
-(global-hl-line-mode 1)
+(show-paren-mode 1)
+(save-place-mode 1)
 
 
 (setq-default indent-tabs-mode nil)
