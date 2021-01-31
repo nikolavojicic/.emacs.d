@@ -175,7 +175,12 @@
 
 (global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
-(global-set-key (kbd "C-a")     #'org-agenda)
+
+
+(eval-after-load "org"
+  '(progn
+     (define-key org-mode-map (kbd "C-c a") #'org-agenda)))
+
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
