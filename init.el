@@ -108,6 +108,7 @@
       auto-save-default                   nil
       make-backup-files                   nil
       mouse-yank-at-point                 t
+      org-log-into-drawer                 'LOGBOOK
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
