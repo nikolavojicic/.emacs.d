@@ -130,10 +130,9 @@
 (global-set-key (kbd "M-/") #'hippie-expand)
 
 
-(eval-after-load "paredit"
-  '(progn
-     (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
-     (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)))
+(with-eval-after-load 'paredit
+  (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
+  (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly))
 
 
 ;;                     _             _   _
@@ -177,9 +176,8 @@
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
 
-(eval-after-load "org"
-  '(progn
-     (define-key org-mode-map (kbd "C-c a") #'org-agenda)))
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-c a") #'org-agenda))
 
 
 (fset 'yes-or-no-p 'y-or-n-p)
