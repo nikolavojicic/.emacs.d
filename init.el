@@ -71,6 +71,9 @@
       eldoc-echo-area-use-multiline-p nil)
 
 
+(set-background-color "lightyellow")
+
+
 (set-face-attribute
  'default nil
  :height  110
