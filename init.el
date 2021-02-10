@@ -23,6 +23,7 @@
                    flx-ido
                    paredit
                    clojure-mode
+                   expand-region
                    ido-vertical-mode
                    idle-highlight-mode
                    ido-completing-read+))
@@ -132,6 +133,7 @@
 
 
 (global-set-key (kbd "M-/") #'hippie-expand)
+(global-set-key (kbd "C-=") #'er/expand-region)
 
 
 (with-eval-after-load 'paredit
