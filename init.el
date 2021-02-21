@@ -25,6 +25,7 @@
                    flycheck
                    clojure-mode
                    expand-region
+                   flycheck-pos-tip
                    ido-vertical-mode
                    flycheck-clj-kondo
                    idle-highlight-mode
@@ -182,6 +183,7 @@
       ido-use-virtual-buffers    t
       ido-enable-flex-matching   t
       ido-vertical-define-keys   'C-n-and-C-p-only
+      flycheck-pos-tip-timeout   most-positive-fixnum
       ido-use-filename-at-point  nil
       uniquify-buffer-name-style 'forward)
 
@@ -192,6 +194,10 @@
 
 (with-eval-after-load 'org
   (define-key org-mode-map (kbd "C-c a") #'org-agenda))
+
+
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
 
 
 (fset 'yes-or-no-p 'y-or-n-p)
