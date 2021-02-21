@@ -106,6 +106,9 @@
 ;;                           |___/
 
 
+(set-language-environment "UTF-8")
+
+
 (show-paren-mode 1)
 (save-place-mode 1)
 
