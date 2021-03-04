@@ -18,7 +18,6 @@
 (dolist (package '(smex
                    cider
                    magit
-                   beacon
                    company
                    flx-ido
                    paredit
@@ -58,7 +57,6 @@
 ;;  \__,_|_|
 
 
-(beacon-mode             1)
 (menu-bar-mode          -1)
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
