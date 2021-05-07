@@ -47,7 +47,9 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/generated")
-(add-to-list 'exec-path "C:/Program Files/7-Zip") ;; For Windows only
+
+(when (eq system-type 'windows-nt)
+  (add-to-list 'exec-path "C:/Program Files/7-Zip"))
 
 
 ;;        _
