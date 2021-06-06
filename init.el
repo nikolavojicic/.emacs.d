@@ -218,6 +218,7 @@
       cider-prompt-for-symbol               nil
       cider-font-lock-dynamically           '(macro core function var)
       cider-auto-select-error-buffer        nil
+      cider-repl-display-help-banner        nil
       cider-repl-use-pretty-printing        t
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-auto-select-test-report-buffer  nil
