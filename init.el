@@ -24,6 +24,7 @@
                    flycheck
                    clojure-mode
                    expand-region
+                   zenburn-theme
                    ido-vertical-mode
                    flycheck-clj-kondo
                    idle-highlight-mode
@@ -56,6 +57,9 @@
 ;; | | | | |
 ;; | |_| | |
 ;;  \__,_|_|
+
+
+(load-theme 'zenburn t)
 
 
 (menu-bar-mode          -1)
