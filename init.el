@@ -15,7 +15,8 @@
   (package-refresh-contents))
 
 
-(dolist (package '(smex
+(dolist (package '(avy
+                   smex
                    cider
                    magit
                    company
@@ -189,6 +190,7 @@
 
 (global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
+(global-set-key (kbd "C-'")     #'avy-goto-char-timer)
 
 
 (with-eval-after-load 'org
