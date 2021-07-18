@@ -50,6 +50,7 @@
 (add-to-list 'load-path "~/.emacs.d/generated")
 
 (when (eq system-type 'windows-nt)
+  (setq default-directory "C:/")
   (add-to-list 'exec-path "C:/Program Files/7-Zip"))
 
 
