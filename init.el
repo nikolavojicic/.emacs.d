@@ -61,7 +61,13 @@
 ;;  \__,_|_|
 
 
-(load-theme 'zenburn t)
+(global-set-key
+ [f12]
+ (lambda ()
+   (interactive)
+   (if (eq (car custom-enabled-themes) 'zenburn)
+       (disable-theme 'zenburn)
+     (load-theme 'zenburn t))))
 
 
 (menu-bar-mode          -1)
