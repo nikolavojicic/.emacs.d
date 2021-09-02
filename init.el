@@ -77,13 +77,14 @@
 (global-visual-line-mode 1)
 
 
-(setq ring-bell-function              'ignore
-      scroll-conservatively           101
-      inhibit-startup-message         t
-      initial-scratch-message         ""
-      mouse-wheel-scroll-amount       '(1)
-      mouse-wheel-progressive-speed   nil
-      eldoc-echo-area-use-multiline-p nil)
+(setq ring-bell-function                 'ignore
+      scroll-conservatively              101
+      inhibit-startup-message            t
+      initial-scratch-message            ""
+      mouse-wheel-scroll-amount          '(1)
+      mouse-wheel-progressive-speed      nil
+      eldoc-echo-area-use-multiline-p    nil
+      magit-section-visibility-indicator nil)
 
 
 (set-face-attribute
@@ -230,6 +231,7 @@
       cider-save-file-on-load               t
       cider-prompt-for-symbol               nil
       cider-font-lock-dynamically           '(macro core function var)
+      cider-use-fringe-indicators           nil
       cider-auto-select-error-buffer        nil
       cider-repl-display-help-banner        nil
       cider-repl-use-pretty-printing        t
