@@ -25,7 +25,6 @@
                    flycheck
                    clojure-mode
                    expand-region
-                   zenburn-theme
                    ido-vertical-mode
                    flycheck-clj-kondo
                    idle-highlight-mode
@@ -61,15 +60,6 @@
 ;;  \__,_|_|
 
 
-(global-set-key
- [f12]
- (lambda ()
-   (interactive)
-   (if (eq (car custom-enabled-themes) 'zenburn)
-       (disable-theme 'zenburn)
-     (load-theme 'zenburn t))))
-
-
 (menu-bar-mode          -1)
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
@@ -93,6 +83,10 @@
  :family  "Monaco")
 
 
+(set-cursor-color "red")
+(set-background-color "lightgray")
+(set-face-background 'fringe          "lightgray")
+(set-face-foreground 'vertical-border "dark gray")
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
 
