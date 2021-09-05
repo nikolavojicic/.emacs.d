@@ -195,6 +195,12 @@
 (global-set-key (kbd "C-'")     #'avy-goto-char-timer)
 
 
+(global-set-key (kbd "<f2> u") 'windmove-up)
+(global-set-key (kbd "<f2> d") 'windmove-down)
+(global-set-key (kbd "<f2> l") 'windmove-left)
+(global-set-key (kbd "<f2> r") 'windmove-right)
+
+
 (with-eval-after-load 'org
   (define-key org-mode-map (kbd "C-c a") #'org-agenda))
 
