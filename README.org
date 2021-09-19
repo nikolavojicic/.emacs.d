@@ -52,7 +52,9 @@
 | M-u         | uppercase word   |   | M-l         | lowercase word                 |
 | C-x C-u     | uppercase region |   | C-x C-l     | lowercase region               |
 | C-x r t     | string rectangle |   | C-x space   | rectangle region               |
+| C-=         | expand region    |   | C-- C-=     | contract region                |
 | F3          | start macro      |   | (M-0) F4    | stop / play (until fail) macro |
+|             |                  |   | C-x C-o     | delete surrounding blank lines |
 
 *** Paredit
 
