@@ -180,14 +180,15 @@
 (ido-ubiquitous-mode 1)
 
 
-(setq apropos-do-all             t
-      ido-use-faces              nil
-      recentf-max-menu-items     40
-      ido-use-virtual-buffers    t
-      ido-enable-flex-matching   t
-      ido-vertical-define-keys   'C-n-and-C-p-only
-      ido-use-filename-at-point  nil
-      uniquify-buffer-name-style 'forward)
+(setq apropos-do-all                         t
+      ido-use-faces                          nil
+      recentf-max-menu-items                 40
+      ido-use-virtual-buffers                t
+      ido-enable-flex-matching               t
+      ido-vertical-define-keys               'C-n-and-C-p-only
+      ido-use-filename-at-point              nil
+      uniquify-buffer-name-style             'forward
+      ido-auto-merge-work-directories-length -1)
 
 
 (global-set-key (kbd "M-x")     #'smex)
