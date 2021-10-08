@@ -128,7 +128,8 @@
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
-      save-interprogram-paste-before-kill t)
+      save-interprogram-paste-before-kill t
+      flycheck-check-syntax-automatically '(save idle-change mode-enabled))
 
 
 (setq hippie-expand-try-functions-list
