@@ -41,22 +41,22 @@
 
 *** Text
 
-    | Key binding | Description      |   | Key binding | Description                    |
-    |-------------+------------------+---+-------------+--------------------------------|
-    | C-space     | set mark         |   | C-M-h       | select form                    |
-    | M-w         | copy selected    |   | C-x h       | select all                     |
-    | C-y         | paste latest cut |   | M-y         | replace C-y with previous cut  |
-    | C-d         | delete char      |   | C-j         | new line + indent              |
-    | M-d         | cut word         |   | M-;         | (un)comment selected           |
-    | C-k         | cut line         |   | M-/         | autocomplete                   |
-    | M-k         | cut sentence     |   | M-\         | clear spaces around point      |
-    | C-w         | cut selected     |   | M-%         | replace                        |
-    | M-u         | uppercase word   |   | M-l         | lowercase word                 |
-    | C-x C-u     | uppercase region |   | C-x C-l     | lowercase region               |
-    | C-x r t     | string rectangle |   | C-x space   | rectangle region               |
-    | C-=         | expand region    |   | C-- C-=     | contract region                |
-    | F3          | start macro      |   | (M-0) F4    | stop / play (until fail) macro |
-    |             |                  |   | C-x C-o     | delete surrounding blank lines |
+    | Key binding   | Description      |   | Key binding | Description                    |
+    |---------------+------------------+---+-------------+--------------------------------|
+    | C-space       | set mark         |   | C-M-h       | select form                    |
+    | M-w           | copy selected    |   | C-x h       | select all                     |
+    | C-y           | paste latest cut |   | M-y         | replace C-y with previous cut  |
+    | C-d           | delete char      |   | C-j         | new line + indent              |
+    | M-d           | cut word         |   | M-;         | (un)comment selected           |
+    | C-k           | cut text forward |   | M-/         | autocomplete                   |
+    | C-S-backspace | cut line         |   | M-\         | clear spaces around point      |
+    | M-k           | cut sentence     |   | M-%         | replace                        |
+    | C-w           | cut selected     |   | M-l         | lowercase word                 |
+    | M-u           | uppercase word   |   | C-x C-l     | lowercase region               |
+    | C-x C-u       | uppercase region |   | C-x space   | rectangle region               |
+    | C-x r t       | string rectangle |   | C-- C-=     | contract region                |
+    | C-=           | expand region    |   | (M-0) F4    | stop / play (until fail) macro |
+    | F3            | start macro      |   | C-x C-o     | delete surrounding blank lines |
 
 *** Paredit
 
