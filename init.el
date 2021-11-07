@@ -120,14 +120,17 @@
 (setq-default indent-tabs-mode nil)
 
 
-(setq create-lockfiles                    nil
+(setq org-log-done                        t
+      create-lockfiles                    nil
       auto-save-default                   nil
       make-backup-files                   nil
+      org-log-reschedule                  t
       mouse-yank-at-point                 t
       org-log-into-drawer                 'LOGBOOK
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
+      org-hide-emphasis-markers           t
       save-interprogram-paste-before-kill t
       flycheck-check-syntax-automatically '(save idle-change mode-enabled))
 
