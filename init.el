@@ -23,6 +23,7 @@
                    flx-ido
                    paredit
                    flycheck
+                   powershell
                    clojure-mode
                    expand-region
                    ido-vertical-mode
