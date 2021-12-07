@@ -26,6 +26,7 @@
                    powershell
                    clojure-mode
                    expand-region
+                   plantuml-mode
                    ido-vertical-mode
                    flycheck-clj-kondo
                    idle-highlight-mode
@@ -48,6 +49,7 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/generated")
+
 
 (when (eq system-type 'windows-nt)
   (setq default-directory "C:/")
@@ -121,17 +123,13 @@
 (setq-default indent-tabs-mode nil)
 
 
-(setq org-log-done                        t
-      create-lockfiles                    nil
+(setq create-lockfiles                    nil
       auto-save-default                   nil
       make-backup-files                   nil
-      org-log-reschedule                  t
       mouse-yank-at-point                 t
-      org-log-into-drawer                 'LOGBOOK
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
-      org-hide-emphasis-markers           t
       save-interprogram-paste-before-kill t
       flycheck-check-syntax-automatically '(save idle-change mode-enabled))
 
@@ -207,10 +205,6 @@
 (global-set-key (kbd "<f2> r") 'windmove-right)
 
 
-(with-eval-after-load 'org
-  (define-key org-mode-map (kbd "C-c a") #'org-agenda))
-
-
 (fset 'yes-or-no-p 'y-or-n-p)
 
 
@@ -262,3 +256,28 @@
   (rfn        2)
   (let-routes 1)
   (context    2))
+
+
+;;   ___  _ __ __ _
+;;  / _ \| '__/ _` |
+;; | (_) | | | (_| |
+;;  \___/|_|  \__, |
+;;            |___/
+
+
+(setq org-log-done                   t
+      plantuml-jar-path              (getenv "plantuml")
+      org-log-reschedule             t
+      org-log-into-drawer            'LOGBOOK
+      org-plantuml-jar-path          (expand-file-name (getenv "plantuml"))
+      org-hide-emphasis-markers      t
+      org-confirm-babel-evaluate     nil
+      plantuml-default-exec-mode     'jar
+      org-startup-with-inline-images t)
+
+
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-c a") #'org-agenda)
+  (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+  (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
+  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
