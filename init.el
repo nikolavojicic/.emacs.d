@@ -284,5 +284,5 @@
   (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (setq org-capture-templates
-        '(("t" "Tasks" entry (file+headline "~/.emacs.d/org/tasks.org" "Task")
-           "* TODO %?\n  %i%U\n  %a"))))
+        '(("t" "Tasks" entry (file+headline "~/.emacs.d/org/tasks.org" "Tasks")
+           "* TODO %?\n  %iSCHEDULED: %U\n  %a"))))
