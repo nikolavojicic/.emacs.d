@@ -278,6 +278,11 @@
 
 (with-eval-after-load 'org
   (define-key org-mode-map (kbd "C-c a") #'org-agenda)
+  (define-key org-mode-map (kbd "C-c c") #'org-capture)
+  (define-key org-mode-map (kbd "C-c l") #'org-store-link)
   (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
   (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
-  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
+  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
+  (setq org-capture-templates
+        '(("t" "Tasks" entry (file+headline "~/.emacs.d/org/tasks.org" "Task")
+           "* TODO %?\n  %i%U\n  %a"))))
