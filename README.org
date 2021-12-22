@@ -81,6 +81,11 @@
     | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
     | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
 
+*** Magit
+
+    | C-x g | Status |
+    | ?     | Help   |
+
 *** Org
 
 **** Outline {*+}
