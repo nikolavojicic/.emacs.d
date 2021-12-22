@@ -6,8 +6,8 @@
 
     | C-g     | abort binding |   | C-x C-s  | save file           |
     | C-/     | undo          |   | C-x C-f  | find / create file  |
-    | C-z     | suspend Emacs |   | C-x s    | save some files     |
-    | C-x C-c | exit Emacs    |   | C-r      | minibuffer previous |
+    | C-z     | suspend emacs |   | C-x s    | save some files     |
+    | C-x C-c | exit emacs    |   | C-r      | minibuffer previous |
     | C-x b   | switch buffer |   | C-s      | minibuffer next     |
     | C-x k   | kill buffer   |   | C-x C- - | zoom out            |
     | C-x C-b | list buffers  |   | C-x C- + | zoom in             |
@@ -83,42 +83,50 @@
 
 *** Magit
 
-    | C-x g | Status |
-    | ?     | Help   |
+    | C-x g | status               |
+    | ?     | help                 |
+    | C-n   | next     line        |
+    | C-p   | previous line        |
+    | n     | next     item        |
+    | p     | previous item        |
+    | M-n   | next     section     |
+    | M-p   | previous section     |
+    | TAB   | toggle expand parent |
+    | C-TAB | toggle expand all    |
 
 *** Org
 
 **** Outline {*+}
 
-     | TAB              | Toggle local  visibility |
-     | S-TAB            | Toggle global visibility |
-     | C-ENTER          | Add same level heading   |
-     | M-RIGHT / LEFT   | Level inc / dec headline |
-     | M-S-RIGHT / LEFT | Level inc / dec section  |
-     | M-UP / DOWN      | Move section up / down   |
-     | M-S-UP / DOWN    | Move heading up / down   |
-     | C-c C-w          | Move under another level |
+     | TAB              | toggle local  visibility |
+     | S-TAB            | toggle global visibility |
+     | C-ENTER          | add same level heading   |
+     | M-RIGHT / LEFT   | level inc / dec headline |
+     | M-S-RIGHT / LEFT | level inc / dec section  |
+     | M-UP / DOWN      | move section up / down   |
+     | M-S-UP / DOWN    | move heading up / down   |
+     | C-c C-w          | move under another level |
 
 **** Status {TODO / DONE}
 
-     | S-RIGHT / LEFT | Cycling                |
-     | C-c C-t        | Keywords menu          |
-     | #+SEQ_TODO     | Define new keyword     |
-     | TODO(t@/!)     | Specify logging        |
+     | S-RIGHT / LEFT | cycling                |
+     | C-c C-t        | keywords menu          |
+     | #+SEQ_TODO     | define new keyword     |
+     | TODO(t@/!)     | specify logging        |
      |                | @ - ts + note on enter |
      |                | ! - ts        on exit  |
 
 **** Agenda
 
-     | C-C C-s | Schedule                |
-     | C-c C-d | Deadline                |
-     | C-c C-z | Add note (to LOGBOOK)   |
-     | C-c [   | Add file to agenda list |
-     | C-c a   | Agenda view             |
-     | g       | Refresh agenda          |
-     | S-f     | Follow mode             |
-     | f / b   | Move forward / back     |
-     | t       | Change task status      |
+     | C-C C-s | schedule                |
+     | C-c C-d | deadline                |
+     | C-c C-z | add note (to LOGBOOK)   |
+     | C-c [   | add file to agenda list |
+     | C-c a   | agenda view             |
+     | g       | refresh agenda          |
+     | S-f     | follow mode             |
+     | f / b   | move forward / back     |
+     | t       | change task status      |
 
 **** Repeat {w(eek) d(ay) m(onth) y(ear)}
 
@@ -128,50 +136,51 @@
 
 **** Checklist {- [ ]}
 
-     | C-c C-c   | Cycling         |
-     | M-S-ENTER | New item        |
-     | [/]       | Number of done  |
-     | [%]       | Percent of done |
+     | C-c C-c   | cycling         |
+     | M-S-ENTER | new item        |
+     | [/]       | number of done  |
+     | [%]       | percent of done |
 
 **** Tag
 
-     | C-c C-q   | Assign to headline    |
-     | #+TAGS    | Define new tag        |
-     | -TAG_NAME | Exclude from agenda+m |
+     | C-c C-q   | assign to headline    |
+     | #+TAGS    | define new tag        |
+     | -TAG_NAME | exclude from agenda+m |
 
 **** Archive
 
-     | C-c C-x C-a | Archive entry       |
-     | C-c C-x C-s | Archive subtree     |
-     | #+ARCHIVE   | Define archive file |
+     | C-c C-x C-a | archive entry       |
+     | C-c C-x C-s | archive subtree     |
+     | #+ARCHIVE   | define archive file |
 
 **** Link
 
-     | C-c C-l                            | Create link           |
-     | C-c C-o                            | Open link             |
-     | C-c &                              | Return back from link |
-     | [[https://orgmode.org/][link]]                               | Website               |
-     | file:~/.emacs.d/README.org         | File                  |
-     | file:~/.emacs.d/README.org::17     | File at line          |
-     | file:~/.emacs.d/README.org::*Basic | File at headline      |
-     | [[here][Goto here]]                          | Radio target <<here>> |
-     | [[Org]]                                | Subsection            |
-     | TODO                               | Gnus email            |
+     | C-c C-l                            | create link           |
+     | C-c C-o                            | open link             |
+     | C-c &                              | return back from link |
+     | [[https://orgmode.org/][link]]                               | website               |
+     | file:~/.emacs.d/README.org         | file                  |
+     | file:~/.emacs.d/README.org::17     | file at line          |
+     | file:~/.emacs.d/README.org::*Basic | file at headline      |
+     | [[here][Goto here]]                          | radio target <<here>> |
+     | [[Org]]                                | subsection            |
+     | TODO                               | gnus email            |
 
 **** Table
 
-     | TAB             | Next cell                |
-     | S-TAB           | Previous cell            |
-     | M-LEFT / RIGHT  | Move column left / right |
-     | M-DOWN / UP     | Move row up / down       |
-     | <length-number> | Set max column length    |
-     | C-c TAB         | Apply max column length  |
-     | C-c ^           | Sort table               |
-     | M-S-DOWN        | Add row                  |
-     | M-S-UP          | Delete row               |
-     | M-S-RIGHT       | Add column               |
-     | M-S-LEFT        | Delete column            |
-     | C-c -           | Add line row             |
+     | TAB                   | next cell                |
+     | S-TAB                 | previous cell            |
+     | M-LEFT / RIGHT        | move column left / right |
+     | M-DOWN / UP           | move row up / down       |
+     | <length-number>       | set max column length    |
+     | C-c TAB               | apply max column length  |
+     | C-c ^                 | sort table               |
+     | M-S-DOWN              | add row                  |
+     | M-S-UP                | delete row               |
+     | M-S-RIGHT             | add column               |
+     | M-S-LEFT              | delete column            |
+     | C-c -                 | add line row             |
+     | #+TBLFM: @3..@$1=@#-1 | row number formula       |
 
 **** Various
 
