@@ -49,6 +49,7 @@
     | C-x r t       | string rectangle |   | C-- C-=   | contract region                |
     | C-=           | expand region    |   | (M-0) F4  | stop / play (until fail) macro |
     | F3            | start macro      |   | C-x C-o   | delete surrounding blank lines |
+    | C-M SPACE     | select next word |   | C-u C-c . | insert timestamp               |
 
 *** Paredit
 
