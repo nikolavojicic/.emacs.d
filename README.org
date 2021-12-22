@@ -81,6 +81,98 @@
     | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
     | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
 
+*** Org
+
+**** Outline {*+}
+
+     | TAB              | Toggle local  visibility |
+     | S-TAB            | Toggle global visibility |
+     | C-ENTER          | Add same level heading   |
+     | M-RIGHT / LEFT   | Level inc / dec headline |
+     | M-S-RIGHT / LEFT | Level inc / dec section  |
+     | M-UP / DOWN      | Move section up / down   |
+     | M-S-UP / DOWN    | Move heading up / down   |
+     | C-c C-w          | Move under another level |
+
+**** Status {TODO / DONE}
+
+     | S-RIGHT / LEFT | Cycling                |
+     | C-c C-t        | Keywords menu          |
+     | #+SEQ_TODO     | Define new keyword     |
+     | TODO(t@/!)     | Specify logging        |
+     |                | @ - ts + note on enter |
+     |                | ! - ts        on exit  |
+
+**** Agenda
+
+     | C-C C-s | Schedule                |
+     | C-c C-d | Deadline                |
+     | C-c C-z | Add note (to LOGBOOK)   |
+     | C-c [   | Add file to agenda list |
+     | C-c a   | Agenda view             |
+     | g       | Refresh agenda          |
+     | S-f     | Follow mode             |
+     | f / b   | Move forward / back     |
+     | t       | Change task status      |
+
+**** Repeat {w(eek) d(ay) m(onth) y(ear)}
+
+     | +1w  | 1 week                    |
+     | ++1w | 1 week in future          |
+     | .+1w | 1 week after task is DONE |
+
+**** Checklist {- [ ]}
+
+     | C-c C-c   | Cycling         |
+     | M-S-ENTER | New item        |
+     | [/]       | Number of done  |
+     | [%]       | Percent of done |
+
+**** Tag
+
+     | C-c C-q   | Assign to headline    |
+     | #+TAGS    | Define new tag        |
+     | -TAG_NAME | Exclude from agenda+m |
+
+**** Archive
+
+     | C-c C-x C-a | Archive entry       |
+     | C-c C-x C-s | Archive subtree     |
+     | #+ARCHIVE   | Define archive file |
+
+**** Links
+
+     | C-c C-l                            | Create link           |
+     | C-c C-o                            | Open link             |
+     | C-c &                              | Return back from link |
+     | [[https://orgmode.org/][link]]                               | Website               |
+     | file:~/.emacs.d/README.org         | File                  |
+     | file:~/.emacs.d/README.org::17     | File at line          |
+     | file:~/.emacs.d/README.org::*Basic | File at headline      |
+     | [[here][Goto here]]                          | Radio target <<here>> |
+     | [[Org]]                                | Subsection            |
+     | TODO                               | Gnus email            |
+
+**** Table
+
+     | TAB             | Next cell                |
+     | S-TAB           | Previous cell            |
+     | M-LEFT / RIGHT  | Move column left / right |
+     | M-DOWN / UP     | Move row up / down       |
+     | <length-number> | Set max column length    |
+     | C-c TAB         | Apply max column length  |
+     | C-c ^           | Sort table               |
+     | M-S-DOWN        | Add row                  |
+     | M-S-UP          | Delete row               |
+     | M-S-RIGHT       | Add column               |
+     | M-S-LEFT        | Delete column            |
+     | C-c -           | Add line row             |
+
+**** Various
+
+     | C-c C-c | Activate #+ line |
+     | C-c c   | Prompt capture   |
+
 ** Emacs installation on Windows
 
    1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
