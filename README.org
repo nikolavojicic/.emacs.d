@@ -140,7 +140,7 @@
      | C-c C-x C-s | Archive subtree     |
      | #+ARCHIVE   | Define archive file |
 
-**** Links
+**** Link
 
      | C-c C-l                            | Create link           |
      | C-c C-o                            | Open link             |
