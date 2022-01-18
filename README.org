@@ -121,7 +121,7 @@
 
      | C-C C-s | schedule                |
      | C-c C-d | deadline                |
-     | C-c C-z | add note (to LOGBOOK)   |
+     | C-c C-z | add note (to :LOGBOOK:) |
      | C-c [   | add file to agenda list |
      | C-c a   | agenda view             |
      | g       | refresh agenda          |
@@ -145,14 +145,13 @@
 **** Tag
 
      | C-c C-q   | assign to headline    |
-     | #+TAGS    | define new tag        |
+     | #+TAGS:   | define new tags       |
      | -TAG_NAME | exclude from agenda+m |
 
 **** Archive
 
-     | C-c C-x C-a | archive entry       |
-     | C-c C-x C-s | archive subtree     |
-     | #+ARCHIVE   | define archive file |
+     | C-c C-x C-a | archive subtree     |
+     | #+ARCHIVE:  | define archive file |
 
 **** Link
 
@@ -185,8 +184,9 @@
 
 **** Various
 
-     | C-c C-c | Activate #+ line |
-     | C-c c   | Prompt capture   |
+     | C-c C-c            | activate #+ line |
+     | C-c c              | prompt capture   |
+     | :DRAWERNAME: :END: | custom drawer    |
 
 ** Emacs installation on Windows
 
