@@ -83,8 +83,8 @@
 
 (set-face-attribute
  'default nil
- :height  110
- :family  "Monaco")
+ :height  120
+ :family  "iosevka ss07")
 
 
 (set-cursor-color "red")
