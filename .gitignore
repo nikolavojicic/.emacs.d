@@ -1,4 +1,4 @@
-/elpa/
-/generated/
-/transient/
-/org/
+*
+!.gitignore
+!README.org
+!init.el
