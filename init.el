@@ -29,7 +29,6 @@
                    plantuml-mode
                    ido-vertical-mode
                    flycheck-clj-kondo
-                   idle-highlight-mode
                    ido-completing-read+))
   (unless (package-installed-p package)
     (package-install package)))
@@ -229,7 +228,6 @@
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook    #'flycheck-mode)
-(add-hook 'prog-mode-hook       #'idle-highlight-mode)
 
 
 (setq cider-use-overlays                    t
