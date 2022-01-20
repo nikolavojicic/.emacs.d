@@ -24,7 +24,6 @@
                    flx-ido
                    paredit
                    flycheck
-                   powershell
                    clojure-mode
                    expand-region
                    plantuml-mode
