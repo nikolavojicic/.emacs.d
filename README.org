@@ -14,10 +14,11 @@
 
 *** Window
 
-    | q       | quit help     |   | C-x 1   | close all but current |
-    | C-x o   | jump to next  |   | C-x 2   | split north-south     |
-    | C-x 0   | close current |   | C-x 3   | split west-east       |
-    | C-x 5 2 | new frame     |   | C-x 5 o | jump to next frame    |
+    | q          | quit help                  |   | C-x 1   | close all but current |
+    | C-x o      | jump to next               |   | C-x 2   | split up-down         |
+    | C-x 0      | close current              |   | C-x 3   | split left-right      |
+    | F2 u/d/l/r | jump to up/down/left/right |   | C-x +   | equally size windows  |
+    | C-x 5 2    | new frame                  |   | C-x 5 o | jump to next frame    |
 
 *** Move
 
