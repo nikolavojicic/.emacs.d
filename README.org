@@ -120,15 +120,16 @@
 
 **** Agenda
 
-     | C-C C-s | schedule                |
-     | C-c C-d | deadline                |
-     | C-c C-z | add note (to :LOGBOOK:) |
-     | C-c [   | add file to agenda list |
-     | C-c a   | agenda view             |
-     | g       | refresh agenda          |
-     | S-f     | follow mode             |
-     | f / b   | move forward / back     |
-     | t       | change task status      |
+     | C-C C-s | schedule                     |
+     | C-c C-d | deadline                     |
+     | C-c C-z | add note (to :LOGBOOK:)      |
+     | C-c [   | add file to agenda list      |
+     | C-c ]   | remove file from agenda list |
+     | C-c a   | agenda view                  |
+     | g       | refresh agenda               |
+     | S-f     | follow mode                  |
+     | f / b   | move forward / back          |
+     | t       | change task status           |
 
 **** Repeat {w(eek) d(ay) m(onth) y(ear)}
 
@@ -183,11 +184,37 @@
      | C-c -                 | add line row             |
      | #+TBLFM: @3..@$1=@#-1 | row number formula       |
 
+**** Timer
+
+     | C-c C-x ;     | timer start countdown         |
+     | C-c C-x 0     | timer start relative          |
+     | C-u C-c C-x 0 | timer start relative + offset |
+     | C-c C-x ,     | timer toggle pause            |
+     | C-u C-c C-x , | timer stop                    |
+     | C-c C-x .     | insert timestamp              |
+     | C-c C-x -     | insert timestamp list         |
+
+**** Clock
+
+     | C-c C-x C-i            | clock in                      |
+     | C-c C-x C-o            | clock out                     |
+     | C-c C-x C-x            | clock restart                 |
+     | C-c C-x C-q            | clock quit                    |
+     | C-c C-x C-d            | clock display (C-c C-c close) |
+     | C-c C-x C-j            | jump to clocked task          |
+     | C-c C-x e              | set effort estimate           |
+     | M-RIGHT / LEFT         | level inc / dec effort        |
+     | #+PROPERTY: Effort_ALL | def effort values             |
+     | C-c C-x C-c            | open column view (Q close)    |
+     | #+COLUMNS:             | customize column view         |
+
 **** Various
 
-     | C-c C-c            | activate #+ line |
-     | C-c c              | prompt capture   |
-     | :DRAWERNAME: :END: | custom drawer    |
+     | #+SETUPFILE  | file wth settings                             |
+     | C-c C-c      | activate #+ line                              |
+     | C-c c        | prompt capture                                |
+     | :DRAWERNAME: | custom drawer                                 |
+     | :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS: |
 
 ** Emacs installation on Windows
 
@@ -200,8 +227,3 @@
       -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
    5. Clone or download this repository to =C:\home\.emacs.d=
    6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
-
-** Monaco font installation on Windows
-
-   1. [[https://fontsgeek.com/fonts/Monaco-Regular][Download Monaco Regular]]
-   2. Extract and run =.ttf= file

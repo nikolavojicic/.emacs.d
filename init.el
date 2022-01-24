@@ -267,6 +267,7 @@
       org-hide-emphasis-markers      t
       org-confirm-babel-evaluate     nil
       plantuml-default-exec-mode     'jar
+      org-enforce-todo-dependencies  t
       org-startup-with-inline-images t)
 
 
