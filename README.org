@@ -207,6 +207,7 @@
      | #+PROPERTY: Effort_ALL | def effort values             |
      | C-c C-x C-c            | open column view (Q close)    |
      | #+COLUMNS:             | customize column view         |
+     | #+BEGIN: columnview    | capture column view           |
 
 **** Various
 
