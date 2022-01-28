@@ -275,6 +275,9 @@
   (define-key org-mode-map (kbd "C-c a") #'org-agenda)
   (define-key org-mode-map (kbd "C-c c") #'org-capture)
   (define-key org-mode-map (kbd "C-c l") #'org-store-link)
+  (define-key org-mode-map (kbd "<f5>" ) (lambda ()
+                                           (interactive)
+                                           (kill-new (org-id-get-create))))
   (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
   (org-babel-do-load-languages
    'org-babel-load-languages

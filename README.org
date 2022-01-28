@@ -157,16 +157,17 @@
 
 **** Link
 
-     | C-c C-l                            | create link           |
-     | C-c C-o                            | open link             |
-     | C-c &                              | return back from link |
-     | [[https://orgmode.org/][link]]                               | website               |
-     | file:~/.emacs.d/README.org         | file                  |
-     | file:~/.emacs.d/README.org::17     | file at line          |
-     | file:~/.emacs.d/README.org::*Basic | file at headline      |
-     | [[here][Goto here]]                          | radio target <<here>> |
-     | [[Org]]                                | subsection            |
-     | TODO                               | gnus email            |
+     | C-c C-l                                 | create / edit link        |
+     | C-c C-o                                 | open link                 |
+     | C-c &                                   | return back from link     |
+     | [[https://orgmode.org/][link]]                                    | website                   |
+     | file:~/.emacs.d/README.org              | file                      |
+     | file:~/.emacs.d/README.org::17          | file at line              |
+     | file:~/.emacs.d/README.org::*Basic      | file at headline          |
+     | [[here][Goto here]]                               | radio target <<here>>     |
+     | [[Org]]                                     | subsection                |
+     | id:d34d34fe-1b76-4e1d-a60d-a119bef6f542 | :PROPERTIES: -> :ID: (F5) |
+     | TODO                                    | gnus email                |
 
 **** Table
 
