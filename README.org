@@ -108,6 +108,7 @@
      | M-UP / DOWN      | move section up / down   |
      | M-S-UP / DOWN    | move heading up / down   |
      | C-c C-w          | move under another level |
+     | S-UP / DOWN      | priority inc / dec       |
 
 **** Status {TODO / DONE}
 
@@ -178,12 +179,12 @@
      | <length-number>       | set max column length    |
      | C-c TAB               | apply max column length  |
      | C-c ^                 | sort table               |
-     | M-S-DOWN              | add row                  |
-     | M-S-UP                | delete row               |
-     | M-S-RIGHT             | add column               |
-     | M-S-LEFT              | delete column            |
+     | M-S-DOWN / UP         | add / delete row         |
+     | M-S-RIGHT / LEFT      | add / delete column      |
      | C-c -                 | add line row             |
      | #+TBLFM: @3..@$1=@#-1 | row number formula       |
+     | $colnum @rownum       | references in #+TBLFM:   |
+     | #+CONSTANTS:          | constants for formulas   |
 
 **** Timer
 
