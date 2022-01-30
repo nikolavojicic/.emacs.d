@@ -218,6 +218,7 @@
      | C-c c        | prompt capture                                |
      | :DRAWERNAME: | custom drawer                                 |
      | :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS: |
+     | C-c C-e      | export menu                                   |
 
 ** Emacs installation on Windows
 

@@ -259,9 +259,9 @@
 ;;            |___/
 
 
-(setq org-log-done                   t
+(setq org-log-done                   'note
       plantuml-jar-path              (getenv "plantuml")
-      org-log-reschedule             t
+      org-log-reschedule             'note
       org-log-into-drawer            'LOGBOOK
       org-plantuml-jar-path          (expand-file-name (getenv "plantuml"))
       org-hide-emphasis-markers      t
