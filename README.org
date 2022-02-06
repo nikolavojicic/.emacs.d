@@ -219,6 +219,8 @@
      | :DRAWERNAME: | custom drawer                                 |
      | :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS: |
      | C-c C-e      | export menu                                   |
+     | C-c C-,      | insert begin...end block                      |
+     | C-c '        | open begin_src in new window                  |
 
 ** Emacs installation on Windows
 
