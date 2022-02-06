@@ -282,10 +282,13 @@
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((C          . t)
+     (js         . t)
      (http       . t)
      (plantuml   . t)
      (emacs-lisp . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (setq org-capture-templates
         '(("t" "Tasks" entry (file+headline "~/.emacs.d/org/tasks.org" "Tasks")
-           "* TODO %?\n  %iSCHEDULED: %U\n  %a"))))
+           "* TODO %?\n  %iSCHEDULED: %U\n  %a")))
+  (setq org-babel-js-function-wrapper
+        "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"))
