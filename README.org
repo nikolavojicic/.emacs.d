@@ -213,14 +213,15 @@
 
 **** Various
 
-     | #+SETUPFILE  | file wth settings                             |
-     | C-c C-c      | activate #+ line                              |
-     | C-c c        | prompt capture                                |
-     | :DRAWERNAME: | custom drawer                                 |
-     | :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS: |
-     | C-c C-e      | export menu                                   |
-     | C-c C-,      | insert begin...end block                      |
-     | C-c '        | open begin_src in new window                  |
+     | #+SETUPFILE  | file wth settings                                  |
+     | C-c C-c      | activate #+ line                                   |
+     | C-c c        | prompt capture                                     |
+     | :DRAWERNAME: | custom drawer                                      |
+     | :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS:      |
+     | C-c C-e      | export menu                                        |
+     | C-c C-,      | insert begin...end block                           |
+     | C-c '        | open begin_src in new window                       |
+     | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
 ** Emacs installation on Windows
 
