@@ -4,13 +4,14 @@
 
 *** Basic
 
-    | C-g     | abort binding |   | C-x C-s  | save file           |
-    | C-/     | undo          |   | C-x C-f  | find / create file  |
-    | C-z     | suspend emacs |   | C-x s    | save some files     |
-    | C-x C-c | exit emacs    |   | C-r      | minibuffer previous |
-    | C-x b   | switch buffer |   | C-s      | minibuffer next     |
-    | C-x k   | kill buffer   |   | C-x C- - | zoom out            |
-    | C-x C-b | list buffers  |   | C-x C- + | zoom in             |
+    | C-g         | abort binding        |   | C-x C-s  | save file           |
+    | C-/         | undo                 |   | C-x C-f  | find / create file  |
+    | C-z         | suspend emacs        |   | C-x s    | save some files     |
+    | C-x C-c     | exit emacs           |   | C-n      | minibuffer previous |
+    | C-x b       | switch buffer        |   | C-p      | minibuffer next     |
+    | C-x k       | kill buffer          |   | C-x C- - | zoom out            |
+    | C-x C-b     | list buffers         |   | C-x C- + | zoom in             |
+    | C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu           |
 
 *** Window
 
@@ -26,7 +27,7 @@
     | M-f   | next word            |   | M-b   | previous word         |
     | C-n   | next line            |   | C-p   | previous line         |
     | C-a   | line start           |   | C-e   | line end              |
-    | M-e   | next sentence        |   | M-a   | previous sentence     |
+    | M-a   | sentence start       |   | M-e   | sentence end          |
     | C-v   | next screen          |   | M-v   | previous screen       |
     | M-<   | buffer start         |   | M->   | buffer end            |
     | C-s   | search forward       |   | C-r   | search backward       |
