@@ -204,6 +204,7 @@
 (global-set-key (kbd "<f2> d") 'windmove-down)
 (global-set-key (kbd "<f2> l") 'windmove-left)
 (global-set-key (kbd "<f2> r") 'windmove-right)
+(global-set-key (kbd "<f2> s") 'window-swap-states)
 
 
 (fset 'yes-or-no-p 'y-or-n-p)
