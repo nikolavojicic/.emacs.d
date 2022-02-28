@@ -27,6 +27,7 @@
                    clojure-mode
                    expand-region
                    plantuml-mode
+                   zenburn-theme
                    ido-vertical-mode
                    flycheck-clj-kondo
                    ido-completing-read+))
@@ -53,6 +54,23 @@
 ;; =========
 
 
+(defun my/default-theme-overrides ()
+  (set-cursor-color "red")
+  (set-background-color "lightgray")
+  (set-face-background 'fringe "lightgray")
+  (set-face-foreground 'vertical-border "darkgray"))
+
+
+(global-set-key
+ [f12]
+ (lambda ()
+   (interactive)
+   (if (eq (car custom-enabled-themes) 'zenburn)
+       (progn (disable-theme 'zenburn)
+              (my/default-theme-overrides))
+     (load-theme 'zenburn t))))
+
+
 (menu-bar-mode          -1)
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
@@ -76,13 +94,8 @@
  :family  "iosevka ss07")
 
 
-(set-cursor-color "red")
-(set-background-color "lightgray")
-(set-face-background 'fringe "lightgray")
-(set-face-foreground 'vertical-border "darkgray")
+(my/default-theme-overrides)
 (set-frame-parameter nil 'fullscreen 'fullboth)
-
-
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 
