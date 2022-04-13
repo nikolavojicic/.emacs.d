@@ -58,7 +58,8 @@
   (set-cursor-color "red")
   (set-background-color "lightgray")
   (set-face-background 'fringe "lightgray")
-  (set-face-foreground 'vertical-border "darkgray"))
+  (set-face-foreground 'vertical-border "darkgray")
+  (set-face-foreground 'line-number-current-line "red"))
 
 
 (global-set-key
