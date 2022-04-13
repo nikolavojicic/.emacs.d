@@ -137,6 +137,7 @@
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
+      flycheck-display-errors-function    nil
       save-interprogram-paste-before-kill t
       flycheck-check-syntax-automatically '(save idle-change mode-enabled))
 
@@ -161,6 +162,15 @@
 (with-eval-after-load 'paredit
   (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
   (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly))
+
+
+(with-eval-after-load 'flycheck
+  (define-key flycheck-mode-map (kbd "<f6>")
+    (lambda ()
+      (interactive)
+      (if (get-buffer-window flycheck-error-list-buffer)
+          (quit-windows-on flycheck-error-list-buffer)
+        (list-flycheck-errors)))))
 
 
 ;; navigation =========================================
