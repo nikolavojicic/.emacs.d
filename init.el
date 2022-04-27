@@ -204,6 +204,7 @@
 
 (setq apropos-do-all                         t
       ido-use-faces                          nil
+      recenter-positions                     '(top middle bottom)
       recentf-max-menu-items                 40
       ido-use-virtual-buffers                t
       ido-enable-flex-matching               t
