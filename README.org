@@ -54,6 +54,7 @@
     | C-M SPACE     | select next word |   | C-u C-c .   | insert timestamp               |
     | C-x w h       | highlight regex  |   | C-x w r     | unhighlight regex              |
     | C-x w .       | highlight symbol |   | C-u C-x w r | unhighlight all                |
+    | C-o           | add line below   |   | M-DEL       | cut word backward              |
 
 *** Paredit
 
