@@ -125,16 +125,17 @@
 
 *** Agenda
 
-    | C-C C-s | schedule                     |
-    | C-c C-d | deadline                     |
-    | C-c C-z | add note (to :LOGBOOK:)      |
-    | C-c [   | add file to agenda list      |
-    | C-c ]   | remove file from agenda list |
-    | C-c a   | agenda view                  |
-    | g       | refresh agenda               |
-    | S-f     | follow mode                  |
-    | f / b   | move forward / back          |
-    | t       | change task status           |
+    | C-C C-s     | schedule                     |
+    | C-c C-d     | deadline                     |
+    | C-c C-z     | add note (to :LOGBOOK:)      |
+    | C-c [       | add file to agenda list      |
+    | C-c ]       | remove file from agenda list |
+    | C-c a       | agenda view                  |
+    | C-u 5 C-c a | agenda view for 5 days       |
+    | g           | refresh agenda               |
+    | S-f         | follow mode                  |
+    | f / b       | move forward / back          |
+    | t           | change task status           |
 
 *** Repeat {w(eek) d(ay) m(onth) y(ear)}
 
@@ -157,8 +158,9 @@
 
 *** Archive
 
-    | C-c C-x C-a | archive subtree     |
-    | #+ARCHIVE:  | define archive file |
+    | C-c C-x C-a | internal archive subtree |
+    | C-c C-x C-s | move subtree to archive  |
+    | #+ARCHIVE:  | define archive file      |
 
 *** Link
 
