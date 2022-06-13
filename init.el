@@ -319,6 +319,7 @@
    'org-babel-load-languages
    '((C          . t)
      (js         . t)
+     (java       . t)
      (http       . t)
      (plantuml   . t)
      (emacs-lisp . t)))
