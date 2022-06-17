@@ -58,7 +58,9 @@
   (set-background-color "lightgray")
   (set-face-background 'fringe "lightgray")
   (set-face-foreground 'vertical-border "darkgray")
-  (set-face-foreground 'line-number-current-line "red"))
+  (set-face-foreground 'line-number-current-line "red")
+  (with-eval-after-load 'org
+    (set-face-background 'org-block "gray90")))
 
 
 (global-set-key
