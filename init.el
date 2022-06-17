@@ -60,7 +60,11 @@
   (set-face-foreground 'vertical-border "darkgray")
   (set-face-foreground 'line-number-current-line "red")
   (with-eval-after-load 'org
-    (set-face-background 'org-block "gray90")))
+    (set-face-background 'org-block "gray90")
+    (set-face-attribute 'org-meta-line nil
+                        :background "gray75"
+                        :foreground "black"
+                        :slant 'italic)))
 
 
 (global-set-key
@@ -70,7 +74,12 @@
    (if (eq (car custom-enabled-themes) 'zenburn)
        (progn (disable-theme 'zenburn)
               (my/default-theme-overrides))
-     (load-theme 'zenburn t))))
+     (progn (load-theme 'zenburn t)
+            (with-eval-after-load 'org
+              (set-face-attribute 'org-meta-line nil
+                                  :background nil
+                                  :foreground nil
+                                  :slant 'italic))))))
 
 
 (menu-bar-mode          -1)
