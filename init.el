@@ -64,7 +64,10 @@
     (set-face-attribute 'org-meta-line nil
                         :background "gray75"
                         :foreground "black"
-                        :slant 'italic)))
+                        :slant 'italic))
+  (with-eval-after-load 'magit
+    (set-face-background 'magit-section-highlight "gray90")
+    (set-face-background 'magit-diff-context-highlight "gray90")))
 
 
 (global-set-key
