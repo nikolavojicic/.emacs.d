@@ -312,7 +312,7 @@
       plantuml-jar-path              (getenv "plantuml")
       org-log-reschedule             'note
       org-log-into-drawer            'LOGBOOK
-      org-plantuml-jar-path          (expand-file-name (getenv "plantuml"))
+      org-plantuml-jar-path          (getenv "plantuml")
       org-src-fontify-natively       t
       org-hide-emphasis-markers      t
       org-confirm-babel-evaluate     nil
