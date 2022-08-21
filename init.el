@@ -341,7 +341,8 @@
      (emacs-lisp . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (setq org-capture-templates
-        '(("t" "Tasks" entry (file+headline "~/.emacs.d/org/tasks.org" "Tasks")
+        `(("t" "Tasks" entry
+           (file+headline ,(expand-file-name "org/mobile/tasks.org" (getenv "dropbox")) "Tasks")
            "* TODO %?\n  %iSCHEDULED: %U\n  %a")))
   (setq org-babel-js-function-wrapper
         "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"))
