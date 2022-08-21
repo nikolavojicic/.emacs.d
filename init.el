@@ -309,6 +309,7 @@
 
 
 (setq org-log-done                   'note
+      org-agenda-files               (list (expand-file-name "org/mobile" (getenv "dropbox")))
       plantuml-jar-path              (getenv "plantuml")
       org-log-reschedule             'note
       org-log-into-drawer            'LOGBOOK
