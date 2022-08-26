@@ -2,3 +2,4 @@
 !.gitignore
 !README.org
 !init.el
+!concrete-theme.el

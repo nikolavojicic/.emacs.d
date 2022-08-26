@@ -53,21 +53,7 @@
 ;; =========
 
 
-(defun my/default-theme-overrides ()
-  (set-cursor-color "red")
-  (set-background-color "lightgray")
-  (set-face-background 'fringe "lightgray")
-  (set-face-foreground 'vertical-border "darkgray")
-  (set-face-foreground 'line-number-current-line "red")
-  (with-eval-after-load 'org
-    (set-face-background 'org-block "gray90")
-    (set-face-attribute 'org-meta-line nil
-                        :background "gray75"
-                        :foreground "black"
-                        :slant 'italic))
-  (with-eval-after-load 'magit
-    (set-face-background 'magit-section-highlight "gray90")
-    (set-face-background 'magit-diff-context-highlight "gray90")))
+(load-theme 'concrete t)
 
 
 (global-set-key
@@ -76,13 +62,9 @@
    (interactive)
    (if (eq (car custom-enabled-themes) 'zenburn)
        (progn (disable-theme 'zenburn)
-              (my/default-theme-overrides))
-     (progn (load-theme 'zenburn t)
-            (with-eval-after-load 'org
-              (set-face-attribute 'org-meta-line nil
-                                  :background nil
-                                  :foreground nil
-                                  :slant 'italic))))))
+              (load-theme 'concrete t))
+     (progn (disable-theme 'concrete)
+            (load-theme 'zenburn t)))))
 
 
 (menu-bar-mode          -1)
@@ -109,7 +91,6 @@
  :family  "iosevka ss07")
 
 
-(my/default-theme-overrides)
 (set-frame-parameter nil 'fullscreen 'fullboth)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
