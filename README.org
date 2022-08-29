@@ -1,243 +1,244 @@
+#+STARTUP: indent
 #+STARTUP: hidestars
 
 ** Key bindings
 
 *** Basic
 
-    | C-g         | abort binding        |   | C-x C-s  | save file           |
-    | C-/         | undo                 |   | C-x C-f  | find / create file  |
-    | C-z         | suspend emacs        |   | C-x s    | save some files     |
-    | C-x C-c     | exit emacs           |   | C-n      | minibuffer previous |
-    | C-x b       | switch buffer        |   | C-p      | minibuffer next     |
-    | C-x k       | kill buffer          |   | C-x C- - | zoom out            |
-    | C-x C-b     | list buffers         |   | C-x C- + | zoom in             |
-    | C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu           |
+| C-g         | abort binding        |   | C-x C-s  | save file           |
+| C-/         | undo                 |   | C-x C-f  | find / create file  |
+| C-z         | suspend emacs        |   | C-x s    | save some files     |
+| C-x C-c     | exit emacs           |   | C-n      | minibuffer previous |
+| C-x b       | switch buffer        |   | C-p      | minibuffer next     |
+| C-x k       | kill buffer          |   | C-x C- - | zoom out            |
+| C-x C-b     | list buffers         |   | C-x C- + | zoom in             |
+| C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu           |
 
 *** Window
 
-    | q          | quit help                  |   | C-x 1   | close all but current |
-    | C-x o      | jump to next               |   | C-x 2   | split up-down         |
-    | C-x 0      | close current              |   | C-x 3   | split left-right      |
-    | F2 u/d/l/r | jump to up/down/left/right |   | C-x +   | equally size windows  |
-    | C-x 5 2    | new frame                  |   | C-x 5 o | jump to next frame    |
+| q          | quit help                  |   | C-x 1   | close all but current |
+| C-x o      | jump to next               |   | C-x 2   | split up-down         |
+| C-x 0      | close current              |   | C-x 3   | split left-right      |
+| F2 u/d/l/r | jump to up/down/left/right |   | C-x +   | equally size windows  |
+| C-x 5 2    | new frame                  |   | C-x 5 o | jump to next frame    |
 
 *** Move
 
-    | C-f   | next char            |   | C-b   | previous char         |
-    | M-f   | next word            |   | M-b   | previous word         |
-    | C-n   | next line            |   | C-p   | previous line         |
-    | C-a   | line start           |   | C-e   | line end              |
-    | M-a   | sentence start       |   | M-e   | sentence end          |
-    | C-v   | next screen          |   | M-v   | previous screen       |
-    | M-<   | buffer start         |   | M->   | buffer end            |
-    | C-s   | search forward       |   | C-r   | search backward       |
-    | C-M-s | search forward regex |   | C-M-r | search backward regex |
-    | M-g g | jump to line         |   | C-l   | center / top / bottom |
-    | C-M-v | scroll other window  |   | C-M-l | scroll heuristically  |
+| C-f   | next char            |   | C-b   | previous char         |
+| M-f   | next word            |   | M-b   | previous word         |
+| C-n   | next line            |   | C-p   | previous line         |
+| C-a   | line start           |   | C-e   | line end              |
+| M-a   | sentence start       |   | M-e   | sentence end          |
+| C-v   | next screen          |   | M-v   | previous screen       |
+| M-<   | buffer start         |   | M->   | buffer end            |
+| C-s   | search forward       |   | C-r   | search backward       |
+| C-M-s | search forward regex |   | C-M-r | search backward regex |
+| M-g g | jump to line         |   | C-l   | center / top / bottom |
+| C-M-v | scroll other window  |   | C-M-l | scroll heuristically  |
 
 *** Text
 
-    | C-space       | set mark         |   | C-M-h       | select form                    |
-    | M-w           | copy selected    |   | C-x h       | select all                     |
-    | C-y           | paste latest cut |   | M-y         | replace C-y with previous cut  |
-    | C-d           | delete char      |   | C-j         | new line + indent              |
-    | M-d           | cut word         |   | M-;         | (un)comment selected           |
-    | C-k           | cut text forward |   | M-/         | autocomplete                   |
-    | C-S-backspace | cut line         |   | M-\         | clear spaces around point      |
-    | M-k           | cut sentence     |   | M-%         | replace                        |
-    | C-w           | cut selected     |   | M-l         | lowercase word                 |
-    | M-u           | uppercase word   |   | C-x C-l     | lowercase region               |
-    | C-x C-u       | uppercase region |   | C-x space   | rectangle region               |
-    | C-x r t       | string rectangle |   | C-- C-=     | contract region                |
-    | C-=           | expand region    |   | (M-0) F4    | stop / play (until fail) macro |
-    | F3            | start macro      |   | C-x C-o     | delete surrounding blank lines |
-    | C-M SPACE     | select next word |   | C-u C-c .   | insert timestamp               |
-    | C-x w h       | highlight regex  |   | C-x w r     | unhighlight regex              |
-    | C-x w .       | highlight symbol |   | C-u C-x w r | unhighlight all                |
-    | C-o           | add line below   |   | M-DEL       | cut word backward              |
+| C-space       | set mark         |   | C-M-h       | select form                    |
+| M-w           | copy selected    |   | C-x h       | select all                     |
+| C-y           | paste latest cut |   | M-y         | replace C-y with previous cut  |
+| C-d           | delete char      |   | C-j         | new line + indent              |
+| M-d           | cut word         |   | M-;         | (un)comment selected           |
+| C-k           | cut text forward |   | M-/         | autocomplete                   |
+| C-S-backspace | cut line         |   | M-\         | clear spaces around point      |
+| M-k           | cut sentence     |   | M-%         | replace                        |
+| C-w           | cut selected     |   | M-l         | lowercase word                 |
+| M-u           | uppercase word   |   | C-x C-l     | lowercase region               |
+| C-x C-u       | uppercase region |   | C-x space   | rectangle region               |
+| C-x r t       | string rectangle |   | C-- C-=     | contract region                |
+| C-=           | expand region    |   | (M-0) F4    | stop / play (until fail) macro |
+| F3            | start macro      |   | C-x C-o     | delete surrounding blank lines |
+| C-M SPACE     | select next word |   | C-u C-c .   | insert timestamp               |
+| C-x w h       | highlight regex  |   | C-x w r     | unhighlight regex              |
+| C-x w .       | highlight symbol |   | C-u C-x w r | unhighlight all                |
+| C-o           | add line below   |   | M-DEL       | cut word backward              |
 
 *** Paredit
 
-    | (      | open and close delimiter     |   | )     | go through closing delimiters |
-    | M-([{" | wrap with delimiters         |   | M-s   | remove delimiters             |
-    | C-(    | move opening delimiter left  |   | C-)   | move closing delimiter right  |
-    | C-{    | move opening delimiter right |   | C-}   | move closing delimiter left   |
-    | M-down | remove next and unwrap       |   | M-up  | remove previous and unwrap    |
-    | M-S    | split delimiters             |   | M-J   | join delimiters               |
-    | C-M-f  | jump to closing delimiter    |   | C-M-b | jump to opening delimiter     |
+| (      | open and close delimiter     |   | )     | go through closing delimiters |
+| M-([{" | wrap with delimiters         |   | M-s   | remove delimiters             |
+| C-(    | move opening delimiter left  |   | C-)   | move closing delimiter right  |
+| C-{    | move opening delimiter right |   | C-}   | move closing delimiter left   |
+| M-down | remove next and unwrap       |   | M-up  | remove previous and unwrap    |
+| M-S    | split delimiters             |   | M-J   | join delimiters               |
+| C-M-f  | jump to closing delimiter    |   | C-M-b | jump to opening delimiter     |
 
-    - delimiters: () [] {} ""
+- delimiters: () [] {} ""
 
 *** Company
 
-    | M-n       | next choice             |
-    | M-p       | previous choice         |
-    | M-(digit) | nth choice              |
-    | f1        | see docs for selected   |
-    | C-w       | see source for selected |
+| M-n       | next choice             |
+| M-p       | previous choice         |
+| M-(digit) | nth choice              |
+| f1        | see docs for selected   |
+| C-w       | see source for selected |
 
 *** Cider
 
-    | C-c C-k     | eval buffer      |   | C-c M-j     | run and open       |
-    | C-c C-e     | eval form, show  |   | C-c M-n M-n | switch repl ns     |
-    | C-u C-c C-e | eval form, write |   | C-u C-c C-o | clear buffer       |
-    | C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back |
-    | C-c M-i     | inspect form     |   | C-u C-c C-c | debug form         |
-    | M-.         | go to symbol def |   | M-,         | return back        |
-    | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
-    | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
+| C-c C-k     | eval buffer      |   | C-c M-j     | run and open       |
+| C-c C-e     | eval form, show  |   | C-c M-n M-n | switch repl ns     |
+| C-u C-c C-e | eval form, write |   | C-u C-c C-o | clear buffer       |
+| C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back |
+| C-c M-i     | inspect form     |   | C-u C-c C-c | debug form         |
+| M-.         | go to symbol def |   | M-,         | return back        |
+| C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
+| C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
 
 *** Magit
 
-    | C-x g | status               |
-    | ?     | help                 |
-    | C-n   | next     line        |
-    | C-p   | previous line        |
-    | n     | next     item        |
-    | p     | previous item        |
-    | M-n   | next     section     |
-    | M-p   | previous section     |
-    | TAB   | toggle expand parent |
-    | C-TAB | toggle expand all    |
+| C-x g | status               |
+| ?     | help                 |
+| C-n   | next     line        |
+| C-p   | previous line        |
+| n     | next     item        |
+| p     | previous item        |
+| M-n   | next     section     |
+| M-p   | previous section     |
+| TAB   | toggle expand parent |
+| C-TAB | toggle expand all    |
 
 ** Org
 
 *** Outline {*+}
 
-    | TAB              | toggle local  visibility |
-    | S-TAB            | toggle global visibility |
-    | C-ENTER          | add same level heading   |
-    | M-RIGHT / LEFT   | level inc / dec headline |
-    | M-S-RIGHT / LEFT | level inc / dec section  |
-    | M-UP / DOWN      | move section up / down   |
-    | M-S-UP / DOWN    | move heading up / down   |
-    | C-c C-w          | move under another level |
-    | S-UP / DOWN      | priority inc / dec       |
+| TAB              | toggle local  visibility |
+| S-TAB            | toggle global visibility |
+| C-ENTER          | add same level heading   |
+| M-RIGHT / LEFT   | level inc / dec headline |
+| M-S-RIGHT / LEFT | level inc / dec section  |
+| M-UP / DOWN      | move section up / down   |
+| M-S-UP / DOWN    | move heading up / down   |
+| C-c C-w          | move under another level |
+| S-UP / DOWN      | priority inc / dec       |
 
 *** Status {TODO / DONE}
 
-    | S-RIGHT / LEFT | cycling                |
-    | C-c C-t        | keywords menu          |
-    | #+SEQ_TODO     | define new keyword     |
-    | TODO(t@/!)     | specify logging        |
-    |                | @ - ts + note on enter |
-    |                | ! - ts        on exit  |
+| S-RIGHT / LEFT | cycling                |
+| C-c C-t        | keywords menu          |
+| #+SEQ_TODO     | define new keyword     |
+| TODO(t@/!)     | specify logging        |
+|                | @ - ts + note on enter |
+|                | ! - ts        on exit  |
 
 *** Agenda
 
-    | C-C C-s     | schedule                     |
-    | C-c C-d     | deadline                     |
-    | C-c C-z     | add note (to :LOGBOOK:)      |
-    | C-c [       | add file to agenda list      |
-    | C-c ]       | remove file from agenda list |
-    | C-c a       | agenda view                  |
-    | C-u 5 C-c a | agenda view for 5 days       |
-    | g           | refresh agenda               |
-    | S-f         | follow mode                  |
-    | f / b       | move forward / back          |
-    | t           | change task status           |
+| C-C C-s     | schedule                     |
+| C-c C-d     | deadline                     |
+| C-c C-z     | add note (to :LOGBOOK:)      |
+| C-c [       | add file to agenda list      |
+| C-c ]       | remove file from agenda list |
+| C-c a       | agenda view                  |
+| C-u 5 C-c a | agenda view for 5 days       |
+| g           | refresh agenda               |
+| S-f         | follow mode                  |
+| f / b       | move forward / back          |
+| t           | change task status           |
 
 *** Repeat {w(eek) d(ay) m(onth) y(ear)}
 
-    | +1w  | 1 week                    |
-    | ++1w | 1 week in future          |
-    | .+1w | 1 week after task is DONE |
+| +1w  | 1 week                    |
+| ++1w | 1 week in future          |
+| .+1w | 1 week after task is DONE |
 
 *** Checklist {- [ ]}
 
-    | C-c C-c   | cycling         |
-    | M-S-ENTER | new item        |
-    | [/]       | number of done  |
-    | [%]       | percent of done |
+| C-c C-c   | cycling         |
+| M-S-ENTER | new item        |
+| [/]       | number of done  |
+| [%]       | percent of done |
 
 *** Tag
 
-    | C-c C-q   | assign to headline    |
-    | #+TAGS:   | define new tags       |
-    | -TAG_NAME | exclude from agenda+m |
+| C-c C-q   | assign to headline    |
+| #+TAGS:   | define new tags       |
+| -TAG_NAME | exclude from agenda+m |
 
 *** Archive
 
-    | C-c C-x C-a | internal archive subtree |
-    | C-c C-x C-s | move subtree to archive  |
-    | #+ARCHIVE:  | define archive file      |
+| C-c C-x C-a | internal archive subtree |
+| C-c C-x C-s | move subtree to archive  |
+| #+ARCHIVE:  | define archive file      |
 
 *** Link
 
-    | C-c C-l                                 | create / edit link        |
-    | C-c C-o                                 | open link                 |
-    | C-c &                                   | return back from link     |
-    | [[https://orgmode.org/][website]]                                 | website                   |
-    | file:~/.emacs.d/README.org              | file                      |
-    | file:~/.emacs.d/README.org::17          | file at line              |
-    | file:~/.emacs.d/README.org::*Basic      | file at headline          |
-    | [[here][Goto here]]                               | radio target <<here>>     |
-    | [[Org]]                                     | section                   |
-    | id:d34d34fe-1b76-4e1d-a60d-a119bef6f542 | :PROPERTIES: -> :ID: (F5) |
-    | TODO                                    | gnus email                |
+| C-c C-l                                 | create / edit link        |
+| C-c C-o                                 | open link                 |
+| C-c &                                   | return back from link     |
+| [[https://orgmode.org/][website]]                                 | website                   |
+| file:~/.emacs.d/README.org              | file                      |
+| file:~/.emacs.d/README.org::17          | file at line              |
+| file:~/.emacs.d/README.org::*Basic      | file at headline          |
+| [[here][Goto here]]                               | radio target <<here>>     |
+| [[Org]]                                     | section                   |
+| id:d34d34fe-1b76-4e1d-a60d-a119bef6f542 | :PROPERTIES: -> :ID: (F5) |
+| TODO                                    | gnus email                |
 
 *** Table
 
-    | TAB                   | next cell                |
-    | S-TAB                 | previous cell            |
-    | M-LEFT / RIGHT        | move column left / right |
-    | M-DOWN / UP           | move row up / down       |
-    | <length-number>       | set max column length    |
-    | C-c TAB               | apply max column length  |
-    | C-c ^                 | sort table               |
-    | M-S-DOWN / UP         | add / delete row         |
-    | M-S-RIGHT / LEFT      | add / delete column      |
-    | C-c -                 | add line row             |
-    | #+TBLFM: @3..@$1=@#-1 | row number formula       |
-    | $colnum @rownum       | references in #+TBLFM:   |
-    | #+CONSTANTS:          | constants for formulas   |
+| TAB                   | next cell                |
+| S-TAB                 | previous cell            |
+| M-LEFT / RIGHT        | move column left / right |
+| M-DOWN / UP           | move row up / down       |
+| <length-number>       | set max column length    |
+| C-c TAB               | apply max column length  |
+| C-c ^                 | sort table               |
+| M-S-DOWN / UP         | add / delete row         |
+| M-S-RIGHT / LEFT      | add / delete column      |
+| C-c -                 | add line row             |
+| #+TBLFM: @3..@$1=@#-1 | row number formula       |
+| $colnum @rownum       | references in #+TBLFM:   |
+| #+CONSTANTS:          | constants for formulas   |
 
 *** Timer
 
-    | C-c C-x ;     | timer start countdown         |
-    | C-c C-x 0     | timer start relative          |
-    | C-u C-c C-x 0 | timer start relative + offset |
-    | C-c C-x ,     | timer toggle pause            |
-    | C-u C-c C-x , | timer stop                    |
-    | C-c C-x .     | insert timestamp              |
-    | C-c C-x -     | insert timestamp list         |
+| C-c C-x ;     | timer start countdown         |
+| C-c C-x 0     | timer start relative          |
+| C-u C-c C-x 0 | timer start relative + offset |
+| C-c C-x ,     | timer toggle pause            |
+| C-u C-c C-x , | timer stop                    |
+| C-c C-x .     | insert timestamp              |
+| C-c C-x -     | insert timestamp list         |
 
 *** Clock
 
-    | C-c C-x C-i            | clock in                      |
-    | C-c C-x C-o            | clock out                     |
-    | C-c C-x C-x            | clock restart                 |
-    | C-c C-x C-q            | clock quit                    |
-    | C-c C-x C-d            | clock display (C-c C-c close) |
-    | C-c C-x C-j            | jump to clocked task          |
-    | C-c C-x e              | set effort estimate           |
-    | C-u C-c C-x C-x        | recently clocked tasks        |
-    | M-RIGHT / LEFT         | level inc / dec effort        |
-    | #+PROPERTY: Effort_ALL | def effort values             |
-    | C-c C-x C-c            | open column view (Q close)    |
-    | #+COLUMNS:             | customize column view         |
-    | #+BEGIN: columnview    | capture column view           |
+| C-c C-x C-i            | clock in                      |
+| C-c C-x C-o            | clock out                     |
+| C-c C-x C-x            | clock restart                 |
+| C-c C-x C-q            | clock quit                    |
+| C-c C-x C-d            | clock display (C-c C-c close) |
+| C-c C-x C-j            | jump to clocked task          |
+| C-c C-x e              | set effort estimate           |
+| C-u C-c C-x C-x        | recently clocked tasks        |
+| M-RIGHT / LEFT         | level inc / dec effort        |
+| #+PROPERTY: Effort_ALL | def effort values             |
+| C-c C-x C-c            | open column view (Q close)    |
+| #+COLUMNS:             | customize column view         |
+| #+BEGIN: columnview    | capture column view           |
 
 *** Various
 
-    | #+SETUPFILE  | file wth settings                                  |
-    | C-c C-c      | activate #+ line                                   |
-    | C-c c        | prompt capture                                     |
-    | :DRAWERNAME: | custom drawer                                      |
-    | :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS:      |
-    | C-c C-e      | export menu                                        |
-    | C-c C-,      | insert begin...end block                           |
-    | C-c '        | open begin_src in new window                       |
-    | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
+| #+SETUPFILE  | file wth settings                                  |
+| C-c C-c      | activate #+ line                                   |
+| C-c c        | prompt capture                                     |
+| :DRAWERNAME: | custom drawer                                      |
+| :PROPERTIES: | agenda search, :LOGGING:, :ORDERED: :COLUMNS:      |
+| C-c C-e      | export menu                                        |
+| C-c C-,      | insert begin...end block                           |
+| C-c '        | open begin_src in new window                       |
+| emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
 ** Emacs installation on Windows
 
-   1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
-      (=i686= for 32-bit, =x86_64= for 64-bit) and extract it to =C:\emacs-version=
-   2. Computer -> Properties -> Advanced system settings -> Environment Variables\\
-      -> System variables -> Path -> Edit -> add =C:\emacs-version\bin=
-   3. Create folder =C:\home=
-   4. Computer -> Properties -> Advanced system settings -> Environment Variables\\
-      -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
-   5. Clone or download this repository to =C:\home\.emacs.d=
-   6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
+1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
+   (=i686= for 32-bit, =x86_64= for 64-bit) and extract it to =C:\emacs-version=
+2. Computer -> Properties -> Advanced system settings -> Environment Variables\\
+   -> System variables -> Path -> Edit -> add =C:\emacs-version\bin=
+3. Create folder =C:\home=
+4. Computer -> Properties -> Advanced system settings -> Environment Variables\\
+   -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
+5. Clone or download this repository to =C:\home\.emacs.d=
+6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
