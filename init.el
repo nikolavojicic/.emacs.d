@@ -21,6 +21,7 @@
         (zenburn-theme        . "melpa-stable")
         (ido-vertical-mode    . "melpa-stable")
         (flycheck-clj-kondo   . "melpa-stable")
+        (idle-highlight-mode  . "melpa"       )
         (ido-completing-read+ . "melpa-stable")))
 
 
@@ -250,6 +251,9 @@
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook    #'flycheck-mode)
+(add-hook 'org-mode-hook        #'idle-highlight-mode)
+(add-hook 'prog-mode-hook       #'idle-highlight-mode)
+(add-hook 'cider-repl-mode-hook #'idle-highlight-mode)
 
 
 (setq cider-use-overlays                    t
