@@ -3,9 +3,25 @@
 
 (setq package-archives
       '(("gnu"          . "https://elpa.gnu.org/packages/")
-      ;;("melpa"        . "https://melpa.org/packages/")
-      ;;("marmalade"    . "https://marmalade-repo.org/packages/")
-        ("melpa-stable" . "https://stable.melpa.org/packages/")))
+        ("melpa"        . "https://melpa.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/"))
+      package-pinned-packages
+      '((eros                 . "melpa"       )
+        (smex                 . "melpa-stable")
+        (cider                . "melpa-stable")
+        (magit                . "melpa-stable")
+        (company              . "melpa-stable")
+        (ob-http              . "melpa-stable")
+        (flx-ido              . "melpa-stable")
+        (paredit              . "melpa-stable")
+        (flycheck             . "melpa-stable")
+        (clojure-mode         . "melpa-stable")
+        (expand-region        . "melpa-stable")
+        (plantuml-mode        . "melpa-stable")
+        (zenburn-theme        . "melpa-stable")
+        (ido-vertical-mode    . "melpa-stable")
+        (flycheck-clj-kondo   . "melpa-stable")
+        (ido-completing-read+ . "melpa-stable")))
 
 
 (package-initialize)
@@ -15,21 +31,7 @@
   (package-refresh-contents))
 
 
-(dolist (package '(smex
-                   cider
-                   magit
-                   company
-                   ob-http
-                   flx-ido
-                   paredit
-                   flycheck
-                   clojure-mode
-                   expand-region
-                   plantuml-mode
-                   zenburn-theme
-                   ido-vertical-mode
-                   flycheck-clj-kondo
-                   ido-completing-read+))
+(dolist (package (mapcar #'car package-pinned-packages))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -237,6 +239,9 @@
 ;; |_|_|___/ .__/
 ;;         |_|
 ;; ===============
+
+
+(eros-mode 1)
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
