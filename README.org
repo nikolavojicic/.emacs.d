@@ -231,6 +231,31 @@
 | C-c '        | open begin_src in new window                       |
 | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
+** Clojure <-(roughly)-> Emacs Lisp
+
+| Clojure  | Emacs Lisp      |
+|----------+-----------------|
+| fn       | lambda          |
+| do       | progn           |
+| if       | if              |
+| when     | when            |
+| when-not | unless          |
+| first    | car             |
+| rest     | cdr             |
+| ->       | thread-first    |
+| ->>      | thread-last     |
+| map      | mapcar          |
+| mapcat   | mapcan          |
+| run!     | mapc            |
+| str/join | mapconcat       |
+| doseq    | dolist          |
+| inc      | 1+              |
+| dec      | 1-              |
+| list     | list            |
+| name     | symbol-name     |
+| format   | format          |
+| range    | number-sequence |
+
 ** Emacs installation on Windows
 
 1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
