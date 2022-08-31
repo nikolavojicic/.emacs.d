@@ -246,6 +246,7 @@
 (eros-mode 1)
 
 
+(global-set-key (kbd "C-c C-c") #'eval-defun)
 (global-set-key (kbd "C-c C-e") #'eval-last-sexp)
 
 
