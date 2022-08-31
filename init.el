@@ -43,7 +43,8 @@
 
 
 (when (eq system-type 'windows-nt)
-  (setq default-directory "C:/")
+  (unless buffer-file-name
+    (setq default-directory "C:/"))
   (add-to-list 'exec-path "C:/Program Files/7-Zip"))
 
 
