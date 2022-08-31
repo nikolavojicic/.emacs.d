@@ -157,8 +157,8 @@
 
 
 (with-eval-after-load 'paredit
-  (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
-  (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly))
+  (define-key paredit-mode-map (kbd "M-[") #'paredit-wrap-square)
+  (define-key paredit-mode-map (kbd "M-{") #'paredit-wrap-curly))
 
 
 (with-eval-after-load 'flycheck
@@ -246,7 +246,10 @@
 
 
 (with-eval-after-load 'eros
-  (define-key emacs-lisp-mode-map (kbd "C-c C-e") 'eros-eval-last-sexp))
+  (define-key emacs-lisp-mode-map (kbd "C-c C-e") #'eros-eval-last-sexp)
+  (define-key emacs-lisp-mode-map (kbd "C-c C-k") (lambda ()
+                                                    (interactive)
+                                                    (load-file buffer-file-name))))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
