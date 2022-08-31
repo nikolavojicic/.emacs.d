@@ -245,6 +245,10 @@
 (eros-mode 1)
 
 
+(with-eval-after-load 'eros
+  (define-key emacs-lisp-mode-map (kbd "C-c C-e") 'eros-eval-last-sexp))
+
+
 (add-hook 'cider-mode-hook      #'eldoc-mode)
 (add-hook 'prog-mode-hook       #'paredit-mode)
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
