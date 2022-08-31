@@ -245,11 +245,13 @@
 (eros-mode 1)
 
 
-(with-eval-after-load 'eros
-  (define-key emacs-lisp-mode-map (kbd "C-c C-e") #'eros-eval-last-sexp)
-  (define-key emacs-lisp-mode-map (kbd "C-c C-k") (lambda ()
-                                                    (interactive)
-                                                    (load-file buffer-file-name))))
+(global-set-key (kbd "C-c C-e") #'eval-last-sexp)
+
+
+(define-key emacs-lisp-mode-map
+  (kbd "C-c C-k") (lambda ()
+                    (interactive)
+                    (load-file buffer-file-name)))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
