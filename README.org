@@ -231,7 +231,19 @@
 | C-c '        | open begin_src in new window                       |
 | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
-** Clojure <-(roughly)-> Emacs Lisp
+** Emacs installation on Windows
+
+1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
+   (=i686= for 32-bit, =x86_64= for 64-bit) and extract it to =C:\emacs-version=
+2. Computer -> Properties -> Advanced system settings -> Environment Variables\\
+   -> System variables -> Path -> Edit -> add =C:\emacs-version\bin=
+3. Create folder =C:\home=
+4. Computer -> Properties -> Advanced system settings -> Environment Variables\\
+   -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
+5. Clone or download this repository to =C:\home\.emacs.d=
+6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
+
+** Emacs Lisp for Clojure programmers
 
 | Clojure  | Emacs Lisp      |
 |----------+-----------------|
@@ -255,15 +267,3 @@
 | name     | symbol-name     |
 | format   | format          |
 | range    | number-sequence |
-
-** Emacs installation on Windows
-
-1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
-   (=i686= for 32-bit, =x86_64= for 64-bit) and extract it to =C:\emacs-version=
-2. Computer -> Properties -> Advanced system settings -> Environment Variables\\
-   -> System variables -> Path -> Edit -> add =C:\emacs-version\bin=
-3. Create folder =C:\home=
-4. Computer -> Properties -> Advanced system settings -> Environment Variables\\
-   -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
-5. Clone or download this repository to =C:\home\.emacs.d=
-6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
