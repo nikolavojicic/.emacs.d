@@ -248,6 +248,7 @@
 
 (global-set-key (kbd "C-c C-c") #'eval-defun)
 (global-set-key (kbd "C-c C-e") #'eval-last-sexp)
+(global-set-key (kbd "C-c C-p") #'pp-eval-last-sexp)
 
 
 (define-key emacs-lisp-mode-map
