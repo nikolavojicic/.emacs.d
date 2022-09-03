@@ -245,25 +245,27 @@
 
 ** Emacs Lisp for Clojure programmers
 
-| Clojure  | Emacs Lisp      |
-|----------+-----------------|
-| fn       | lambda          |
-| do       | progn           |
-| if       | if              |
-| when     | when            |
-| when-not | unless          |
-| first    | car             |
-| rest     | cdr             |
-| ->       | thread-first    |
-| ->>      | thread-last     |
-| map      | mapcar          |
-| mapcat   | mapcan          |
-| run!     | mapc            |
-| str/join | mapconcat       |
-| doseq    | dolist          |
-| inc      | 1+              |
-| dec      | 1-              |
-| list     | list            |
-| name     | symbol-name     |
-| format   | format          |
-| range    | number-sequence |
+| Clojure   | Emacs Lisp      |
+|-----------+-----------------|
+| fn        | lambda          |
+| do        | progn           |
+| if        | if              |
+| if-some   | if-let          |
+| when      | when            |
+| when-not  | unless          |
+| when-some | when-let        |
+| first     | car             |
+| rest      | cdr             |
+| ->        | thread-first    |
+| ->>       | thread-last     |
+| map       | mapcar          |
+| mapcat    | mapcan          |
+| run!      | mapc            |
+| str/join  | mapconcat       |
+| doseq     | dolist          |
+| inc       | 1+              |
+| dec       | 1-              |
+| list      | list            |
+| name      | symbol-name     |
+| format    | format          |
+| range     | number-sequence |
