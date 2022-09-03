@@ -57,6 +57,10 @@
 ;; =========
 
 
+(when-let (theme (car custom-enabled-themes))
+  (disable-theme theme))
+
+
 (load-theme 'concrete t)
 
 
