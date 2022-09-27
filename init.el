@@ -345,6 +345,7 @@
      (java       . t)
      (http       . t)
      (shell      . t)
+     (fortran    . t)
      (plantuml   . t)
      (emacs-lisp . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
