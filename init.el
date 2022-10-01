@@ -7,8 +7,8 @@
         ("melpa-stable" . "https://stable.melpa.org/packages/"))
       package-pinned-packages
       '((eros                 . "melpa"       )
-        (smex                 . "melpa-stable")
         (sicp                 . "melpa"       )
+        (smex                 . "melpa-stable")
         (cider                . "melpa-stable")
         (magit                . "melpa-stable")
         (company              . "melpa-stable")
@@ -263,14 +263,20 @@
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
-(add-hook 'prog-mode-hook       #'paredit-mode)
-(add-hook 'cider-repl-mode-hook #'paredit-mode)
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook    #'flycheck-mode)
 (add-hook 'org-mode-hook        #'idle-highlight-mode)
 (add-hook 'prog-mode-hook       #'idle-highlight-mode)
 (add-hook 'cider-repl-mode-hook #'idle-highlight-mode)
+
+
+(add-hook 'clojure-mode-hook         #'paredit-mode)
+(add-hook 'cider-mode-hook           #'paredit-mode)
+(add-hook 'cider-repl-mode-hook      #'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook      #'paredit-mode)
+(add-hook 'scheme-mode-hook          #'paredit-mode)
+(add-hook 'inferior-scheme-mode-hook #'paredit-mode)
 
 
 (setq cider-use-overlays                    t
