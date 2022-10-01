@@ -8,6 +8,7 @@
       package-pinned-packages
       '((eros                 . "melpa"       )
         (smex                 . "melpa-stable")
+        (sicp                 . "melpa"       )
         (cider                . "melpa-stable")
         (magit                . "melpa-stable")
         (company              . "melpa-stable")
