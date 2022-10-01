@@ -15,7 +15,6 @@
         (flx-ido              . "melpa-stable")
         (paredit              . "melpa-stable")
         (flycheck             . "melpa-stable")
-        (racket-mode          . "melpa"       )
         (clojure-mode         . "melpa-stable")
         (expand-region        . "melpa-stable")
         (plantuml-mode        . "melpa-stable")
