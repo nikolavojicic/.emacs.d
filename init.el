@@ -343,6 +343,7 @@
   (define-key org-mode-map (kbd "<f5>" ) (lambda ()
                                            (interactive)
                                            (kill-new (org-id-get-create))))
+  (add-to-list 'org-export-backends 'beamer)
   (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
   (org-babel-do-load-languages
    'org-babel-load-languages
