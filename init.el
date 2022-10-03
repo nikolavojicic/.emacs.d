@@ -349,6 +349,7 @@
    'org-babel-load-languages
    '((C          . t)
      (js         . t)
+     (dot        . t)
      (java       . t)
      (http       . t)
      (shell      . t)
