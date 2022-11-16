@@ -248,25 +248,25 @@
 
 | Clojure   | Emacs Lisp      |
 |-----------+-----------------|
-| fn        | lambda          |
+| ->        | thread-first    |
+| ->>       | thread-last     |
+| dec       | 1-              |
 | do        | progn           |
+| doseq     | dolist          |
+| first     | car             |
+| fn        | lambda          |
+| format    | format          |
 | if        | if              |
 | if-some   | if-let          |
+| inc       | 1+              |
+| list      | list            |
+| map       | mapcar          |
+| mapcat    | mapcan          |
+| name      | symbol-name     |
+| range     | number-sequence |
+| rest      | cdr             |
+| run!      | mapc            |
+| str/join  | mapconcat       |
 | when      | when            |
 | when-not  | unless          |
 | when-some | when-let        |
-| first     | car             |
-| rest      | cdr             |
-| ->        | thread-first    |
-| ->>       | thread-last     |
-| map       | mapcar          |
-| mapcat    | mapcan          |
-| run!      | mapc            |
-| str/join  | mapconcat       |
-| doseq     | dolist          |
-| inc       | 1+              |
-| dec       | 1-              |
-| list      | list            |
-| name      | symbol-name     |
-| format    | format          |
-| range     | number-sequence |
