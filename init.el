@@ -226,13 +226,7 @@
 
 (global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
-
-
-(global-set-key (kbd "<f2> u") 'windmove-up)
-(global-set-key (kbd "<f2> d") 'windmove-down)
-(global-set-key (kbd "<f2> l") 'windmove-left)
-(global-set-key (kbd "<f2> r") 'windmove-right)
-(global-set-key (kbd "<f2> s") 'window-swap-states)
+(global-set-key (kbd "C-<tab>") #'other-window)
 
 
 (fset 'yes-or-no-p 'y-or-n-p)
