@@ -221,7 +221,8 @@
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-unpulled-from-upstream)
-  (setq magit-module-sections-nested nil))
+  (setq magit-module-sections-nested nil)
+  (define-key magit-mode-map (kbd "C-<tab>") nil))
 
 
 (global-set-key (kbd "M-x")     #'smex)
