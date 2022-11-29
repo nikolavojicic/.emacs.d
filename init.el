@@ -167,7 +167,10 @@
  (lambda ()
    (interactive)
    (save-excursion
-     (indent-region (point-min) (point-max) nil))))
+     (delete-trailing-whitespace)
+     (untabify      (point-min) (point-max) nil)
+     (indent-region (point-min) (point-max) nil)
+     (save-buffer))))
 
 
 (with-eval-after-load 'paredit
