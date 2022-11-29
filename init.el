@@ -162,6 +162,14 @@
 (global-set-key (kbd "C-=") #'er/expand-region)
 
 
+(global-set-key
+ [f2]
+ (lambda ()
+   (interactive)
+   (save-excursion
+     (indent-region (point-min) (point-max) nil))))
+
+
 (with-eval-after-load 'paredit
   (define-key paredit-mode-map (kbd "M-[") #'paredit-wrap-square)
   (define-key paredit-mode-map (kbd "M-{") #'paredit-wrap-curly))
