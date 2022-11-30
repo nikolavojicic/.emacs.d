@@ -262,6 +262,16 @@
 (global-set-key (kbd "C-c C-p") #'pp-eval-last-sexp)
 
 
+(global-set-key
+ (kbd "C-c M-w")
+ (lambda ()
+   (interactive)
+   (save-excursion
+     (let ((beg (progn (beginning-of-defun) (point)))
+           (end (progn (end-of-defun)       (point))))
+       (kill-ring-save beg end)))))
+
+
 (define-key emacs-lisp-mode-map
   (kbd "C-c C-k") (lambda ()
                     (interactive)
@@ -274,15 +284,6 @@
                     (thread-last (or (thing-at-point 'symbol) "")
                       (read-from-minibuffer "Undefine symbol: ")
                       (intern) (fmakunbound))))
-
-
-(define-key emacs-lisp-mode-map
-  (kbd "C-c M-w") (lambda ()
-                    (interactive)
-                    (save-excursion
-                      (let ((beg (progn (beginning-of-defun) (point)))
-                            (end (progn (end-of-defun)       (point))))
-                        (kill-ring-save beg end)))))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
