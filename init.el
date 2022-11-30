@@ -268,6 +268,23 @@
                     (load-file buffer-file-name)))
 
 
+(define-key emacs-lisp-mode-map
+  (kbd "C-c C-u") (lambda ()
+                    (interactive)
+                    (thread-last (or (thing-at-point 'symbol) "")
+                      (read-from-minibuffer "Undefine symbol: ")
+                      (intern) (fmakunbound))))
+
+
+(define-key emacs-lisp-mode-map
+  (kbd "C-c M-w") (lambda ()
+                    (interactive)
+                    (save-excursion
+                      (let ((beg (progn (beginning-of-defun) (point)))
+                            (end (progn (end-of-defun)       (point))))
+                        (kill-ring-save beg end)))))
+
+
 (add-hook 'cider-mode-hook      #'eldoc-mode)
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
