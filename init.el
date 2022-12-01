@@ -267,9 +267,9 @@
  (lambda ()
    (interactive)
    (save-excursion
-     (let ((beg (progn (beginning-of-defun) (point)))
-           (end (progn (end-of-defun)       (point))))
-       (kill-ring-save beg end)))))
+     (kill-ring-save
+      (progn (beginning-of-defun) (point))
+      (progn (end-of-defun)       (point))))))
 
 
 (define-key emacs-lisp-mode-map
