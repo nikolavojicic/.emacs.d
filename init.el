@@ -306,6 +306,7 @@
 
 
 (setq cider-use-overlays                    t
+      cider-enrich-classpath                t
       cider-repl-wrap-history               t
       cider-save-file-on-load               t
       cider-prompt-for-symbol               nil
