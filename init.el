@@ -97,6 +97,7 @@
 (set-face-attribute
  'default nil
  :height  120
+ :weight  'bold
  :family  "iosevka ss07")
 
 
