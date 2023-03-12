@@ -405,6 +405,7 @@
   (interactive)
   (let ((root (read-directory-name "Enter root dir for XSPF playlists: ")))
     (when (y-or-n-p (format "Confirm %s? " root))
+      (require 'xml)
       (thread-last (directory-files-recursively root "." t)
         (seq-filter (lambda (fname) (file-directory-p fname)))
         (cons root)
@@ -419,7 +420,6 @@
                                            "mp3" "mp4" "ogg" "opus" "ra" "rm"
                                            "sd2" "tta" "wav" "wma"))))
                              (directory-files dir nil directory-files-no-dot-files-regexp)))
-             (require 'xml)
              (let ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
