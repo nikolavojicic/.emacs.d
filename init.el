@@ -419,6 +419,7 @@
                                            "mp3" "mp4" "ogg" "opus" "ra" "rm"
                                            "sd2" "tta" "wav" "wma"))))
                              (directory-files dir nil directory-files-no-dot-files-regexp)))
+             (require 'xml)
              (let ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
@@ -431,8 +432,7 @@
                  (mapcar (lambda (track)
                            (insert "    ")
                            (insert (format "<track><location>%s</location></track>"
-                                           (progn (require 'xml)
-                                                  (xml-escape-string track))))
+                                           (xml-escape-string track)))
                            (newline))
                          files)
                  (insert "  ")
