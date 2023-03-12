@@ -253,6 +253,7 @@
 | dec       | 1-              |
 | do        | progn           |
 | doseq     | dolist          |
+| let       | let*            |
 | first     | car             |
 | fn        | lambda          |
 | format    | format          |
