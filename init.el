@@ -419,11 +419,12 @@
                                            "flac" "m4a" "m4b" "m4p" "mka"
                                            "mp3" "mp4" "ogg" "opus" "ra" "rm"
                                            "sd2" "tta" "wav" "wma"))))
-                             (directory-files dir nil directory-files-no-dot-files-regexp)))
+                             (directory-files dir)))
              (let ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
-                 (insert "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
+                 (insert "<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
+                 (newline)
                  (insert "<playlist>")
                  (newline)
                  (insert "  ")
