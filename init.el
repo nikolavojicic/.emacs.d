@@ -411,15 +411,15 @@
         (cons root)
         (mapc
          (lambda (dir)
-           (when-let (files (seq-filter
-                             (lambda (fname)
-                               (when-let (ext (file-name-extension fname))
-                                 (member (downcase ext)
-                                         '("aac" "ac3" "aif" "amr" "ape" "au"
-                                           "flac" "m4a" "m4b" "m4p" "mka"
-                                           "mp3" "mp4" "ogg" "opus" "ra" "rm"
-                                           "sd2" "tta" "wav" "wma"))))
-                             (directory-files dir)))
+           (when-let (tracks (seq-filter
+                              (lambda (fname)
+                                (when-let (ext (file-name-extension fname))
+                                  (member (downcase ext)
+                                          '("aac" "ac3" "aif" "amr" "ape" "au"
+                                            "flac" "m4a" "m4b" "m4p" "mka"
+                                            "mp3" "mp4" "ogg" "opus" "ra" "rm"
+                                            "sd2" "tta" "wav" "wma"))))
+                              (directory-files dir)))
              (let ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
@@ -435,7 +435,7 @@
                            (insert (format "<track><location>%s</location></track>"
                                            (xml-escape-string track)))
                            (newline))
-                         files)
+                         tracks)
                  (insert "  ")
                  (insert "</trackList>")
                  (newline)
