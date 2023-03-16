@@ -420,7 +420,7 @@
                                             "flac" "m4a" "m4b" "m4p" "mka"
                                             "mp3" "mp4" "ogg" "opus" "ra" "rm"
                                             "sd2" "tta" "wav" "wma"))))
-                              (directory-files dir)))
+                              (directory-files dir t)))
              (let ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
@@ -433,7 +433,7 @@
                  (newline)
                  (mapcar (lambda (track)
                            (insert "    ")
-                           (insert (format "<track><location>%s</location></track>"
+                           (insert (format "<track><location>file:///%s</location></track>"
                                            (xml-escape-string track)))
                            (newline))
                          tracks)
