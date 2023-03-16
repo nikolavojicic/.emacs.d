@@ -46,7 +46,8 @@
 (when (eq system-type 'windows-nt)
   (unless buffer-file-name
     (setq default-directory "C:/"))
-  (add-to-list 'exec-path "C:/Program Files/7-Zip"))
+  (add-to-list 'exec-path "C:/Program Files/7-Zip")
+  (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""))
 
 
 ;; ui ======
