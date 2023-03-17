@@ -440,4 +440,5 @@
                  (insert "  ")
                  (insert "</trackList>")
                  (newline)
-                 (insert "</playlist>"))))))))))
+                 (insert "</playlist>")))))))))
+  (message "Playlists created."))
