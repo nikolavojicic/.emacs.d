@@ -388,7 +388,8 @@
      (shell      . t)
      (fortran    . t)
      (plantuml   . t)
-     (emacs-lisp . t)))
+     (emacs-lisp . t)
+     (inf-scheme . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (setq org-capture-templates
         `(("t" "Tasks" entry
