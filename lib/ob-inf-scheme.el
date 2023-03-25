@@ -22,44 +22,14 @@
 ;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 
-;; After that continue by creating a simple code block that looks like e.g.
-;;
-;; #+begin_src inf-scheme
-
-;; test
-
-;; #+end_src
-
-;; Finally you can use `edebug' to instrumentalize
-;; `org-babel-expand-body:inf-scheme' and continue to evaluate the code block. You
-;; try to add header keywords and change the body of the code block and
-;; reevaluate the code block to observe how things get handled.
-
-;;
-;; If you have questions as to any of the portions of the file defined
-;; below please look to existing language support for guidance.
-;;
-;; If you are planning on adding a language to org-babel we would ask
-;; that if possible you fill out the FSF copyright assignment form
-;; available at https://orgmode.org/request-assign-future.txt as this
-;; will make it possible to include your language support in the core
-;; of Org-mode, otherwise unassigned language support files can still
-;; be included in the contrib/ directory of the Org-mode repository.
-
-
 ;;; Requirements:
 
-;; Use this section to list the requirements of this language.  Most
-;; languages will require that at least the language be installed on
-;; the user's system, and the Emacs major mode relevant to the
-;; language be installed as well.
+;; - Make sure that `M-x run-scheme` works
 
-;;; Code:
 (require 'ob)
 (require 'ob-ref)
 (require 'ob-comint)
 (require 'ob-eval)
-;; possibly require modes required for your language
 
 ;; optionally define a file extension for this language
 (add-to-list 'org-babel-tangle-lang-exts '("inf-scheme" . "scm"))
