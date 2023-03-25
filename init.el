@@ -50,6 +50,11 @@
   (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""))
 
 
+(let ((dir "~/.emacs.d/lib"))
+  (add-to-list 'load-path dir)
+  (setq custom-theme-directory dir))
+
+
 ;; ui ======
 ;;        _
 ;;  _   _(_)
