@@ -8,22 +8,18 @@
       package-pinned-packages
       '((eros                 . "melpa"       )
         (sicp                 . "melpa"       )
-        (smex                 . "melpa-stable")
         (cider                . "melpa-stable")
         (magit                . "melpa-stable")
         (company              . "melpa-stable")
         (ob-http              . "melpa-stable")
-        (flx-ido              . "melpa-stable")
         (paredit              . "melpa-stable")
         (flycheck             . "melpa-stable")
         (clojure-mode         . "melpa-stable")
         (expand-region        . "melpa-stable")
         (plantuml-mode        . "melpa-stable")
         (zenburn-theme        . "melpa-stable")
-        (ido-vertical-mode    . "melpa-stable")
         (flycheck-clj-kondo   . "melpa-stable")
-        (idle-highlight-mode  . "melpa"       )
-        (ido-completing-read+ . "melpa-stable")))
+        (idle-highlight-mode  . "melpa"       )))
 
 
 (package-initialize)
@@ -203,35 +199,21 @@
 ;; ====================================================
 
 
-(require 'flx-ido)
 (require 'recentf)
 (require 'uniquify)
-(require 'ido-vertical-mode)
-(require 'ido-completing-read+)
 
 
-(smex-initialize)
 (global-company-mode)
 
 
-(ido-mode            1)
 (recentf-mode        1)
-(flx-ido-mode        1)
-(ido-everywhere      1)
-(ido-vertical-mode   1)
-(ido-ubiquitous-mode 1)
+(fido-vertical-mode  1)
 
 
-(setq apropos-do-all                         t
-      ido-use-faces                          nil
-      recenter-positions                     '(top middle bottom)
-      recentf-max-menu-items                 40
-      ido-use-virtual-buffers                t
-      ido-enable-flex-matching               t
-      ido-vertical-define-keys               'C-n-and-C-p-only
-      ido-use-filename-at-point              nil
-      uniquify-buffer-name-style             'forward
-      ido-auto-merge-work-directories-length -1)
+(setq apropos-do-all             t
+      recenter-positions         '(top middle bottom)
+      recentf-max-menu-items     40
+      uniquify-buffer-name-style 'forward)
 
 
 (with-eval-after-load 'magit
@@ -242,12 +224,8 @@
   (define-key magit-mode-map (kbd "C-<tab>") nil))
 
 
-(global-set-key (kbd "M-x")     #'smex)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 (global-set-key (kbd "C-<tab>") #'other-window)
-
-
-(fset 'yes-or-no-p 'y-or-n-p)
 
 
 ;; lisp ==========
@@ -289,7 +267,8 @@
   (kbd "C-c C-u")
   (lambda ()
     (interactive)
-    (thread-last (or (thing-at-point 'symbol) "")
+    (thread-last
+      (or (thing-at-point 'symbol) "")
       (read-from-minibuffer "Undefine symbol: ")
       (intern) (fmakunbound))))
 
@@ -301,6 +280,8 @@
 (add-hook 'org-mode-hook        #'idle-highlight-mode)
 (add-hook 'prog-mode-hook       #'idle-highlight-mode)
 (add-hook 'cider-repl-mode-hook #'idle-highlight-mode)
+(add-hook 'cider-mode-hook      #'cider-company-enable-fuzzy-completion)
+(add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
 
 
 (add-hook 'clojure-mode-hook         #'paredit-mode)
@@ -413,7 +394,8 @@
   (let ((root (read-directory-name "Enter root dir for XSPF playlists: ")))
     (when (y-or-n-p (format "Confirm %s? " root))
       (require 'xml)
-      (thread-last (directory-files-recursively root "." t)
+      (thread-last
+        (directory-files-recursively root "." t)
         (seq-filter (lambda (fname) (file-directory-p fname)))
         (cons root)
         (mapc
@@ -446,5 +428,5 @@
                  (insert "  ")
                  (insert "</trackList>")
                  (newline)
-                 (insert "</playlist>")))))))))
-  (message "Playlists created."))
+                 (insert "</playlist>")))))))
+      (message "Playlists created."))))
