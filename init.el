@@ -55,7 +55,12 @@
 ;; =========
 
 
-(mapc #'disable-theme custom-enabled-themes)
+(defun disable-themes ()
+  (interactive)
+  (mapc #'disable-theme custom-enabled-themes))
+
+
+(disable-themes)
 (load-theme 'concrete t)
 
 
@@ -64,7 +69,7 @@
  (lambda ()
    (interactive)
    (let* ((theme (car custom-enabled-themes)))
-     (mapc #'disable-theme custom-enabled-themes)
+     (disable-themes)
      (cond ((eq theme 'concrete)
             (load-theme 'zenburn t))
            ((eq theme 'zenburn)
