@@ -55,10 +55,7 @@
 ;; =========
 
 
-(when-let (theme (car custom-enabled-themes))
-  (disable-theme theme))
-
-
+(mapc #'disable-theme custom-enabled-themes)
 (load-theme 'concrete t)
 
 
@@ -66,11 +63,14 @@
  [f12]
  (lambda ()
    (interactive)
-   (if (eq (car custom-enabled-themes) 'zenburn)
-       (progn (disable-theme 'zenburn)
-              (load-theme 'concrete t))
-     (progn (disable-theme 'concrete)
-            (load-theme 'zenburn t)))))
+   (let* ((theme (car custom-enabled-themes)))
+     (mapc #'disable-theme custom-enabled-themes)
+     (cond ((eq theme 'concrete)
+            (load-theme 'zenburn t))
+           ((eq theme 'zenburn)
+            (load-theme 'modus-vivendi t))
+           ("default theme"
+            (load-theme 'concrete t))))))
 
 
 (menu-bar-mode          -1)
