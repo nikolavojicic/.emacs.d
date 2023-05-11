@@ -395,7 +395,7 @@
       (require 'xml)
       (thread-last
         (directory-files-recursively root "." t)
-        (seq-filter (lambda (fname) (file-directory-p fname)))
+        (seq-filter #'file-directory-p)
         (cons root)
         (mapc
          (lambda (dir)
