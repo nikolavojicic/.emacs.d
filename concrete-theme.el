@@ -13,7 +13,8 @@
  '(magit-section-highlight ((t (:background "gray90"))))
  '(magit-diff-context-highlight ((t (:background "gray90"))))
  '(org-block ((t (:background "gray90"))))
- '(org-meta-line ((t (:background "gray75" :foreground "black" :slant italic)))))
+ '(org-meta-line ((t (:background "gray75" :foreground "black" :slant italic))))
+ '(cider-repl-stderr-face ((t (:foreground "firebrick" :weight bold)))))
 
 
 (provide-theme 'concrete)
