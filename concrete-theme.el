@@ -15,6 +15,8 @@
  '(magit-diff-context-highlight ((t (:background "gray90"))))
  '(org-block ((t (:background "gray90"))))
  '(org-meta-line ((t (:background "gray75" :foreground "black" :slant italic))))
+ '(font-lock-type-face ((t (:foreground "darkgreen" :weight bold :slant italic))))
+ '(clojure-keyword-face ((t (:foreground "darkgreen"))))
  '(cider-repl-stderr-face ((t (:foreground "firebrick" :weight bold)))))
 
 
