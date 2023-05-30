@@ -216,6 +216,7 @@
 
 
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
 
 
 (with-eval-after-load 'magit
