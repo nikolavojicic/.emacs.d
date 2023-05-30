@@ -130,6 +130,7 @@
 
 (show-paren-mode 1)
 (save-place-mode 1)
+(global-auto-revert-mode 1)
 
 
 (setq-default indent-tabs-mode nil)
@@ -143,6 +144,7 @@
       select-enable-primary               t
       select-enable-clipboard             t
       flycheck-display-errors-function    nil
+      global-auto-revert-non-file-buffers t
       save-interprogram-paste-before-kill t
       flycheck-check-syntax-automatically '(save idle-change mode-enabled))
 
@@ -199,20 +201,15 @@
 ;; ====================================================
 
 
-(require 'recentf)
 (require 'uniquify)
 
 
 (global-company-mode)
-
-
-(recentf-mode        1)
 (fido-vertical-mode  1)
 
 
 (setq apropos-do-all             t
       recenter-positions         '(top middle bottom)
-      recentf-max-menu-items     40
       uniquify-buffer-name-style 'forward)
 
 
