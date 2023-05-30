@@ -117,7 +117,7 @@
 | M-n   | next     section     |
 | M-p   | previous section     |
 | TAB   | toggle expand parent |
-| C-TAB | toggle expand all    |
+| S-TAB | hide expanded        |
 
 ** Org
 
