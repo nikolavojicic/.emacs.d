@@ -65,8 +65,8 @@
 | u       | unmark             |   | U         | unmark all               |
 | %m      | mark regex by name |   | %g        | mark regex by content    |
 | d       | mark for delete    |   | x         | delete marked for delete |
-| C       | copy               |   | R         | rename / move            |
-| D       | delete marked      |   | ^         | goto parent dir          |
+| D       | delete marked      |   | R         | rename / move            |
+| C       | copy               |   | ^         | goto parent dir          |
 | o       | open and goto file |   | C-o       | open file                |
 | C-x C-j | jump to dired      |   | C-x 4 C-j | jump to dired new window |
 | C-x C-q | change file names  |   | C-c C-c   | apply changes            |
