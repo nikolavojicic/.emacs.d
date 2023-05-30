@@ -215,6 +215,9 @@
       uniquify-buffer-name-style 'forward)
 
 
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
+
+
 (with-eval-after-load 'magit
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules

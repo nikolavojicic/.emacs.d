@@ -70,6 +70,7 @@
 | o       | open and goto file |   | C-o       | open file                |
 | C-x C-j | jump to dired      |   | C-x 4 C-j | jump to dired new window |
 | C-x C-q | change file names  |   | C-c C-c   | apply changes            |
+| (       | show details       |   |           |                          |
 
 *** Paredit
 
