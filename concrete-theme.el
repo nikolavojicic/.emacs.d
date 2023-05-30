@@ -17,7 +17,13 @@
  '(org-meta-line ((t (:background "gray75" :foreground "black" :slant italic))))
  '(font-lock-type-face ((t (:foreground "darkgreen" :weight bold :slant italic))))
  '(clojure-keyword-face ((t (:foreground "darkgreen"))))
- '(cider-repl-stderr-face ((t (:foreground "firebrick" :weight bold)))))
+ '(cider-repl-stderr-face ((t (:foreground "firebrick" :weight bold))))
+ '(dired-subtree-depth-1-face ((t (:background "inherit"))))
+ '(dired-subtree-depth-2-face ((t (:background "inherit"))))
+ '(dired-subtree-depth-3-face ((t (:background "inherit"))))
+ '(dired-subtree-depth-4-face ((t (:background "inherit"))))
+ '(dired-subtree-depth-5-face ((t (:background "inherit"))))
+ '(dired-subtree-depth-6-face ((t (:background "inherit")))))
 
 
 (provide-theme 'concrete)

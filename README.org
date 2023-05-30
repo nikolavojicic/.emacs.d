@@ -72,6 +72,7 @@
 | C-x C-j | jump to dired      |   | C-x 4 C-j | jump to dired new window |
 | C-x C-q | change file names  |   | C-c C-c   | apply changes            |
 | q       | close dired buffer |   | C-u q     | kill dired buffer        |
+| TAB     | toggle subtree     |   | S-TAB     | remove subtree           |
 | (       | show details       |   |           |                          |
 
 *** Paredit

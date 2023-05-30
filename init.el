@@ -18,6 +18,7 @@
         (expand-region        . "melpa-stable")
         (plantuml-mode        . "melpa-stable")
         (zenburn-theme        . "melpa-stable")
+        (dired-subtree        . "melpa"       )
         (flycheck-clj-kondo   . "melpa-stable")
         (idle-highlight-mode  . "melpa"       )))
 
@@ -217,6 +218,11 @@
 
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
+
+
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "<tab>"    ) #'dired-subtree-toggle)
+  (define-key dired-mode-map (kbd "<backtab>") #'dired-subtree-remove))
 
 
 (with-eval-after-load 'magit
