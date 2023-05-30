@@ -57,6 +57,20 @@
 | C-x w .       | highlight symbol |   | C-u C-x w r | unhighlight all                |
 | C-o           | add line below   |   | M-DEL       | cut word backward              |
 
+*** Dired
+
+| p       | previous           |   | n         | next                     |
+| +       | create dir         |   | g         | refresh                  |
+| m       | mark               |   | t         | inverse mark             |
+| u       | unmark             |   | U         | unmark all               |
+| %m      | mark regex by name |   | %g        | mark regex by content    |
+| d       | mark for delete    |   | x         | delete marked for delete |
+| C       | copy               |   | R         | rename / move            |
+| D       | delete marked      |   | ^         | goto parent dir          |
+| o       | open and goto file |   | C-o       | open file                |
+| C-x C-j | jump to dired      |   | C-x 4 C-j | jump to dired new window |
+| C-x C-q | change file names  |   | C-c C-c   | apply changes            |
+
 *** Paredit
 
 | (      | open and close delimiter     |   | )     | go through closing delimiters |
@@ -134,7 +148,7 @@
 | C-c a       | agenda view                  |
 | C-u 5 C-c a | agenda view for 5 days       |
 | g           | refresh agenda               |
-| S-f         | follow mode                  |
+| F           | follow mode                  |
 | f / b       | move forward / back          |
 | t           | change task status           |
 
