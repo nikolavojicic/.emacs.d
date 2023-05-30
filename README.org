@@ -59,18 +59,19 @@
 
 *** Dired
 
-| p       | previous           |   | n         | next                     |
-| +       | create dir         |   | g         | refresh                  |
-| m       | mark               |   | t         | inverse mark             |
-| u       | unmark             |   | U         | unmark all               |
-| %m      | mark regex by name |   | %g        | mark regex by content    |
-| d       | mark for delete    |   | x         | delete marked for delete |
-| D       | delete marked      |   | R         | rename / move            |
-| C       | copy               |   | ^         | goto parent dir          |
-| o       | open and goto file |   | C-o       | open file                |
-| C-x C-j | jump to dired      |   | C-x 4 C-j | jump to dired new window |
-| C-x C-q | change file names  |   | C-c C-c   | apply changes            |
-| (       | show details       |   |           |                          |
+| p       | previous            |   | n         | next                     |
+| +       | create dir          |   | g         | refresh                  |
+| m       | mark                |   | t         | inverse mark             |
+| u       | unmark              |   | U         | unmark all               |
+| %m      | mark regex by name  |   | %g        | mark regex by content    |
+| d       | mark for delete     |   | x         | delete marked for delete |
+| D       | delete marked       |   | R         | rename / move            |
+| C       | copy                |   | ^         | goto parent dir          |
+| f       | edit file           |   | v         | view file                |
+| o       | open and goto file  |   | C-o       | open file                |
+| C-x C-j | jump to dired       |   | C-x 4 C-j | jump to dired new window |
+| C-x C-q | change file names   |   | C-c C-c   | apply changes            |
+| C-u q   | remove dired buffer |   | (         | show details             |
 
 *** Paredit
 
