@@ -138,6 +138,7 @@
 
 (setq create-lockfiles                    nil
       auto-save-default                   nil
+      dired-dwim-target                   t
       make-backup-files                   nil
       mouse-yank-at-point                 t
       electric-indent-mode                nil
@@ -210,6 +211,7 @@
 
 (setq apropos-do-all             t
       recenter-positions         '(top middle bottom)
+      dired-listing-switches     "-alFh"
       uniquify-buffer-name-style 'forward)
 
 
