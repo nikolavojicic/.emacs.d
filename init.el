@@ -225,6 +225,9 @@
 (global-set-key (kbd "C-<tab>") #'other-window)
 
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+
 ;; lisp ==========
 ;;  _ _
 ;; | (_)___ _ __
