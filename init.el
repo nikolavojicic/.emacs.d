@@ -285,6 +285,9 @@
       (intern) (fmakunbound))))
 
 
+(define-key cider-repl-mode-map (kbd "<return>") #'cider-repl-closing-return)
+
+
 (add-hook 'cider-mode-hook      #'eldoc-mode)
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
