@@ -285,7 +285,8 @@
       (intern) (fmakunbound))))
 
 
-(define-key cider-repl-mode-map (kbd "<return>") #'cider-repl-closing-return)
+(with-eval-after-load 'cider-repl
+  (define-key cider-repl-mode-map (kbd "<return>") #'cider-repl-closing-return))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
