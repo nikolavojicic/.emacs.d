@@ -16,11 +16,14 @@
 
 *** Window
 
-| q          | quit help                  |   | C-x 1   | close all but current |
-| C-x o      | jump to next               |   | C-x 2   | split up-down         |
-| C-x 0      | close current              |   | C-x 3   | split left-right      |
-| F2 u/d/l/r | jump to up/down/left/right |   | C-x +   | equally size windows  |
-| C-x 5 2    | new frame                  |   | C-x 5 o | jump to next frame    |
+| q       | quit help                |   | C-x 1   | close all but current  |
+| C-x o   | jump to next             |   | C-x 2   | split up-down          |
+| C-x 0   | close current            |   | C-x 3   | split left-right       |
+| C-x {   | resize window left       |   | C-x }   | resize window right    |
+| C-x ^   | resize window up         |   | C-x v   | resize window down     |
+| C-x +   | equally size windows     |   | C-M-l   | scroll heuristically   |
+| C-M-v   | scroll other window down |   | C-M-V   | scroll other window up |
+| C-x 5 2 | new frame                |   | C-x 5 o | jump to next frame     |
 
 *** Move
 
@@ -34,7 +37,6 @@
 | C-s   | search forward       |   | C-r   | search backward       |
 | C-M-s | search forward regex |   | C-M-r | search backward regex |
 | M-g g | jump to line         |   | C-l   | center / top / bottom |
-| C-M-v | scroll other window  |   | C-M-l | scroll heuristically  |
 
 *** Text
 
