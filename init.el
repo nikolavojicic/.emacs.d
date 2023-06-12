@@ -37,7 +37,8 @@
 
 (setq backup-directory-alist     nil
       auto-save-list-file-prefix nil
-      custom-file                "~/.emacs.d/custom.el")
+      find-function-C-source-directory "~/.emacs.d/src"
+      custom-file                      "~/.emacs.d/custom.el")
 
 
 (when (eq system-type 'windows-nt)
