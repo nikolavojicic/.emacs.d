@@ -201,6 +201,8 @@
 
 | TAB                   | next cell                |
 | S-TAB                 | previous cell            |
+| S-LEFT / RIGHT        | move cell left / right   |
+| S-DOWN / UP           | move cell up / down      |
 | M-LEFT / RIGHT        | move column left / right |
 | M-DOWN / UP           | move row up / down       |
 | <length-number>       | set max column length    |
