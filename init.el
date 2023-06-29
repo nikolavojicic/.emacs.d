@@ -146,6 +146,7 @@
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
+      delete-by-moving-to-trash           t
       flycheck-display-errors-function    nil
       global-auto-revert-non-file-buffers t
       save-interprogram-paste-before-kill t

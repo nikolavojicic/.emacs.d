@@ -5,14 +5,15 @@
 
 *** Basic
 
-| C-g         | abort binding        |   | C-x C-s  | save file           |
-| C-/         | undo                 |   | C-x C-f  | find / create file  |
-| C-z         | suspend emacs        |   | C-x s    | save some files     |
-| C-x C-c     | exit emacs           |   | C-n      | minibuffer previous |
-| C-x b       | switch buffer        |   | C-p      | minibuffer next     |
-| C-x k       | kill buffer          |   | C-x C- - | zoom out            |
-| C-x C-b     | list buffers         |   | C-x C- + | zoom in             |
-| C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu           |
+| C-g         | abort binding        |   | C-x C-s  | save file                   |
+| C-/         | undo                 |   | C-x C-f  | find / create file          |
+| C-z         | suspend emacs        |   | C-x s    | save some files             |
+| C-x C-c     | exit emacs           |   | C-x b    | switch buffer               |
+| C-n         | minibuffer next      |   | M-n      | minibuffer next history     |
+| C-p         | minibuffer previous  |   | M-p      | minibuffer previous history |
+| C-x k       | kill buffer          |   | C-x C- - | zoom out                    |
+| C-x C-b     | list buffers         |   | C-x C- + | zoom in                     |
+| C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu                   |
 
 *** Window
 
