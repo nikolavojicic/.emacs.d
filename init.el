@@ -197,7 +197,7 @@
     (lambda ()
       (interactive)
       (if (get-buffer-window flycheck-error-list-buffer)
-          (quit-windows-on flycheck-error-list-buffer)
+          (quit-windows-on   flycheck-error-list-buffer)
         (list-flycheck-errors)))))
 
 
@@ -296,6 +296,15 @@
   (define-key cider-repl-mode-map (kbd "<return>") #'cider-repl-closing-return))
 
 
+(with-eval-after-load 'cider
+  (define-key cider-mode-map (kbd "<f7>")
+    (lambda ()
+      (interactive)
+      (if (get-buffer-window cider-error-buffer)
+          (quit-windows-on   cider-error-buffer)
+        (cider-popup-buffer-display cider-error-buffer)))))
+
+
 (add-hook 'cider-mode-hook      #'eldoc-mode)
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
@@ -319,6 +328,7 @@
       cider-enrich-classpath                t
       cider-repl-wrap-history               t
       cider-save-file-on-load               t
+      cider-show-error-buffer               nil
       cider-prompt-for-symbol               nil
       cider-font-lock-dynamically           '(macro core function var)
       cider-use-fringe-indicators           nil

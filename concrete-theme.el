@@ -18,6 +18,7 @@
  '(font-lock-type-face ((t (:foreground "darkgreen" :weight bold))))
  '(clojure-keyword-face ((t (:foreground "darkgreen"))))
  '(cider-repl-stderr-face ((t (:foreground "firebrick" :weight bold))))
+ '(cider-error-overlay-face ((t (:foreground "firebrick" :weight bold))))
  '(dired-subtree-depth-1-face ((t (:background "inherit"))))
  '(dired-subtree-depth-2-face ((t (:background "inherit"))))
  '(dired-subtree-depth-3-face ((t (:background "inherit"))))
