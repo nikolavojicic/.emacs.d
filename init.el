@@ -327,7 +327,8 @@
       cider-repl-use-pretty-printing        t
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-auto-select-test-report-buffer  nil
-      cider-repl-history-display-duplicates nil)
+      cider-repl-history-display-duplicates nil
+      cider-repl-display-output-before-window-boundaries t)
 
 
 (require 'clojure-mode)
