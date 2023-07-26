@@ -330,6 +330,7 @@
       cider-save-file-on-load               t
       cider-show-error-buffer               nil
       cider-prompt-for-symbol               nil
+      cider-auto-jump-to-error              nil
       cider-font-lock-dynamically           '(macro core function var)
       cider-use-fringe-indicators           nil
       cider-auto-select-error-buffer        nil
