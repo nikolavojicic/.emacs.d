@@ -23,7 +23,7 @@
  '(clojure-keyword-face ((t (:foreground "darkgreen"))))
  '(cider-repl-stderr-face ((t (:foreground "firebrick" :weight bold))))
  '(cider-error-overlay-face ((t (:foreground "firebrick" :weight bold))))
- '(cider-result-overlay-face ((t)))
+ '(cider-result-overlay-face (()))
  '(eros-result-overlay-face (()))
  '(dired-subtree-depth-1-face ((t (:background "inherit"))))
  '(dired-subtree-depth-2-face ((t (:background "inherit"))))
