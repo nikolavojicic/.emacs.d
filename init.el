@@ -296,6 +296,11 @@
 
 
 (with-eval-after-load 'cider
+  (define-key cider-mode-map (kbd "C-c C-j")
+    (lambda ()
+      (interactive)
+      (cider-jump-to-compilation-error)
+      (recenter nil t)))
   (define-key cider-mode-map (kbd "<f7>")
     (lambda ()
       (interactive)

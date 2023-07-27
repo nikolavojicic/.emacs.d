@@ -14,6 +14,7 @@
 | C-x k       | kill buffer          |   | C-x C- - | zoom out                    |
 | C-x C-b     | list buffers         |   | C-x C- + | zoom in                     |
 | C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu                   |
+| F2          | reformat and save    |   | F6       | toggle flycheck             |
 
 *** Window
 
@@ -108,6 +109,7 @@
 | M-.         | go to symbol def |   | M-,         | return back        |
 | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
 | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
+| C-c C-j     | jump to error    |   | F7          | toggle cider-error |
 
 *** Magit
 
