@@ -73,16 +73,16 @@
    (let* ((theme (car custom-enabled-themes)))
      (disable-themes)
      (cond ((eq theme 'concrete)
-            (load-theme 'zenburn t))
+            (load-theme 'zenburn t)
+            (custom-theme-set-faces
+             'zenburn
+             '(default ((t (:background "#383838"))))
+             '(fringe ((t (:background "#383838"))))
+             '(vertical-border ((t (:foreground "#656555"))))
+             '(org-meta-line ((t (:background "#383838" :foreground "#7F9F7F"))))
+             '(cider-error-overlay-face ((t (:foreground "#D0BF8F" :weight bold))))))
            ("default theme"
             (load-theme 'concrete t))))))
-
-
-(with-eval-after-load 'zenburn-theme
-  (custom-theme-set-faces
-   'zenburn
-   '(org-meta-line ((t (:background "#383838" :foreground "#7F9F7F"))))
-   '(cider-error-overlay-face ((t (:foreground "#D0BF8F" :weight bold))))))
 
 
 (menu-bar-mode          -1)
@@ -98,6 +98,7 @@
       inhibit-startup-message            t
       initial-scratch-message            ""
       mouse-wheel-scroll-amount          '(1)
+      custom--inhibit-theme-enable       nil
       mouse-wheel-progressive-speed      nil
       eldoc-echo-area-use-multiline-p    nil
       magit-section-visibility-indicator nil)
