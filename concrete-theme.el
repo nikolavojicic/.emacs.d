@@ -15,6 +15,7 @@
  '(magit-diff-context-highlight ((t (:background "gray90"))))
  '(org-block ((t (:background "gray90"))))
  '(org-meta-line ((t (:foreground "black" :background "gray75"))))
+ '(org-hide ((t (:foreground "lightgray"))))
  '(org-level-1 ((t (:foreground "purple"))))
  '(org-level-3 ((t (:foreground "blue"))))
  '(org-level-4 ((t (:foreground "darkgreen"))))

@@ -79,7 +79,9 @@
              '(default ((t (:background "#383838"))))
              '(fringe ((t (:background "#383838"))))
              '(vertical-border ((t (:foreground "#656555"))))
-             '(org-meta-line ((t (:background "#383838" :foreground "#7F9F7F"))))
+             '(org-hide ((t (:foreground "#383838"))))
+             '(org-block ((t (:background "#494949"))))
+             '(org-meta-line ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
              '(cider-error-overlay-face ((t (:foreground "#D0BF8F" :weight bold))))))
            ("default theme"
             (load-theme 'concrete t))))))
