@@ -80,6 +80,7 @@
              '(fringe ((t (:background "#383838"))))
              '(vertical-border ((t (:foreground "#656555"))))
              '(highlight ((t (:background "#2B2B2B"))))
+             '(font-lock-doc-face ((t (:foreground "#9FC59F" :slant italic))))
              '(org-hide ((t (:foreground "#383838"))))
              '(org-block ((t (:background "#494949"))))
              '(org-meta-line ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
