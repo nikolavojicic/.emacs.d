@@ -271,28 +271,59 @@
 
 ** Emacs Lisp for Clojure programmers
 
-| Clojure   | Emacs Lisp      |
-|-----------+-----------------|
-| ->        | thread-first    |
-| ->>       | thread-last     |
-| dec       | 1-              |
-| do        | progn           |
-| doseq     | dolist          |
-| let       | let*            |
-| first     | car             |
-| fn        | lambda          |
-| format    | format          |
-| if        | if              |
-| if-some   | if-let          |
-| inc       | 1+              |
-| list      | list            |
-| map       | mapcar          |
-| mapcat    | mapcan          |
-| name      | symbol-name     |
-| range     | number-sequence |
-| rest      | cdr             |
-| run!      | mapc            |
-| str/join  | mapconcat       |
-| when      | when            |
-| when-not  | unless          |
-| when-some | when-let        |
+| Clojure          | Emacs Lisp       |
+|------------------+------------------|
+| (#{x} x)         | seq-contains     |
+| (= #{..} #{..})  | seq-set-equal-p  |
+| .indexOf         | seq-position     |
+| ->               | thread-first     |
+| ->>              | thread-last      |
+| concat           | seq-concatenate  |
+| count            | length           |
+| dec              | 1-               |
+| distinct         | seq-uniq         |
+| do               | progn            |
+| doseq            | dolist           |
+| drop             | seq-drop         |
+| drop-while       | seq-drop-while   |
+| empty? (list)    | null             |
+| empty? (string)  | string-empty-p   |
+| every?           | seq-every-p      |
+| filter           | seq-filter       |
+| first            | car              |
+| fn               | lambda           |
+| format           | format           |
+| group-by         | seq-group-by     |
+| if               | if               |
+| if-some          | if-let           |
+| inc              | 1+               |
+| let              | let*             |
+| list             | list             |
+| map              | mapcar           |
+| mapcat           | mapcan           |
+| map-indexed      | seq-map-indexed  |
+| max              | seq-max          |
+| min              | seq-min          |
+| name             | symbol-name      |
+| nth              | nth              |
+| partition-all    | seq-partition    |
+| rand-nth         | seq-random-elt   |
+| range            | number-sequence  |
+| reduce           | seq-reduce       |
+| remove           | seq-remove       |
+| rest             | cdr              |
+| reverse          | seq-reverse      |
+| run!             | mapc             |
+| set/difference   | seq-difference   |
+| set/intersection | seq-intersection |
+| set/union        | seq-union        |
+| some             | seq-find         |
+| sort-by          | seq-sort         |
+| str/blank?       | string-blank-p   |
+| str/join         | mapconcat        |
+| subvec           | seq-subseq       |
+| take             | seq-take         |
+| take-while       | seq-take-while   |
+| when             | when             |
+| when-not         | unless           |
+| when-some        | when-let         |
