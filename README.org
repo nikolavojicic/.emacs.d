@@ -282,6 +282,8 @@
 | concat           | seq-concatenate  |
 | count            | length           |
 | dec              | 1-               |
+| def              | setq             |
+| defn             | defun            |
 | distinct         | seq-uniq         |
 | do               | progn            |
 | doseq            | dolist           |
@@ -300,6 +302,7 @@
 | inc              | 1+               |
 | let              | let*             |
 | list             | list             |
+| list?            | listp            |
 | map              | mapcar           |
 | mapcat           | mapcan           |
 | map-indexed      | seq-map-indexed  |
@@ -320,6 +323,7 @@
 | set/union        | seq-union        |
 | some             | seq-find         |
 | sort-by          | seq-sort         |
+| str              | concat           |
 | str/blank?       | string-blank-p   |
 | str/join         | mapconcat        |
 | subvec           | seq-subseq       |
@@ -328,3 +332,4 @@
 | when             | when             |
 | when-not         | unless           |
 | when-some        | when-let         |
+| zero?            | zerop            |
