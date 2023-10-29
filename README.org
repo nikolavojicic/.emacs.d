@@ -277,12 +277,16 @@
 | (#{x} x)         | seq-contains     |
 | (= #{..} #{..})  | seq-set-equal-p  |
 | .indexOf         | seq-position     |
+| =                | equal            |
 | ->               | thread-first     |
+| > < <= >= =      | > < <= >= =      |
 | ->>              | thread-last      |
+| compare          | sting< string>   |
 | concat           | seq-concatenate  |
 | count            | length           |
 | dec              | 1-               |
 | def              | setq             |
+| defn             | defun            |
 | defn             | defun            |
 | distinct         | seq-uniq         |
 | do               | progn            |
@@ -292,11 +296,13 @@
 | empty? (list)    | null             |
 | empty? (string)  | string-empty-p   |
 | every?           | seq-every-p      |
+| false            | nil ()           |
 | filter           | seq-filter       |
 | first            | car              |
 | fn               | lambda           |
 | format           | format           |
 | group-by         | seq-group-by     |
+| identical?       | eq               |
 | if               | if               |
 | if-some          | if-let           |
 | inc              | 1+               |
@@ -311,6 +317,8 @@
 | name             | symbol-name      |
 | nth              | nth              |
 | partition-all    | seq-partition    |
+| println          | message          |
+| prn              | print            |
 | rand-nth         | seq-random-elt   |
 | range            | number-sequence  |
 | reduce           | seq-reduce       |
@@ -321,6 +329,7 @@
 | set/difference   | seq-difference   |
 | set/intersection | seq-intersection |
 | set/union        | seq-union        |
+| setq             | def              |
 | some             | seq-find         |
 | sort-by          | seq-sort         |
 | str              | concat           |
@@ -329,6 +338,7 @@
 | subvec           | seq-subseq       |
 | take             | seq-take         |
 | take-while       | seq-take-while   |
+| true             | t                |
 | when             | when             |
 | when-not         | unless           |
 | when-some        | when-let         |
