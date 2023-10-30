@@ -251,6 +251,12 @@
   (setq magit-module-sections-nested nil))
 
 
+(with-eval-after-load 'doc-view
+  (let* ((pdf-program "mutool"))
+    (setq doc-view-resolution 300
+          doc-view-ghostscript-program pdf-program)))
+
+
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
 
