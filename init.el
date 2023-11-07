@@ -347,6 +347,7 @@
 
 (setq cider-use-overlays                    t
       cider-enrich-classpath                t
+      inferior-lisp-program                 "clisp"
       cider-repl-wrap-history               t
       cider-save-file-on-load               t
       cider-show-error-buffer               nil
