@@ -116,8 +116,8 @@
 
 (set-face-attribute
  'default nil
- :height  120
- :family  "iosevka ss07")
+ :height  110
+ :family  "Lucida Sans Typewriter")
 
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
