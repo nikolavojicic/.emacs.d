@@ -69,6 +69,7 @@
 | m       | mark               |   | t         | inverse mark             |
 | u       | unmark             |   | U         | unmark all               |
 | %m      | mark regex by name |   | %g        | mark regex by content    |
+| M-}     | next marked file   |   | M-{       | previous marked file     |
 | d       | mark for delete    |   | x         | delete marked for delete |
 | D       | delete marked      |   | R         | rename / move            |
 | C       | copy               |   | ^         | goto parent dir          |
