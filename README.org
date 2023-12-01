@@ -16,6 +16,7 @@
 | C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu                   |
 | F2          | reformat and save    |   | F6       | toggle flycheck             |
 | C-x r m     | bookmark at point    |   | C-x r l  | list all bookmarks          |
+| C-x n n     | narrow to region     |   | C-x n w  | undo narrow (widen)         |
 
 *** Window
 
@@ -284,6 +285,7 @@
 | ->>              | thread-last      |
 | compare          | sting< string>   |
 | concat           | seq-concatenate  |
+| cons             | cons             |
 | count            | length           |
 | dec              | 1-               |
 | def              | setq             |
@@ -292,7 +294,7 @@
 | distinct         | seq-uniq         |
 | do               | progn            |
 | doseq            | dolist           |
-| drop             | seq-drop         |
+| drop             | nthcdr           |
 | drop-while       | seq-drop-while   |
 | empty? (list)    | null             |
 | empty? (string)  | string-empty-p   |

@@ -227,6 +227,7 @@
 (repeat-mode)
 (global-company-mode)
 (fido-vertical-mode  1)
+(put 'narrow-to-region 'disabled nil)
 
 
 (setq apropos-do-all             t
