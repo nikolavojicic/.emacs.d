@@ -65,22 +65,23 @@
 
 *** Dired
 
-| p       | previous           |   | n         | next                     |
-| +       | create dir         |   | g         | refresh                  |
-| m       | mark               |   | t         | inverse mark             |
-| u       | unmark             |   | U         | unmark all               |
-| %m      | mark regex by name |   | %g        | mark regex by content    |
-| M-}     | next marked file   |   | M-{       | previous marked file     |
-| d       | mark for delete    |   | x         | delete marked for delete |
-| D       | delete marked      |   | R         | rename / move            |
-| C       | copy               |   | ^         | goto parent dir          |
-| f       | edit file          |   | v         | view file                |
-| o       | open and goto      |   | C-o       | open                     |
-| C-x C-j | jump to dired      |   | C-x 4 C-j | jump to dired new window |
-| C-x C-q | change file names  |   | C-c C-c   | apply changes            |
-| q       | close dired buffer |   | C-u q     | kill dired buffer        |
-| TAB     | toggle subtree     |   | S-TAB     | remove subtree           |
-| (       | show details       |   | k         | kill lines (narrow)      |
+| p       | previous                     |   | n         | next                            |
+| +       | create dir                   |   | g         | refresh                         |
+| m       | mark                         |   | t         | inverse mark                    |
+| u       | unmark                       |   | U         | unmark all                      |
+| %m      | mark regex by name           |   | %g        | mark regex by content           |
+| %f      | find files by name recursive |   | %F        | find files by content recursive |
+| M-}     | next marked file             |   | M-{       | previous marked file            |
+| d       | mark for delete              |   | x         | delete marked for delete        |
+| D       | delete marked                |   | R         | rename / move                   |
+| C       | copy                         |   | ^         | goto parent dir                 |
+| f       | edit file                    |   | v         | view file                       |
+| o       | open and goto                |   | C-o       | open                            |
+| C-x C-j | jump to dired                |   | C-x 4 C-j | jump to dired new window        |
+| C-x C-q | change file names            |   | C-c C-c   | apply changes                   |
+| q       | close dired buffer           |   | C-u q     | kill dired buffer               |
+| TAB     | toggle subtree               |   | S-TAB     | remove subtree                  |
+| (       | show details                 |   | k         | kill lines (narrow)             |
 
 *** Paredit
 
@@ -274,75 +275,79 @@
 
 ** Emacs Lisp for Clojure programmers
 
-| Clojure          | Emacs Lisp       |
-|------------------+------------------|
-| (#{x} x)         | seq-contains     |
-| (= #{..} #{..})  | seq-set-equal-p  |
-| .indexOf         | seq-position     |
-| =                | equal            |
-| ->               | thread-first     |
-| > < <= >= =      | > < <= >= =      |
-| ->>              | thread-last      |
-| compare          | sting< string>   |
-| concat           | seq-concatenate  |
-| cons             | cons             |
-| count            | length           |
-| dec              | 1-               |
-| def              | setq             |
-| defn             | defun            |
-| defn             | defun            |
-| distinct         | seq-uniq         |
-| do               | progn            |
-| doseq            | dolist           |
-| drop             | nthcdr           |
-| drop-while       | seq-drop-while   |
-| empty? (list)    | null             |
-| empty? (string)  | string-empty-p   |
-| every?           | seq-every-p      |
-| false            | nil ()           |
-| filter           | seq-filter       |
-| first            | car              |
-| fn               | lambda           |
-| format           | format           |
-| group-by         | seq-group-by     |
-| identical?       | eq               |
-| if               | if               |
-| if-some          | if-let           |
-| inc              | 1+               |
-| let              | let*             |
-| list             | list             |
-| list?            | listp            |
-| map              | mapcar           |
-| mapcat           | mapcan           |
-| map-indexed      | seq-map-indexed  |
-| max              | seq-max          |
-| min              | seq-min          |
-| name             | symbol-name      |
-| nth              | nth              |
-| partition-all    | seq-partition    |
-| println          | message          |
-| prn              | print            |
-| rand-nth         | seq-random-elt   |
-| range            | number-sequence  |
-| reduce           | seq-reduce       |
-| remove           | seq-remove       |
-| rest             | cdr              |
-| reverse          | seq-reverse      |
-| run!             | mapc             |
-| set/difference   | seq-difference   |
-| set/intersection | seq-intersection |
-| set/union        | seq-union        |
-| setq             | def              |
-| some             | seq-find         |
-| sort-by          | seq-sort         |
-| str              | concat           |
-| str/blank?       | string-blank-p   |
-| str/join         | mapconcat        |
-| subvec           | seq-subseq       |
-| take             | seq-take         |
-| take-while       | seq-take-while   |
-| true             | t                |
-| when             | when             |
-| when-not         | unless           |
-| when-some        | when-let         |
-| zero?            | zerop            |
+| Clojure            | Emacs Lisp       |
+|--------------------+------------------|
+| (#{x} x)           | seq-contains     |
+| (= #{..} #{..})    | seq-set-equal-p  |
+| .indexOf           | seq-position     |
+| .remove =          | delete           |
+| .remove identical? | delq             |
+| =                  | equal            |
+| ->                 | thread-first     |
+| > < <= >= =        | > < <= >= =      |
+| ->>                | thread-last      |
+| compare            | sting< string>   |
+| concat             | seq-concatenate  |
+| cons               | cons             |
+| count              | length           |
+| dec                | 1-               |
+| def                | setq             |
+| defn               | defun            |
+| defn               | defun            |
+| distinct           | seq-uniq         |
+| do                 | progn            |
+| doseq              | dolist           |
+| drop               | nthcdr           |
+| drop-while         | seq-drop-while   |
+| empty? list        | null             |
+| empty? string      | string-empty-p   |
+| every?             | seq-every-p      |
+| false              | nil ()           |
+| filter             | seq-filter       |
+| first              | car              |
+| fn                 | lambda           |
+| format             | format           |
+| group-by           | seq-group-by     |
+| identical?         | eq               |
+| if                 | if               |
+| if-some            | if-let           |
+| inc                | 1+               |
+| let                | let*             |
+| list               | list             |
+| list?              | listp            |
+| map                | mapcar           |
+| mapcat             | mapcan           |
+| map-indexed        | seq-map-indexed  |
+| max                | seq-max          |
+| min                | seq-min          |
+| name               | symbol-name      |
+| nth                | nth              |
+| partition-all      | seq-partition    |
+| println            | message          |
+| prn                | print            |
+| rand-nth           | seq-random-elt   |
+| range              | number-sequence  |
+| reduce             | seq-reduce       |
+| remove =           | remove           |
+| remove identical?  | remq             |
+| remove predicate   | seq-remove       |
+| rest               | cdr              |
+| reverse            | seq-reverse      |
+| run!               | mapc             |
+| set/difference     | seq-difference   |
+| set/intersection   | seq-intersection |
+| set/union          | seq-union        |
+| setq               | def              |
+| some               | seq-find         |
+| sort-by            | seq-sort         |
+| str                | concat           |
+| str/blank?         | string-blank-p   |
+| str/join           | mapconcat        |
+| subvec             | seq-subseq       |
+| take               | seq-take         |
+| take-while         | seq-take-while   |
+| true               | t                |
+| when               | when             |
+| when-not           | unless           |
+| when-some          | when-let         |
+| zero?              | zerop            |

@@ -242,7 +242,9 @@
 
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "<tab>"    ) #'dired-subtree-toggle)
-  (define-key dired-mode-map (kbd "<backtab>") #'dired-subtree-remove))
+  (define-key dired-mode-map (kbd "<backtab>") #'dired-subtree-remove)
+  (define-key dired-mode-map (kbd "%f"       ) #'find-name-dired)
+  (define-key dired-mode-map (kbd "%F"       ) #'find-grep-dired))
 
 
 (with-eval-after-load 'magit
@@ -455,7 +457,7 @@
         (directory-files-recursively root "." t)
         (seq-filter #'file-directory-p)
         (cons root)
-        (mapc
+        (mapcar
          (lambda (dir)
            (when-let (tracks (seq-filter
                               (lambda (fname)
@@ -485,5 +487,8 @@
                  (insert "  ")
                  (insert "</trackList>")
                  (newline)
-                 (insert "</playlist>")))))))
-      (message "Playlists created."))))
+                 (insert "</playlist>")))
+             t)))
+        (remq nil)
+        (length)
+        (message "%d playlists created.")))))
