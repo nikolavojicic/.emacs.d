@@ -277,11 +277,13 @@
 
 | Clojure            | Emacs Lisp       |
 |--------------------+------------------|
+| &                  | &rest            |
 | (#{x} x)           | seq-contains     |
 | (= #{..} #{..})    | seq-set-equal-p  |
 | .indexOf           | seq-position     |
 | .remove =          | delete           |
 | .remove identical? | delq             |
+| \c                 | ?c               |
 | =                  | equal            |
 | ->                 | thread-first     |
 | > < <= >= =        | > < <= >= =      |
@@ -293,7 +295,7 @@
 | dec                | 1-               |
 | def                | setq             |
 | defn               | defun            |
-| defn               | defun            |
+| defonce            | defvar           |
 | distinct           | seq-uniq         |
 | do                 | progn            |
 | doseq              | dolist           |
