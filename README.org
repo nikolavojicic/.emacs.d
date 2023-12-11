@@ -285,8 +285,9 @@
 | .remove identical? | delq             |
 | \c                 | ?c               |
 | =                  | equal            |
+| ==                 | =                |
 | ->                 | thread-first     |
-| > < <= >= =        | > < <= >= =      |
+| > < <= >=          | > < <= >=        |
 | ->>                | thread-last      |
 | compare            | sting< string>   |
 | concat             | seq-concatenate  |
