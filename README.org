@@ -289,17 +289,20 @@
 | ->                 | thread-first     |
 | > < <= >=          | > < <= >=        |
 | ->>                | thread-last      |
+| and                | and              |
 | compare            | sting< string>   |
 | concat             | seq-concatenate  |
+| cond               | cond             |
 | cons               | cons             |
 | count              | length           |
 | dec                | 1-               |
 | def                | setq             |
 | defn               | defun            |
-| defonce            | defvar           |
+| defonce            | defvar defcustom |
 | distinct           | seq-uniq         |
 | do                 | progn            |
 | doseq              | dolist           |
+| dotimes            | dotimes          |
 | drop               | nthcdr           |
 | drop-while         | seq-drop-while   |
 | empty? list        | null             |
@@ -325,6 +328,7 @@
 | min                | seq-min          |
 | name               | symbol-name      |
 | nth                | nth              |
+| or                 | or               |
 | partition-all      | seq-partition    |
 | println            | message          |
 | prn                | print            |
