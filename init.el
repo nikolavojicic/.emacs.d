@@ -6,20 +6,21 @@
         ("melpa"        . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/"))
       package-pinned-packages
-      '((eros                 . "melpa"       )
-        (sicp                 . "melpa"       )
-        (cider                . "melpa-stable")
-        (magit                . "melpa-stable")
-        (company              . "melpa-stable")
-        (ob-http              . "melpa-stable")
-        (paredit              . "melpa-stable")
-        (flycheck             . "melpa-stable")
-        (clojure-mode         . "melpa-stable")
-        (expand-region        . "melpa-stable")
-        (plantuml-mode        . "melpa-stable")
-        (zenburn-theme        . "melpa-stable")
-        (flycheck-clj-kondo   . "melpa-stable")
-        (idle-highlight-mode  . "melpa"       )))
+      '((eros                . "melpa"       )
+        (sicp                . "melpa"       )
+        (cider               . "melpa-stable")
+        (magit               . "melpa-stable")
+        (company             . "melpa-stable")
+        (ob-http             . "melpa-stable")
+        (paredit             . "melpa-stable")
+        (flycheck            . "melpa-stable")
+        (clojure-mode        . "melpa-stable")
+        (expand-region       . "melpa-stable")
+        (plantuml-mode       . "melpa-stable")
+        (zenburn-theme       . "melpa-stable")
+        (dired-subtree       . "melpa"       )
+        (flycheck-clj-kondo  . "melpa-stable")
+        (idle-highlight-mode . "melpa"       )))
 
 
 (package-initialize)
@@ -36,7 +37,8 @@
 
 (setq backup-directory-alist     nil
       auto-save-list-file-prefix nil
-      custom-file                "~/.emacs.d/custom.el")
+      find-function-C-source-directory "~/.emacs.d/src"
+      custom-file                      "~/.emacs.d/custom.el")
 
 
 (when (eq system-type 'windows-nt)
@@ -60,10 +62,12 @@
 ;; =========
 
 
-(when-let (theme (car custom-enabled-themes))
-  (disable-theme theme))
+(defun disable-themes ()
+  (interactive)
+  (mapc #'disable-theme custom-enabled-themes))
 
 
+(disable-themes)
 (load-theme 'concrete t)
 
 
@@ -71,11 +75,29 @@
  [f12]
  (lambda ()
    (interactive)
-   (if (eq (car custom-enabled-themes) 'zenburn)
-       (progn (disable-theme 'zenburn)
-              (load-theme 'concrete t))
-     (progn (disable-theme 'concrete)
-            (load-theme 'zenburn t)))))
+   (let* ((theme (car custom-enabled-themes)))
+     (disable-themes)
+     (cond ((eq theme 'concrete)
+            (load-theme 'zenburn t)
+            (custom-theme-set-faces
+             'zenburn
+             '(default ((t (:background "#383838"))))
+             '(fringe ((t (:background "#383838"))))
+             '(vertical-border ((t (:foreground "#656555"))))
+             '(highlight ((t (:background "#2B2B2B"))))
+             '(font-lock-doc-face ((t (:foreground "#9FC59F" :slant italic))))
+             '(org-hide ((t (:foreground "#383838"))))
+             '(org-block ((t (:background "#494949"))))
+             '(org-meta-line ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
+             '(cider-error-overlay-face ((t (:foreground "#D0BF8F" :weight bold))))
+             '(dired-subtree-depth-1-face ((t (:background "inherit"))))
+             '(dired-subtree-depth-2-face ((t (:background "inherit"))))
+             '(dired-subtree-depth-3-face ((t (:background "inherit"))))
+             '(dired-subtree-depth-4-face ((t (:background "inherit"))))
+             '(dired-subtree-depth-5-face ((t (:background "inherit"))))
+             '(dired-subtree-depth-6-face ((t (:background "inherit"))))))
+           ("default theme"
+            (load-theme 'concrete t))))))
 
 
 (menu-bar-mode          -1)
@@ -91,6 +113,7 @@
       inhibit-startup-message            t
       initial-scratch-message            ""
       mouse-wheel-scroll-amount          '(1)
+      custom--inhibit-theme-enable       nil
       mouse-wheel-progressive-speed      nil
       eldoc-echo-area-use-multiline-p    nil
       magit-section-visibility-indicator nil)
@@ -98,8 +121,8 @@
 
 (set-face-attribute
  'default nil
- :height  120
- :family  "iosevka ss07")
+ :height  110
+ :family  "Lucida Sans Typewriter")
 
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
@@ -130,6 +153,7 @@
 
 (show-paren-mode 1)
 (save-place-mode 1)
+(global-auto-revert-mode 1)
 
 
 (setq-default indent-tabs-mode nil)
@@ -137,12 +161,15 @@
 
 (setq create-lockfiles                    nil
       auto-save-default                   nil
+      dired-dwim-target                   t
       make-backup-files                   nil
       mouse-yank-at-point                 t
       electric-indent-mode                nil
       select-enable-primary               t
       select-enable-clipboard             t
+      delete-by-moving-to-trash           t
       flycheck-display-errors-function    nil
+      global-auto-revert-non-file-buffers t
       save-interprogram-paste-before-kill t
       flycheck-check-syntax-automatically '(save idle-change mode-enabled))
 
@@ -185,7 +212,7 @@
     (lambda ()
       (interactive)
       (if (get-buffer-window flycheck-error-list-buffer)
-          (quit-windows-on flycheck-error-list-buffer)
+          (quit-windows-on   flycheck-error-list-buffer)
         (list-flycheck-errors)))))
 
 
@@ -199,33 +226,49 @@
 ;; ====================================================
 
 
-(require 'recentf)
 (require 'uniquify)
 
 
+(repeat-mode)
 (global-company-mode)
-
-
-(recentf-mode        1)
 (fido-vertical-mode  1)
+(put 'narrow-to-region 'disabled nil)
 
 
 (setq apropos-do-all             t
       recenter-positions         '(top middle bottom)
-      recentf-max-menu-items     40
+      dired-listing-switches     "-alFh"
       uniquify-buffer-name-style 'forward)
+
+
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
+
+
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "<tab>"    ) #'dired-subtree-toggle)
+  (define-key dired-mode-map (kbd "<backtab>") #'dired-subtree-remove)
+  (define-key dired-mode-map (kbd "%f"       ) #'find-name-dired)
+  (define-key dired-mode-map (kbd "%F"       ) #'find-grep-dired))
 
 
 (with-eval-after-load 'magit
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-unpulled-from-upstream)
-  (setq magit-module-sections-nested nil)
-  (define-key magit-mode-map (kbd "C-<tab>") nil))
+  (setq magit-module-sections-nested nil))
+
+
+(with-eval-after-load 'doc-view
+  (let* ((pdf-program "mutool"))
+    (setq doc-view-resolution 300
+          doc-view-ghostscript-program pdf-program)))
 
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
-(global-set-key (kbd "C-<tab>") #'other-window)
+
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 
 ;; lisp ==========
@@ -273,6 +316,24 @@
       (intern) (fmakunbound))))
 
 
+(with-eval-after-load 'cider-repl
+  (define-key cider-repl-mode-map (kbd "<return>") #'cider-repl-closing-return))
+
+
+(with-eval-after-load 'cider
+  (define-key cider-mode-map (kbd "C-c C-j")
+    (lambda ()
+      (interactive)
+      (cider-jump-to-compilation-error)
+      (recenter nil t)))
+  (define-key cider-mode-map (kbd "<f7>")
+    (lambda ()
+      (interactive)
+      (if (get-buffer-window cider-error-buffer)
+          (quit-windows-on   cider-error-buffer)
+        (cider-popup-buffer-display cider-error-buffer)))))
+
+
 (add-hook 'cider-mode-hook      #'eldoc-mode)
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
@@ -294,9 +355,12 @@
 
 (setq cider-use-overlays                    t
       cider-enrich-classpath                t
+      inferior-lisp-program                 "clisp"
       cider-repl-wrap-history               t
       cider-save-file-on-load               t
+      cider-show-error-buffer               nil
       cider-prompt-for-symbol               nil
+      cider-auto-jump-to-error              nil
       cider-font-lock-dynamically           '(macro core function var)
       cider-use-fringe-indicators           nil
       cider-auto-select-error-buffer        nil
@@ -304,7 +368,8 @@
       cider-repl-use-pretty-printing        t
       cider-repl-pop-to-buffer-on-connect   'display-only
       cider-auto-select-test-report-buffer  nil
-      cider-repl-history-display-duplicates nil)
+      cider-repl-history-display-duplicates nil
+      cider-repl-display-output-before-window-boundaries t)
 
 
 (require 'clojure-mode)
@@ -391,14 +456,14 @@
 
 (defun xspf-playlists-recursively ()
   (interactive)
-  (let ((root (read-directory-name "Enter root dir for XSPF playlists: ")))
+  (let* ((root (read-directory-name "Enter root dir for XSPF playlists: ")))
     (when (y-or-n-p (format "Confirm %s? " root))
       (require 'xml)
       (thread-last
         (directory-files-recursively root "." t)
-        (seq-filter (lambda (fname) (file-directory-p fname)))
+        (seq-filter #'file-directory-p)
         (cons root)
-        (mapc
+        (mapcar
          (lambda (dir)
            (when-let (tracks (seq-filter
                               (lambda (fname)
@@ -409,7 +474,7 @@
                                             "mp3" "mp4" "ogg" "opus" "ra" "rm"
                                             "sd2" "tta" "wav" "wma"))))
                               (directory-files dir t)))
-             (let ((out (expand-file-name "playlist.xspf" dir)))
+             (let* ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
                  (insert "<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
@@ -428,5 +493,8 @@
                  (insert "  ")
                  (insert "</trackList>")
                  (newline)
-                 (insert "</playlist>")))))))
-      (message "Playlists created."))))
+                 (insert "</playlist>")))
+             t)))
+        (remq nil)
+        (length)
+        (message "%d playlists created.")))))

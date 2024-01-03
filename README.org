@@ -5,22 +5,29 @@
 
 *** Basic
 
-| C-g         | abort binding        |   | C-x C-s  | save file           |
-| C-/         | undo                 |   | C-x C-f  | find / create file  |
-| C-z         | suspend emacs        |   | C-x s    | save some files     |
-| C-x C-c     | exit emacs           |   | C-n      | minibuffer previous |
-| C-x b       | switch buffer        |   | C-p      | minibuffer next     |
-| C-x k       | kill buffer          |   | C-x C- - | zoom out            |
-| C-x C-b     | list buffers         |   | C-x C- + | zoom in             |
-| C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu           |
+| C-g         | abort binding        |   | C-x C-s  | save file                   |
+| C-/         | undo                 |   | C-x C-f  | find / create file          |
+| C-z         | suspend emacs        |   | C-x s    | save some files             |
+| C-x C-c     | exit emacs           |   | C-x b    | switch buffer               |
+| C-n         | minibuffer next      |   | M-n      | minibuffer next history     |
+| C-p         | minibuffer previous  |   | M-p      | minibuffer previous history |
+| C-x k       | kill buffer          |   | C-x C- - | zoom out                    |
+| C-x C-b     | list buffers         |   | C-x C- + | zoom in                     |
+| C-u <n> <c> | repeat <c> <n> times |   | C-h ?    | help menu                   |
+| F2          | reformat and save    |   | F6       | toggle flycheck             |
+| C-x r m     | bookmark at point    |   | C-x r l  | list all bookmarks          |
+| C-x n n     | narrow to region     |   | C-x n w  | undo narrow (widen)         |
 
 *** Window
 
-| q          | quit help                  |   | C-x 1   | close all but current |
-| C-x o      | jump to next               |   | C-x 2   | split up-down         |
-| C-x 0      | close current              |   | C-x 3   | split left-right      |
-| F2 u/d/l/r | jump to up/down/left/right |   | C-x +   | equally size windows  |
-| C-x 5 2    | new frame                  |   | C-x 5 o | jump to next frame    |
+| q       | quit help                |   | C-x 1   | close all but current  |
+| C-x o   | jump to next             |   | C-x 2   | split up-down          |
+| C-x 0   | close current            |   | C-x 3   | split left-right       |
+| C-x {   | resize window left       |   | C-x }   | resize window right    |
+| C-x ^   | resize window up         |   | C-x v   | resize window down     |
+| C-x +   | equally size windows     |   | C-M-l   | scroll heuristically   |
+| C-M-v   | scroll other window down |   | C-M-V   | scroll other window up |
+| C-x 5 2 | new frame                |   | C-x 5 o | jump to next frame     |
 
 *** Move
 
@@ -34,7 +41,6 @@
 | C-s   | search forward       |   | C-r   | search backward       |
 | C-M-s | search forward regex |   | C-M-r | search backward regex |
 | M-g g | jump to line         |   | C-l   | center / top / bottom |
-| C-M-v | scroll other window  |   | C-M-l | scroll heuristically  |
 
 *** Text
 
@@ -56,6 +62,26 @@
 | C-x w h       | highlight regex  |   | C-x w r     | unhighlight regex              |
 | C-x w .       | highlight symbol |   | C-u C-x w r | unhighlight all                |
 | C-o           | add line below   |   | M-DEL       | cut word backward              |
+
+*** Dired
+
+| p       | previous                     |   | n         | next                            |
+| +       | create dir                   |   | g         | refresh                         |
+| m       | mark                         |   | t         | inverse mark                    |
+| u       | unmark                       |   | U         | unmark all                      |
+| %m      | mark regex by name           |   | %g        | mark regex by content           |
+| %f      | find files by name recursive |   | %F        | find files by content recursive |
+| M-}     | next marked file             |   | M-{       | previous marked file            |
+| d       | mark for delete              |   | x         | delete marked for delete        |
+| D       | delete marked                |   | R         | rename / move                   |
+| C       | copy                         |   | ^         | goto parent dir                 |
+| f       | edit file                    |   | v         | view file                       |
+| o       | open and goto                |   | C-o       | open                            |
+| C-x C-j | jump to dired                |   | C-x 4 C-j | jump to dired new window        |
+| C-x C-q | change file names            |   | C-c C-c   | apply changes                   |
+| q       | close dired buffer           |   | C-u q     | kill dired buffer               |
+| TAB     | toggle subtree               |   | S-TAB     | remove subtree                  |
+| (       | show details                 |   | k         | kill lines (narrow)             |
 
 *** Paredit
 
@@ -87,6 +113,7 @@
 | M-.         | go to symbol def |   | M-,         | return back        |
 | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
 | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
+| C-c C-j     | jump to error    |   | F7          | toggle cider-error |
 
 *** Magit
 
@@ -99,7 +126,7 @@
 | M-n   | next     section     |
 | M-p   | previous section     |
 | TAB   | toggle expand parent |
-| C-TAB | toggle expand all    |
+| S-TAB | hide expanded        |
 
 ** Org
 
@@ -134,7 +161,7 @@
 | C-c a       | agenda view                  |
 | C-u 5 C-c a | agenda view for 5 days       |
 | g           | refresh agenda               |
-| S-f         | follow mode                  |
+| F           | follow mode                  |
 | f / b       | move forward / back          |
 | t           | change task status           |
 
@@ -181,6 +208,8 @@
 
 | TAB                   | next cell                |
 | S-TAB                 | previous cell            |
+| S-LEFT / RIGHT        | move cell left / right   |
+| S-DOWN / UP           | move cell up / down      |
 | M-LEFT / RIGHT        | move column left / right |
 | M-DOWN / UP           | move row up / down       |
 | <length-number>       | set max column length    |
@@ -246,28 +275,86 @@
 
 ** Emacs Lisp for Clojure programmers
 
-| Clojure   | Emacs Lisp      |
-|-----------+-----------------|
-| ->        | thread-first    |
-| ->>       | thread-last     |
-| dec       | 1-              |
-| do        | progn           |
-| doseq     | dolist          |
-| let       | let*            |
-| first     | car             |
-| fn        | lambda          |
-| format    | format          |
-| if        | if              |
-| if-some   | if-let          |
-| inc       | 1+              |
-| list      | list            |
-| map       | mapcar          |
-| mapcat    | mapcan          |
-| name      | symbol-name     |
-| range     | number-sequence |
-| rest      | cdr             |
-| run!      | mapc            |
-| str/join  | mapconcat       |
-| when      | when            |
-| when-not  | unless          |
-| when-some | when-let        |
+| Clojure            | Emacs Lisp       |
+|--------------------+------------------|
+| &                  | &rest            |
+| (#{x} x)           | seq-contains     |
+| (= #{..} #{..})    | seq-set-equal-p  |
+| .indexOf           | seq-position     |
+| .remove =          | delete           |
+| .remove identical? | delq             |
+| \c                 | ?c               |
+| =                  | equal            |
+| ==                 | =                |
+| ->                 | thread-first     |
+| > < <= >=          | > < <= >=        |
+| ->>                | thread-last      |
+| and                | and              |
+| compare            | sting< string>   |
+| concat             | seq-concatenate  |
+| cond               | cond             |
+| cons               | cons             |
+| count              | length           |
+| dec                | 1-               |
+| def                | setq             |
+| defn               | defun            |
+| defonce            | defvar defcustom |
+| distinct           | seq-uniq         |
+| do                 | progn            |
+| doseq              | dolist           |
+| dotimes            | dotimes          |
+| drop               | nthcdr           |
+| drop-while         | seq-drop-while   |
+| empty? list        | null             |
+| empty? string      | string-empty-p   |
+| every?             | seq-every-p      |
+| false              | nil ()           |
+| filter             | seq-filter       |
+| first              | car              |
+| fn                 | lambda           |
+| format             | format           |
+| group-by           | seq-group-by     |
+| identical?         | eq               |
+| if                 | if               |
+| if-some            | if-let           |
+| inc                | 1+               |
+| let                | let*             |
+| list               | list             |
+| list?              | listp            |
+| map                | mapcar           |
+| mapcat             | mapcan           |
+| map-indexed        | seq-map-indexed  |
+| max                | seq-max          |
+| min                | seq-min          |
+| name               | symbol-name      |
+| nth                | nth              |
+| or                 | or               |
+| partition-all      | seq-partition    |
+| println            | message          |
+| prn                | print            |
+| rand-nth           | seq-random-elt   |
+| range              | number-sequence  |
+| reduce             | seq-reduce       |
+| remove =           | remove           |
+| remove identical?  | remq             |
+| remove predicate   | seq-remove       |
+| rest               | cdr              |
+| reverse            | seq-reverse      |
+| run!               | mapc             |
+| set/difference     | seq-difference   |
+| set/intersection   | seq-intersection |
+| set/union          | seq-union        |
+| setq               | def              |
+| some               | seq-find         |
+| sort-by            | seq-sort         |
+| str                | concat           |
+| str/blank?         | string-blank-p   |
+| str/join           | mapconcat        |
+| subvec             | seq-subseq       |
+| take               | seq-take         |
+| take-while         | seq-take-while   |
+| true               | t                |
+| when               | when             |
+| when-not           | unless           |
+| when-some          | when-let         |
+| zero?              | zerop            |
