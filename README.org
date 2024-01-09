@@ -290,6 +290,7 @@
 | > < <= >=          | > < <= >=        |
 | ->>                | thread-last      |
 | and                | and              |
+| apply              | apply            |
 | compare            | sting< string>   |
 | concat             | seq-concatenate  |
 | cond               | cond             |
@@ -318,14 +319,15 @@
 | if                 | if               |
 | if-some            | if-let           |
 | inc                | 1+               |
+| into               | append           |
 | let                | let*             |
 | list               | list             |
 | list?              | listp            |
 | map                | mapcar           |
 | mapcat             | mapcan           |
 | map-indexed        | seq-map-indexed  |
-| max                | seq-max          |
-| min                | seq-min          |
+| max                | max              |
+| min                | min              |
 | name               | symbol-name      |
 | nth                | nth              |
 | or                 | or               |
@@ -339,14 +341,14 @@
 | remove identical?  | remq             |
 | remove predicate   | seq-remove       |
 | rest               | cdr              |
-| reverse            | seq-reverse      |
+| reverse            | reverse          |
 | run!               | mapc             |
 | set/difference     | seq-difference   |
 | set/intersection   | seq-intersection |
 | set/union          | seq-union        |
 | setq               | def              |
 | some               | seq-find         |
-| sort-by            | seq-sort         |
+| sort-by            | sort             |
 | str                | concat           |
 | str/blank?         | string-blank-p   |
 | str/join           | mapconcat        |
@@ -357,4 +359,5 @@
 | when               | when             |
 | when-not           | unless           |
 | when-some          | when-let         |
+| while              | while            |
 | zero?              | zerop            |
