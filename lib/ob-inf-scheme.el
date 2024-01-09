@@ -26,6 +26,8 @@
 
 ;; - Make sure that `M-x run-scheme` works
 
+;;; Code:
+
 (require 'ob)
 (require 'ob-ref)
 (require 'ob-comint)
