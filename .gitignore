@@ -1,5 +1,5 @@
-*
+/*
 !.gitignore
 !README.org
 !init.el
-/lib/*
+!/lib/
