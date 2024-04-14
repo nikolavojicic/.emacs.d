@@ -95,6 +95,28 @@
             (load-theme 'concrete t))))))
 
 
+(global-set-key
+ (kbd "C-x _")
+ (lambda ()
+   (interactive)
+   (let ((delta (- (window-size (selected-window) t)
+                   (let ((longest-line 0))
+                     (save-excursion
+                       (goto-char (point-min))
+                       (while (not (eobp))
+                         (let ((line-length 0))
+                           (while (and (not (eolp)) (not (eobp)))
+                             (unless (invisible-p (point))
+                               (setq line-length (1+ line-length)))
+                             (forward-char 1))
+                           (setq longest-line (max longest-line line-length)))
+                         (forward-line 1)))
+                     longest-line)
+                   7)))
+     (when (not (= delta 0))
+       (enlarge-window-horizontally (- delta))))))
+
+
 (menu-bar-mode          -1)
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
@@ -117,6 +139,7 @@
 (set-face-attribute
  'default nil
  :height  110
+ :weight  'bold
  :family  "Lucida Sans Typewriter")
 
 
@@ -264,6 +287,7 @@
 
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 
 
 ;; lisp ==========
