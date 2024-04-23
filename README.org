@@ -62,7 +62,7 @@
 | C-x w h       | highlight regex   |   | C-x w r     | unhighlight regex              |
 | C-x w .       | highlight symbol  |   | C-u C-x w r | unhighlight all                |
 | C-o           | add line below    |   | M-DEL       | cut word backward              |
-| M-t           | drag word forward |   |             |                                |
+| M-t           | drag word forward |   | C-c s       | sort lines                     |
 
 *** Dired
 

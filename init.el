@@ -205,8 +205,9 @@
         try-complete-lisp-symbol))
 
 
-(global-set-key (kbd "M-/") #'hippie-expand)
-(global-set-key (kbd "C-=") #'er/expand-region)
+(global-set-key (kbd "M-/")   #'hippie-expand)
+(global-set-key (kbd "C-=")   #'er/expand-region)
+(global-set-key (kbd "C-c s") #'sort-lines)
 
 
 (global-set-key
