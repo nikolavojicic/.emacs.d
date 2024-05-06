@@ -373,7 +373,7 @@
 
 
 (setq cider-use-overlays                    t
-      cider-enrich-classpath                t
+      cider-enrich-classpath                nil ;; set to t when needed
       inferior-lisp-program                 "clisp"
       cider-repl-wrap-history               t
       cider-save-file-on-load               t
