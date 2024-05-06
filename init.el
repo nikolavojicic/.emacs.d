@@ -62,7 +62,7 @@
   (mapc #'disable-theme custom-enabled-themes))
 
 
-(disable-themes)
+(advice-add 'load-theme :before (lambda (&rest args) (disable-themes)))
 (load-theme 'concrete t)
 
 
@@ -71,20 +71,19 @@
  (lambda ()
    (interactive)
    (let* ((theme (car custom-enabled-themes)))
-     (disable-themes)
      (cond ((eq theme 'concrete)
             (load-theme 'zenburn t)
             (custom-theme-set-faces
              'zenburn
-             '(default ((t (:background "#383838"))))
-             '(fringe ((t (:background "#383838"))))
-             '(vertical-border ((t (:foreground "#656555"))))
-             '(highlight ((t (:background "#2B2B2B"))))
+             '(default            ((t (:background "#383838"))))
+             '(fringe             ((t (:background "#383838"))))
+             '(vertical-border    ((t (:foreground "#656555"))))
+             '(highlight          ((t (:background "#2B2B2B"))))
              '(font-lock-doc-face ((t (:foreground "#9FC59F" :slant italic))))
-             '(org-hide ((t (:foreground "#383838"))))
-             '(org-block ((t (:background "#494949"))))
-             '(org-meta-line ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
-             '(cider-error-overlay-face ((t (:foreground "#D0BF8F" :weight bold))))
+             '(org-hide           ((t (:foreground "#383838"))))
+             '(org-block          ((t (:background "#494949"))))
+             '(org-meta-line      ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
+             '(cider-error-overlay-face   ((t (:foreground "#D0BF8F"))))
              '(dired-subtree-depth-1-face ((t (:background "inherit"))))
              '(dired-subtree-depth-2-face ((t (:background "inherit"))))
              '(dired-subtree-depth-3-face ((t (:background "inherit"))))
