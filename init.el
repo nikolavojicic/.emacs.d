@@ -139,7 +139,7 @@
  'default nil
  :height  110
  :weight  'bold
- :family  "Lucida Sans Typewriter")
+ :family  "iosevka ss07")
 
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
