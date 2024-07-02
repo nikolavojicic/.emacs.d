@@ -274,6 +274,25 @@
 5. Clone or download this repository to =C:\home\.emacs.d=
 6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
 
+** External programs needed on Windows for this init.el
+
+- [[https://www.7-zip.org/download.html][7-Zip]]
+- [[https://git-scm.com/download/win][Git]]
+- [[https://www.mingw-w64.org/][MinGW]]
+- [[https://clisp.sourceforge.io/][CLisp]]
+- [[https://scheme.com/download/][Chez Scheme]]
+- [[https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html][Java]]
+- [[https://gist.github.com/nikolavojicic/6081284d4fb5f969a7fabe1f150db73e][Leiningen]]
+- [[https://github.com/clj-kondo/clj-kondo/releases][clj-kondo]]
+- [[https://nodejs.org/en/download/prebuilt-installer][Node.js]]
+- [[https://graphviz.org/download/][Graphviz]]
+- [[https://plantuml.com/download][PlantUML]]
+- [[https://strawberryperl.com/releases.html][Strawberry Perl]]
+- [[https://miktex.org/][MiKTeX]]
+- [[https://www.libreoffice.org/download/download-libreoffice/][LibreOffice]]
+- [[https://mupdf.com/][MuPDF]]
+- [[https://www.dropbox.com/install][Dropbox]]
+
 ** Emacs Lisp for Clojure programmers
 
 | Clojure            | Emacs Lisp       |
