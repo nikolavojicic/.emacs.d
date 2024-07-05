@@ -227,11 +227,11 @@
 
 (with-eval-after-load 'flycheck
   (define-key flycheck-mode-map (kbd "<f6>")
-    (lambda ()
-      (interactive)
-      (if (get-buffer-window flycheck-error-list-buffer)
-          (quit-windows-on   flycheck-error-list-buffer)
-        (list-flycheck-errors)))))
+              (lambda ()
+                (interactive)
+                (if (get-buffer-window flycheck-error-list-buffer)
+                    (quit-windows-on   flycheck-error-list-buffer)
+                  (list-flycheck-errors)))))
 
 
 ;; navigation =========================================
@@ -303,7 +303,7 @@
 (eros-mode 1)
 
 
-;; Eval Emacs Lisp everywhere
+;; eval elisp everywhere
 (global-set-key (kbd "C-c C-c") #'eval-defun)
 (global-set-key (kbd "C-c C-e") #'eval-last-sexp)
 (global-set-key (kbd "C-c C-p") #'pp-eval-last-sexp)
@@ -313,19 +313,17 @@
   (define-key emacs-lisp-mode-map (kbd "C-c C-c") #'eval-defun)
   (define-key emacs-lisp-mode-map (kbd "C-c C-e") #'eval-last-sexp)
   (define-key emacs-lisp-mode-map (kbd "C-c C-p") #'pp-eval-last-sexp)
-  (define-key emacs-lisp-mode-map
-    (kbd "C-c C-k")
-    (lambda ()
-      (interactive)
-      (load-file buffer-file-name)))
-  (define-key emacs-lisp-mode-map
-    (kbd "C-c C-u")
-    (lambda ()
-      (interactive)
-      (thread-last
-        (or (thing-at-point 'symbol) "")
-        (read-from-minibuffer "Undefine symbol: ")
-        (intern) (fmakunbound)))))
+  (define-key emacs-lisp-mode-map (kbd "C-c C-k")
+              (lambda ()
+                (interactive)
+                (load-file buffer-file-name)))
+  (define-key emacs-lisp-mode-map (kbd "C-c C-u")
+              (lambda ()
+                (interactive)
+                (thread-last
+                  (or (thing-at-point 'symbol) "")
+                  (read-from-minibuffer "Undefine symbol: ")
+                  (intern) (fmakunbound)))))
 
 
 (global-set-key
@@ -344,16 +342,16 @@
 
 (with-eval-after-load 'cider
   (define-key cider-mode-map (kbd "C-c C-j")
-    (lambda ()
-      (interactive)
-      (cider-jump-to-compilation-error)
-      (recenter nil t)))
+              (lambda ()
+                (interactive)
+                (cider-jump-to-compilation-error)
+                (recenter nil t)))
   (define-key cider-mode-map (kbd "<f7>")
-    (lambda ()
-      (interactive)
-      (if (get-buffer-window cider-error-buffer)
-          (quit-windows-on   cider-error-buffer)
-        (cider-popup-buffer-display cider-error-buffer)))))
+              (lambda ()
+                (interactive)
+                (if (get-buffer-window cider-error-buffer)
+                    (quit-windows-on   cider-error-buffer)
+                  (cider-popup-buffer-display cider-error-buffer)))))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
@@ -399,18 +397,18 @@
 
 
 (define-clojure-indent
-  (defroutes  'defun)
-  (GET        2)
-  (POST       2)
-  (PUT        2)
-  (DELETE     2)
-  (HEAD       2)
-  (ANY        2)
-  (OPTIONS    2)
-  (PATCH      2)
-  (rfn        2)
-  (let-routes 1)
-  (context    2))
+ (defroutes  'defun)
+ (GET        2)
+ (POST       2)
+ (PUT        2)
+ (DELETE     2)
+ (HEAD       2)
+ (ANY        2)
+ (OPTIONS    2)
+ (PATCH      2)
+ (rfn        2)
+ (let-routes 1)
+ (context    2))
 
 
 ;; org =============
