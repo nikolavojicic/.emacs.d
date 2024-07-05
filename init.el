@@ -303,9 +303,29 @@
 (eros-mode 1)
 
 
+;; Eval Emacs Lisp everywhere
 (global-set-key (kbd "C-c C-c") #'eval-defun)
 (global-set-key (kbd "C-c C-e") #'eval-last-sexp)
 (global-set-key (kbd "C-c C-p") #'pp-eval-last-sexp)
+
+
+(with-eval-after-load 'elisp-mode
+  (define-key emacs-lisp-mode-map (kbd "C-c C-c") #'eval-defun)
+  (define-key emacs-lisp-mode-map (kbd "C-c C-e") #'eval-last-sexp)
+  (define-key emacs-lisp-mode-map (kbd "C-c C-p") #'pp-eval-last-sexp)
+  (define-key emacs-lisp-mode-map
+    (kbd "C-c C-k")
+    (lambda ()
+      (interactive)
+      (load-file buffer-file-name)))
+  (define-key emacs-lisp-mode-map
+    (kbd "C-c C-u")
+    (lambda ()
+      (interactive)
+      (thread-last
+        (or (thing-at-point 'symbol) "")
+        (read-from-minibuffer "Undefine symbol: ")
+        (intern) (fmakunbound)))))
 
 
 (global-set-key
@@ -316,23 +336,6 @@
      (kill-ring-save
       (progn (beginning-of-defun) (point))
       (progn (end-of-defun)       (point))))))
-
-
-(define-key emacs-lisp-mode-map
-  (kbd "C-c C-k")
-  (lambda ()
-    (interactive)
-    (load-file buffer-file-name)))
-
-
-(define-key emacs-lisp-mode-map
-  (kbd "C-c C-u")
-  (lambda ()
-    (interactive)
-    (thread-last
-      (or (thing-at-point 'symbol) "")
-      (read-from-minibuffer "Undefine symbol: ")
-      (intern) (fmakunbound))))
 
 
 (with-eval-after-load 'cider-repl
