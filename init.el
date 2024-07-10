@@ -326,6 +326,23 @@
                   (intern) (fmakunbound)))))
 
 
+;; ========== inline edebug result ==========
+(advice-add #'edebug-compute-previous-result :around
+            (lambda (_ &rest args)
+              (let ((previous-value (nth 0 args)))
+                (when edebug-unwrap-results
+                  (setq previous-value (edebug-unwrap* previous-value)))
+                (setq edebug-previous-result (edebug-safe-prin1-to-string previous-value)))))
+
+
+(advice-add #'edebug-previous-result :around
+            (lambda (_ &rest args)
+              (eros--make-result-overlay edebug-previous-result
+                :where    (point)
+                :duration eros-eval-result-duration)))
+;; ==========================================
+
+
 (global-set-key
  (kbd "C-c M-w")
  (lambda ()
