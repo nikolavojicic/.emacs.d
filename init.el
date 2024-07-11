@@ -20,6 +20,7 @@
         (plantuml-mode       . "melpa-stable")
         (zenburn-theme       . "melpa-stable")
         (dired-subtree       . "melpa"       )
+        (graphviz-dot-mode   . "melpa-stable")
         (flycheck-clj-kondo  . "melpa-stable")
         (idle-highlight-mode . "melpa"       )))
 
