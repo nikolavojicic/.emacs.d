@@ -291,6 +291,7 @@
 - [[https://miktex.org/][MiKTeX]]
 - [[https://www.libreoffice.org/download/download-libreoffice/][LibreOffice]]
 - [[https://mupdf.com/][MuPDF]]
+- [[https://sourceforge.net/projects/gnuplot/files/gnuplot/][gnuplot]]
 - [[https://www.dropbox.com/install][Dropbox]]
 
 ** Emacs Lisp for Clojure programmers
