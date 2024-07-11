@@ -285,13 +285,13 @@
 - [[https://gist.github.com/nikolavojicic/6081284d4fb5f969a7fabe1f150db73e][Leiningen]]
 - [[https://github.com/clj-kondo/clj-kondo/releases][clj-kondo]]
 - [[https://nodejs.org/en/download/prebuilt-installer][Node.js]]
+- [[https://sourceforge.net/projects/gnuplot/files/gnuplot/][gnuplot]]
 - [[https://graphviz.org/download/][Graphviz]]
 - [[https://plantuml.com/download][PlantUML]]
 - [[https://strawberryperl.com/releases.html][Strawberry Perl]]
 - [[https://miktex.org/][MiKTeX]]
 - [[https://www.libreoffice.org/download/download-libreoffice/][LibreOffice]]
 - [[https://mupdf.com/][MuPDF]]
-- [[https://sourceforge.net/projects/gnuplot/files/gnuplot/][gnuplot]]
 - [[https://www.dropbox.com/install][Dropbox]]
 
 ** Emacs Lisp for Clojure programmers
