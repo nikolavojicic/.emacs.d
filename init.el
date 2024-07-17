@@ -138,9 +138,9 @@
 
 (set-face-attribute
  'default nil
- :height  120
+ :height  110
  :weight  'bold
- :family  "iosevka ss07")
+ :family  "fira code")
 
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
