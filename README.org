@@ -293,6 +293,7 @@
 - [[https://www.libreoffice.org/download/download-libreoffice/][LibreOffice]]
 - [[https://mupdf.com/][MuPDF]]
 - [[https://www.dropbox.com/install][Dropbox]]
+- [[https://github.com/tonsky/FiraCode/releases][Fira Code]]
 
 ** Emacs Lisp for Clojure programmers
 
