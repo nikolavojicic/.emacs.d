@@ -359,6 +359,7 @@
 | rand-nth           | seq-random-elt   |
 | range              | number-sequence  |
 | reduce             | seq-reduce       |
+| re-matches         | string-match-p   |
 | remove =           | remove           |
 | remove identical?  | remq             |
 | remove predicate   | seq-remove       |
