@@ -6,7 +6,8 @@
         ("melpa"        . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/"))
       package-pinned-packages
-      '((eros                . "melpa"       )
+      '((avy                 . "melpa-stable")
+        (eros                . "melpa"       )
         (sicp                . "melpa"       )
         (cider               . "melpa-stable")
         (magit               . "melpa-stable")
@@ -84,13 +85,14 @@
              '(org-hide           ((t (:foreground "#383838"))))
              '(org-block          ((t (:background "#494949"))))
              '(org-meta-line      ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
-             '(cider-error-overlay-face   ((t (:foreground "#D0BF8F"))))
              '(dired-subtree-depth-1-face ((t (:background "inherit"))))
              '(dired-subtree-depth-2-face ((t (:background "inherit"))))
              '(dired-subtree-depth-3-face ((t (:background "inherit"))))
              '(dired-subtree-depth-4-face ((t (:background "inherit"))))
              '(dired-subtree-depth-5-face ((t (:background "inherit"))))
-             '(dired-subtree-depth-6-face ((t (:background "inherit"))))))
+             '(dired-subtree-depth-6-face ((t (:background "inherit"))))
+             '(cider-debug-code-overlay-face (()))
+             '(cider-error-overlay-face      ((t (:foreground "#D0BF8F"))))))
            ("default theme"
             (load-theme 'concrete t))))))
 
@@ -285,6 +287,7 @@
 
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
+(global-set-key (kbd "C-'") #'avy-goto-char-timer)
 
 
 (defalias 'yes-or-no-p 'y-or-n-p)

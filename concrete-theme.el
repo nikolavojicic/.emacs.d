@@ -24,7 +24,7 @@
  '(clojure-keyword-face ((t (:foreground "darkgreen"))))
  '(cider-repl-stderr-face ((t (:foreground "firebrick"))))
  '(cider-error-overlay-face ((t (:foreground "firebrick"))))
- '(cider-debug-code-overlay-face ((t (:background "gray75"))))
+ '(cider-debug-code-overlay-face (()))
  '(cider-result-overlay-face (()))
  '(eros-result-overlay-face (()))
  '(dired-subtree-depth-1-face ((t (:background "inherit"))))
