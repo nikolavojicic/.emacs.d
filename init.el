@@ -458,6 +458,7 @@
 
 
 (with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-'"  ) nil)
   (define-key org-mode-map (kbd "C-c a") #'org-agenda)
   (define-key org-mode-map (kbd "C-c c") #'org-capture)
   (define-key org-mode-map (kbd "C-c l") #'org-store-link)

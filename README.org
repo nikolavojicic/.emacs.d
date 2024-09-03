@@ -41,6 +41,7 @@
 | C-s   | search forward       |   | C-r   | search backward       |
 | C-M-s | search forward regex |   | C-M-r | search backward regex |
 | M-g g | jump to line         |   | C-l   | center / top / bottom |
+| C-'   | avy search timer     |   |       |                       |
 
 *** Text
 
