@@ -472,6 +472,7 @@
    '((C          . t)
      (js         . t)
      (dot        . t)
+     (sql        . t)
      (java       . t)
      (http       . t)
      (shell      . t)

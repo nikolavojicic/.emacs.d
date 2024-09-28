@@ -261,6 +261,8 @@
 | C-c C-e      | export menu                                        |
 | C-c C-,      | insert begin...end block                           |
 | C-c '        | open begin_src in new window                       |
+| C-c M-f      | jump to next src block                             |
+| C-c M-b      | jump to previous src block                         |
 | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
 ** Emacs installation on Windows
