@@ -107,15 +107,16 @@
 
 *** Cider
 
-| C-c C-k     | eval buffer      |   | C-c M-j     | run and open       |
-| C-c C-e     | eval form, show  |   | C-c M-n M-n | switch repl ns     |
-| C-u C-c C-e | eval form, write |   | C-u C-c C-o | clear buffer       |
-| C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back |
-| C-c M-i     | inspect form     |   | C-u C-c C-c | debug form         |
-| M-.         | go to symbol def |   | M-,         | return back        |
-| C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
-| C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
-| C-c C-j     | jump to error    |   | F7          | toggle cider-error |
+| C-c C-k     | eval buffer      |   | C-c M-j     | run and open        |
+| C-c C-e     | eval form, show  |   | C-c M-n M-n | switch repl ns      |
+| C-u C-c C-e | eval form, write |   | C-u C-c C-o | clear buffer        |
+| C-c C-c     | eval defun       |   | C-c M-;     | eval defun, comment |
+| C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back  |
+| C-c M-i     | inspect form     |   | C-u C-c C-c | debug form          |
+| M-.         | go to symbol def |   | M-,         | return back         |
+| C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests   |
+| C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol     |
+| C-c C-j     | jump to error    |   | F7          | toggle cider-error  |
 
 *** Magit
 
