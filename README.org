@@ -317,6 +317,7 @@
 | ->>                | thread-last      |
 | and                | and              |
 | apply              | apply            |
+| class              | type-of          |
 | compare            | sting< string>   |
 | concat             | seq-concatenate  |
 | cond               | cond             |
