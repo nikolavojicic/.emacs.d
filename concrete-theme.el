@@ -11,6 +11,7 @@
  '(line-number-current-line ((t (:foreground "red"))))
  '(font-lock-doc-face ((t (:foreground "firebrick"))))
  '(font-lock-comment-face ((t (:foreground "gray40"))))
+ '(show-paren-match ((t (:background "blue" :foreground "red"))))
  '(magit-section-highlight ((t (:background "gray90"))))
  '(magit-diff-context-highlight ((t (:background "gray90"))))
  '(org-block ((t (:background "gray90"))))
