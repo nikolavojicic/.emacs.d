@@ -43,6 +43,14 @@
 | M-g g | jump to line         |   | C-l   | center / top / bottom |
 | C-'   | avy search timer     |   |       |                       |
 
+*** Cursor
+
+| C-c C-' | mark next                 |   | C-'     | if multiple mark next       |
+| C-c C-; | mark previous             |   | C-;     | if multiple mark previous   |
+| C-"     | if multiple unmark next   |   | C-:     | if multiple unmark previous |
+| C-c C-= | mark all in defun         |   | C-x C-= | mark all                    |
+| C-`     | if multiple cycle forward |   | ENTER   | complete                    |
+
 *** Text
 
 | C-space       | set mark          |   | C-M-h       | select form                    |

@@ -21,8 +21,8 @@
         (plantuml-mode       . "melpa-stable")
         (zenburn-theme       . "melpa-stable")
         (dired-subtree       . "melpa"       )
-        (flycheck-clj-kondo  . "melpa-stable")
-        (idle-highlight-mode . "melpa"       )))
+        (multiple-cursors    . "melpa-stable")
+        (flycheck-clj-kondo  . "melpa-stable")))
 
 
 (package-initialize)
@@ -248,6 +248,7 @@
 
 
 (require 'uniquify)
+(require 'multiple-cursors)
 
 
 (repeat-mode)
@@ -287,8 +288,17 @@
 
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
-(global-set-key (kbd "C-'") #'avy-goto-char-timer)
+(global-set-key (kbd "C-'")     #'avy-goto-char-timer)
+(global-set-key (kbd "C-c C-'") #'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-;") #'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-=") #'mc/mark-all-like-this-in-defun)
+(global-set-key (kbd "C-x C-=") #'mc/mark-all-like-this)
 
+(define-key mc/keymap (kbd "C-'")  #'mc/mark-next-like-this)
+(define-key mc/keymap (kbd "C-;")  #'mc/mark-previous-like-this)
+(define-key mc/keymap (kbd "C-\"") #'mc/unmark-next-like-this)
+(define-key mc/keymap (kbd "C-:")  #'mc/unmark-previous-like-this)
+(define-key mc/keymap (kbd "C-`")  #'mc/cycle-forward)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq use-short-answers t)
@@ -379,9 +389,6 @@
 (add-hook 'prog-mode-hook       #'subword-mode)
 (add-hook 'cider-repl-mode-hook #'subword-mode)
 (add-hook 'clojure-mode-hook    #'flycheck-mode)
-(add-hook 'org-mode-hook        #'idle-highlight-mode)
-(add-hook 'prog-mode-hook       #'idle-highlight-mode)
-(add-hook 'cider-repl-mode-hook #'idle-highlight-mode)
 (add-hook 'cider-mode-hook      #'cider-company-enable-fuzzy-completion)
 (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
 

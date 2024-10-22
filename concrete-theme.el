@@ -4,6 +4,7 @@
 (custom-theme-set-faces
  'concrete
  '(cursor                        ((t (:background "red"))))
+ '(mc/cursor-face                ((t (:background "red" :foreground "gray40"))))
  '(default                       ((t (:background "gray80"))))
  '(fringe                        ((t (:background "gray80"))))
  '(vertical-border               ((t (:foreground "gray65"))))
