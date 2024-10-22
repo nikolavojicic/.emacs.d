@@ -5,8 +5,8 @@
  'concrete
  '(cursor                        ((t (:background "red"))))
  '(mc/cursor-face                ((t (:background "red" :foreground "gray40"))))
- '(default                       ((t (:background "gray80"))))
- '(fringe                        ((t (:background "gray80"))))
+ '(default                       ((t (:background "gray83"))))
+ '(fringe                        ((t (:background "gray83"))))
  '(vertical-border               ((t (:foreground "gray65"))))
  '(mode-line-buffer-id           ((t (:foreground "blue"))))
  '(line-number-current-line      ((t (:foreground "red"))))
