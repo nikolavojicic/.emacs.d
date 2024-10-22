@@ -117,7 +117,7 @@
             (set-face-attribute 'completions-common-part nil :height 1.0 :weight 'bold)
             (set-face-attribute 'header-line             nil :height 1.0)
             (set-face-attribute 'mode-line               nil :height 1.0)
-            (set-face-attribute 'mode-line-buffer-id     nil :height 1.0 :background "blue")
+            (set-face-attribute 'mode-line-buffer-id     nil :height 1.0 :background "inherit")
             (set-face-attribute 'mode-line-highlight     nil :height 1.0)
             (set-face-attribute 'mode-line-inactive      nil :height 1.0))
            ("default theme"
