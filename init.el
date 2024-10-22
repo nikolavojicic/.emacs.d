@@ -101,6 +101,7 @@
              '(cursor                        ((t (:background "red"))))
              '(mc/cursor-face                ((t (:background "red"))))
              '(fringe                        ((t (:background "inherit"))))
+             '(mode-line                     ((t (:foreground "red" :box '(:line-width -1 :style released-button)))))
              '(line-number-current-line      ((t (:foreground "red"))))
              '(font-lock-builtin-face        ((t (:foreground "LightSlateBlue"))))
              '(cider-repl-stderr-face        ((t (:foreground "red"))))
@@ -116,10 +117,9 @@
              '(dired-subtree-depth-6-face    ((t (:background "inherit")))))
             (set-face-attribute 'completions-common-part nil :height 1.0 :weight 'bold)
             (set-face-attribute 'header-line             nil :height 1.0)
-            (set-face-attribute 'mode-line               nil :height 1.0)
             (set-face-attribute 'mode-line-buffer-id     nil :height 1.0 :background "inherit")
             (set-face-attribute 'mode-line-highlight     nil :height 1.0)
-            (set-face-attribute 'mode-line-inactive      nil :height 1.0))
+            (set-face-attribute 'mode-line-inactive      nil :height 1.0 :background "inherit"))
            ("default theme"
             (load-theme 'concrete t))))))
 
