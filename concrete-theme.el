@@ -23,7 +23,7 @@
  '(org-level-4                   ((t (:foreground "darkgreen"))))
  '(org-level-5                   ((t (:foreground "firebrick"))))
  '(font-lock-builtin-face        ((t (:foreground "darkgreen"))))
- '(font-lock-type-face           ((t (:foreground "darkgreen"))))
+ '(font-lock-type-face           ((t (:foreground "darkcyan"))))
  '(clojure-keyword-face          ((t (:foreground "darkgreen"))))
  '(cider-repl-stderr-face        ((t (:foreground "firebrick"))))
  '(cider-error-overlay-face      ((t (:foreground "firebrick"))))
