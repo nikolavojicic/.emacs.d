@@ -72,7 +72,8 @@
  [f12]
  (lambda ()
    (interactive)
-   (let* ((theme (car custom-enabled-themes)))
+   (let* ((theme (car custom-enabled-themes))
+          (box   '(:line-width -1 :style released-button)))
      (cond ((eq theme 'concrete)
             (load-theme 'zenburn t)
             (custom-theme-set-faces
@@ -101,7 +102,7 @@
              '(cursor                        ((t (:background "red"))))
              '(mc/cursor-face                ((t (:background "red"))))
              '(fringe                        ((t (:background "inherit"))))
-             '(mode-line                     ((t (:foreground "red" :box '(:line-width -1 :style released-button)))))
+             '(mode-line                     ((t (:foreground "red" :box ,box))))
              '(line-number-current-line      ((t (:foreground "red"))))
              '(font-lock-builtin-face        ((t (:foreground "LightSlateBlue"))))
              '(cider-repl-stderr-face        ((t (:foreground "red"))))
