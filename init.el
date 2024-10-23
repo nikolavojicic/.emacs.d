@@ -102,6 +102,7 @@
              '(cursor                        ((t (:background "red"))))
              '(mc/cursor-face                ((t (:background "red"))))
              '(fringe                        ((t (:background "inherit"))))
+             '(vertical-border               ((t (:foreground "red"))))
              '(mode-line                     ((t (:foreground "red" :box ,box))))
              '(line-number-current-line      ((t (:foreground "red"))))
              '(font-lock-builtin-face        ((t (:foreground "LightSlateBlue"))))
