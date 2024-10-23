@@ -107,7 +107,7 @@
              '(line-number-current-line      ((t (:foreground "red"))))
              '(font-lock-builtin-face        ((t (:foreground "LightSlateBlue"))))
              '(org-block                     ((t (:background "gray10"))))
-             '(org-meta-line                 ((t (:background "gray50" :foreground "black"))))
+             '(org-meta-line                 ((t (:background "gray20"))))
              '(org-hide                      ((t (:foreground "black"))))
              '(cider-repl-stderr-face        ((t (:foreground "red"))))
              '(cider-error-overlay-face      ((t (:background "inherit" :foreground "red"))))
