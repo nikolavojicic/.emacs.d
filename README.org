@@ -153,6 +153,7 @@
 | C-c C-w          | move under another level |
 | S-UP / DOWN      | priority inc / dec       |
 | C-c C-p          | goto previous heading    |
+| C-c C-n          | goto next     heading    |
 
 *** Status {TODO / DONE}
 
