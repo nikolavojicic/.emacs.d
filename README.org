@@ -152,6 +152,7 @@
 | M-S-UP / DOWN    | move heading up / down   |
 | C-c C-w          | move under another level |
 | S-UP / DOWN      | priority inc / dec       |
+| C-c C-p          | goto previous heading    |
 
 *** Status {TODO / DONE}
 
