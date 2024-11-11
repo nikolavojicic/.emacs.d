@@ -21,13 +21,13 @@
 *** Window
 
 | q       | quit help                |   | C-x 1   | close all but current  |
-| C-x o   | jump to next             |   | C-x 2   | split up-down          |
+| C-x o   | goto to next             |   | C-x 2   | split up-down          |
 | C-x 0   | close current            |   | C-x 3   | split left-right       |
 | C-x {   | resize window left       |   | C-x }   | resize window right    |
 | C-x ^   | resize window up         |   | C-x v   | resize window down     |
 | C-x +   | equally size windows     |   | C-M-l   | scroll heuristically   |
 | C-M-v   | scroll other window down |   | C-M-V   | scroll other window up |
-| C-x 5 2 | new frame                |   | C-x 5 o | jump to next frame     |
+| C-x 5 2 | new frame                |   | C-x 5 o | goto to next frame     |
 
 *** Move
 
@@ -40,7 +40,7 @@
 | M-<   | buffer start         |   | M->   | buffer end            |
 | C-s   | search forward       |   | C-r   | search backward       |
 | C-M-s | search forward regex |   | C-M-r | search backward regex |
-| M-g g | jump to line         |   | C-l   | center / top / bottom |
+| M-g g | goto to line         |   | C-l   | center / top / bottom |
 | C-'   | avy search timer     |   |       |                       |
 
 *** Cursor
@@ -87,7 +87,7 @@
 | C       | copy                         |   | ^         | goto parent dir                 |
 | f       | edit file                    |   | v         | view file                       |
 | o       | open and goto                |   | C-o       | open                            |
-| C-x C-j | jump to dired                |   | C-x 4 C-j | jump to dired new window        |
+| C-x C-j | goto to dired                |   | C-x 4 C-j | goto to dired new window        |
 | C-x C-q | change file names            |   | C-c C-c   | apply changes                   |
 | q       | close dired buffer           |   | C-u q     | kill dired buffer               |
 | TAB     | toggle subtree               |   | S-TAB     | remove subtree                  |
@@ -101,7 +101,7 @@
 | C-{    | move opening delimiter right |   | C-}   | move closing delimiter left   |
 | M-down | remove next and unwrap       |   | M-up  | remove previous and unwrap    |
 | M-S    | split delimiters             |   | M-J   | join delimiters               |
-| C-M-f  | jump to closing delimiter    |   | C-M-b | jump to opening delimiter     |
+| C-M-f  | goto to closing delimiter    |   | C-M-b | goto to opening delimiter     |
 
 - delimiters: () [] {} ""
 
@@ -124,7 +124,7 @@
 | M-.         | go to symbol def |   | M-,         | return back         |
 | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests   |
 | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol     |
-| C-c C-j     | jump to error    |   | F7          | toggle cider-error  |
+| C-c C-j     | goto to error    |   | F7          | toggle cider-error  |
 
 *** Magit
 
@@ -252,7 +252,7 @@
 | C-c C-x C-x            | clock restart                 |
 | C-c C-x C-q            | clock quit                    |
 | C-c C-x C-d            | clock display (C-c C-c close) |
-| C-c C-x C-j            | jump to clocked task          |
+| C-c C-x C-j            | goto to clocked task          |
 | C-c C-x e              | set effort estimate           |
 | C-u C-c C-x C-x        | recently clocked tasks        |
 | M-RIGHT / LEFT         | level inc / dec effort        |
@@ -272,8 +272,8 @@
 | C-c C-e      | export menu                                        |
 | C-c C-,      | insert begin...end block                           |
 | C-c '        | open begin_src in new window                       |
-| C-c M-f      | jump to next src block                             |
-| C-c M-b      | jump to previous src block                         |
+| C-c M-f      | goto to next src block                             |
+| C-c M-b      | goto to previous src block                         |
 | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
 ** Emacs installation on Windows

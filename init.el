@@ -530,6 +530,14 @@
         "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"))
 
 
+(defun org-remove-all-result-blocks ()
+  (interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (while (search-forward "#+begin_src " nil t)
+      (org-babel-remove-result nil t))))
+
+
 ;; audio =====================
 ;;                  _ _
 ;;   __ _ _   _  __| (_) ___
