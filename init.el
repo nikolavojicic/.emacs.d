@@ -100,7 +100,8 @@
             (custom-theme-set-faces
              'manoj-dark
              '(cursor                        ((t (:background "red"))))
-             '(mc/cursor-face                ((t (:background "red"))))
+             '(mc/cursor-face                ((t (:background "blue"))))
+             '(mc/region-face                ((t (:foreground "red"))))
              '(fringe                        ((t (:background "inherit"))))
              '(vertical-border               ((t (:foreground "red"))))
              '(mode-line                     ((t (:foreground "red" :box ,box))))
