@@ -175,10 +175,8 @@
 
 (set-face-attribute
  'default nil
- :height  110
- :weight  'bold
- :family  "fira code")
-
+ :height  125
+ :family  "Inconsolata")
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
