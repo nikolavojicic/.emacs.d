@@ -175,8 +175,8 @@
 
 (set-face-attribute
  'default nil
- :height  125
- :family  "Inconsolata")
+ :height  130
+ :family  "Inconsolata SemiBold")
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
