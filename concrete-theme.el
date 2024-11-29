@@ -10,7 +10,7 @@
  '(vertical-border               ((t (:foreground "gray65"))))
  '(mode-line-buffer-id           ((t (:foreground "blue"))))
  '(line-number-current-line      ((t (:foreground "red"))))
- '(font-lock-doc-face            ((t (:foreground "firebrick"))))
+ '(font-lock-doc-face            ((t (:foreground "firebrick" :slant italic))))
  '(font-lock-comment-face        ((t (:foreground "gray40"))))
  '(show-paren-match              ((t (:background "gray40" :foreground "red"))))
  '(magit-section-highlight       ((t (:background "gray90"))))
