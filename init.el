@@ -16,6 +16,7 @@
         (ob-http             . "melpa-stable")
         (paredit             . "melpa-stable")
         (flycheck            . "melpa-stable")
+        (web-mode            . "melpa-stable")
         (clojure-mode        . "melpa-stable")
         (expand-region       . "melpa-stable")
         (plantuml-mode       . "melpa-stable")
@@ -477,6 +478,28 @@
  (rfn        2)
  (let-routes 1)
  (context    2))
+
+
+;; web ================
+;;               _
+;; __      _____| |__
+;; \ \ /\ / / _ \ '_ \
+;;  \ V  V /  __/ |_) |
+;;   \_/\_/ \___|_.__/
+;; ====================
+
+
+(require 'web-mode)
+
+
+(setq auto-mode-alist
+      (append '(("\\.html\\'" . web-mode)
+                ("\\.xml\\'"  . web-mode)
+                ("\\.json\\'" . web-mode)
+                ("\\.css\\'"  . web-mode)
+                ("\\.scss\\'" . web-mode)
+                ("\\.vue\\'"  . web-mode))
+              auto-mode-alist))
 
 
 ;; org =============
