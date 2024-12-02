@@ -181,7 +181,7 @@
 (set-face-attribute
  'default nil
  :height  110
- :family  "Ibm Plex Mono")
+ :family  "IBM Plex Mono Medium")
 
 
 (set-frame-parameter nil 'fullscreen 'fullboth)
