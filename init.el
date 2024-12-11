@@ -135,7 +135,8 @@
             (set-face-attribute 'mode-line-inactive      nil :height 1.0 :background "inherit")
             (set-face-attribute 'font-lock-constant-face nil :weight 'normal))
            ("default theme"
-            (load-theme 'concrete t))))))
+            (load-theme 'concrete t))))
+   (set-face-attribute 'font-lock-keyword-face nil :weight 'normal)))
 
 
 (global-set-key
