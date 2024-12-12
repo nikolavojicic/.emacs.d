@@ -501,8 +501,32 @@
                 ("\\.json\\'" . web-mode)
                 ("\\.css\\'"  . web-mode)
                 ("\\.scss\\'" . web-mode)
-                ("\\.vue\\'"  . web-mode))
+                ("\\.vue\\'"  . web-mode)
+                ("\\.js\\'"   . js-mode)
+                ("\\.ts\\'"   . typescript-mode))
               auto-mode-alist))
+
+
+;; lsp =========
+;;  _
+;; | |___ _ __
+;; | / __| '_ \
+;; | \__ \ |_) |
+;; |_|___/ .__/
+;;       |_|
+;; =============
+
+
+(require 'eglot)
+
+
+(add-to-list 'eglot-server-programs
+             '((js-mode typescript-mode) .
+               ("typescript-language-server" "--stdio")))
+
+
+(add-hook 'js-mode-hook         'eglot-ensure)
+(add-hook 'typescript-mode-hook 'eglot-ensure)
 
 
 ;; org =============
