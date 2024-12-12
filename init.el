@@ -136,7 +136,8 @@
             (set-face-attribute 'font-lock-constant-face nil :weight 'normal))
            ("default theme"
             (load-theme 'concrete t))))
-   (set-face-attribute 'font-lock-keyword-face nil :weight 'normal)))
+   (set-face-attribute 'font-lock-keyword-face nil :weight 'normal)
+   (set-face-attribute 'mode-line-buffer-id    nil :weight 'normal :slant 'italic)))
 
 
 (global-set-key
