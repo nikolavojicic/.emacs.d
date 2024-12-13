@@ -137,6 +137,7 @@
            ("default theme"
             (load-theme 'concrete t))))
    (set-face-attribute 'font-lock-keyword-face nil :weight 'normal)
+   (set-face-attribute 'font-lock-warning-face nil :weight 'normal)
    (set-face-attribute 'mode-line-buffer-id    nil :weight 'normal :slant 'italic)))
 
 
