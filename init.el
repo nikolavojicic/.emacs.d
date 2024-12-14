@@ -22,6 +22,7 @@
         (plantuml-mode       . "melpa-stable")
         (zenburn-theme       . "melpa-stable")
         (dired-subtree       . "melpa"       )
+        (typescript-mode     . "melpa-stable")
         (multiple-cursors    . "melpa-stable")
         (flycheck-clj-kondo  . "melpa-stable")))
 
