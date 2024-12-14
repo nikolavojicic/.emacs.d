@@ -8,7 +8,7 @@
  '(default                       ((t (:background "gray83"))))
  '(fringe                        ((t (:background "gray83"))))
  '(vertical-border               ((t (:foreground "gray65"))))
- '(mode-line-buffer-id           ((t (:foreground "blue"))))
+ '(mode-line-buffer-id           ((t (:foreground "blue" :slant italic))))
  '(line-number-current-line      ((t (:foreground "red"))))
  '(font-lock-doc-face            ((t (:foreground "firebrick" :slant italic))))
  '(font-lock-comment-face        ((t (:foreground "gray40"))))
