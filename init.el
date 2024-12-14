@@ -383,7 +383,7 @@
                 (thread-last
                   (or (thing-at-point 'symbol) "")
                   (read-from-minibuffer "Undefine symbol: ")
-                  (intern) (fmakunbound)))))
+                  (intern) (makunbound) (fmakunbound)))))
 
 
 ;; ========== inline edebug result ==========
