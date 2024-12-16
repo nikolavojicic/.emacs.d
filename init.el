@@ -517,7 +517,11 @@
               auto-mode-alist))
 
 
-(add-hook 'web-mode-hook (lambda () (setq web-mode-markup-indent-offset 2)))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (setq web-mode-markup-indent-offset 2
+                  web-mode-code-indent-offset   2
+                  web-mode-css-indent-offset    2)))
 
 
 ;; lsp =========
