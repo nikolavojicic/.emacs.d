@@ -517,6 +517,9 @@
               auto-mode-alist))
 
 
+(add-hook 'web-mode-hook (lambda () (setq web-mode-markup-indent-offset 2)))
+
+
 ;; lsp =========
 ;;  _
 ;; | |___ _ __
@@ -537,6 +540,8 @@
 
 (add-hook 'js-mode-hook         'eglot-ensure)
 (add-hook 'typescript-mode-hook 'eglot-ensure)
+(add-hook 'js-mode-hook         (lambda () (setq js-indent-level         2)))
+(add-hook 'typescript-mode-hook (lambda () (setq typescript-indent-level 2)))
 
 
 ;; org =============
