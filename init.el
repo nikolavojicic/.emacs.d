@@ -6,25 +6,26 @@
         ("melpa"        . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/"))
       package-pinned-packages
-      '((avy                 . "melpa-stable")
-        (eros                . "melpa"       )
-        (sicp                . "melpa"       )
-        (cider               . "melpa-stable")
-        (magit               . "melpa-stable")
-        (company             . "melpa-stable")
-        (gnuplot             . "melpa-stable")
-        (ob-http             . "melpa-stable")
-        (paredit             . "melpa-stable")
-        (flycheck            . "melpa-stable")
-        (web-mode            . "melpa-stable")
-        (clojure-mode        . "melpa-stable")
-        (expand-region       . "melpa-stable")
-        (plantuml-mode       . "melpa-stable")
-        (zenburn-theme       . "melpa-stable")
-        (dired-subtree       . "melpa"       )
-        (typescript-mode     . "melpa-stable")
-        (multiple-cursors    . "melpa-stable")
-        (flycheck-clj-kondo  . "melpa-stable")))
+      '((avy                      . "melpa-stable")
+        (eros                     . "melpa"       )
+        (sicp                     . "melpa"       )
+        (cider                    . "melpa-stable")
+        (magit                    . "melpa-stable")
+        (company                  . "melpa-stable")
+        (gnuplot                  . "melpa-stable")
+        (ob-http                  . "melpa-stable")
+        (paredit                  . "melpa-stable")
+        (flycheck                 . "melpa-stable")
+        (web-mode                 . "melpa-stable")
+        (clojure-mode             . "melpa-stable")
+        (expand-region            . "melpa-stable")
+        (plantuml-mode            . "melpa-stable")
+        (zenburn-theme            . "melpa-stable")
+        (dired-subtree            . "melpa"       )
+        (typescript-mode          . "melpa-stable")
+        (multiple-cursors         . "melpa-stable")
+        (flycheck-clj-kondo       . "melpa-stable")
+        (highlight-function-calls . "melpa-stable")))
 
 
 (package-initialize)
@@ -96,7 +97,8 @@
              '(dired-subtree-depth-5-face    ((t (:background "inherit"))))
              '(dired-subtree-depth-6-face    ((t (:background "inherit"))))
              '(cider-debug-code-overlay-face (()))
-             '(cider-error-overlay-face      ((t (:foreground "#D0BF8F"))))))
+             '(cider-error-overlay-face      ((t (:foreground "#D0BF8F"))))
+             '(highlight-function-calls-face ((t (:foreground "#93E0E3"))))))
            ((eq theme 'zenburn)
             (load-theme 'manoj-dark t)
             (custom-theme-set-faces
@@ -128,7 +130,8 @@
              '(dired-subtree-depth-5-face       ((t (:background "inherit"))))
              '(dired-subtree-depth-6-face       ((t (:background "inherit"))))
              '(isearch                          ((t (:background "red" :foreground "black"))))
-             '(lazy-highlight                   ((t (:foreground "red")))))
+             '(lazy-highlight                   ((t (:foreground "red"))))
+             '(highlight-function-calls-face    ((t (:foreground "MediumSpringGreen")))))
             (set-face-attribute 'completions-common-part nil :height 1.0 :weight 'bold)
             (set-face-attribute 'header-line             nil :height 1.0)
             (set-face-attribute 'mode-line-buffer-id     nil :height 1.0 :background "inherit")
@@ -437,6 +440,7 @@
 (add-hook 'clojure-mode-hook    #'flycheck-mode)
 (add-hook 'cider-mode-hook      #'cider-company-enable-fuzzy-completion)
 (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
+(add-hook 'emacs-lisp-mode-hook #'highlight-function-calls-mode)
 
 
 (add-hook 'clojure-mode-hook         #'paredit-mode)
@@ -447,22 +451,22 @@
 (add-hook 'inferior-scheme-mode-hook #'paredit-mode)
 
 
-(setq cider-use-overlays                    t
-      cider-enrich-classpath                nil ;; set to t when needed
-      inferior-lisp-program                 "clisp"
-      cider-repl-wrap-history               t
-      cider-save-file-on-load               t
-      cider-show-error-buffer               nil
-      cider-prompt-for-symbol               nil
-      cider-auto-jump-to-error              nil
-      cider-font-lock-dynamically           '(macro core function var)
-      cider-use-fringe-indicators           nil
-      cider-auto-select-error-buffer        nil
-      cider-repl-display-help-banner        nil
-      cider-repl-use-pretty-printing        t
-      cider-repl-pop-to-buffer-on-connect   'display-only
-      cider-auto-select-test-report-buffer  nil
-      cider-repl-history-display-duplicates nil
+(setq cider-use-overlays                     t
+      cider-enrich-classpath                 nil ;; set to t when needed
+      inferior-lisp-program                  "clisp"
+      cider-repl-wrap-history                t
+      cider-save-file-on-load                t
+      cider-show-error-buffer                nil
+      cider-prompt-for-symbol                nil
+      cider-auto-jump-to-error               nil
+      cider-font-lock-dynamically            '(macro core function var)
+      cider-use-fringe-indicators            nil
+      cider-auto-select-error-buffer         nil
+      cider-repl-display-help-banner         nil
+      cider-repl-use-pretty-printing         t
+      cider-repl-pop-to-buffer-on-connect    'display-only
+      cider-auto-select-test-report-buffer   nil
+      cider-repl-history-display-duplicates  nil
       cider-repl-display-output-before-window-boundaries t)
 
 

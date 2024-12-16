@@ -38,7 +38,8 @@
  '(dired-subtree-depth-6-face    ((t (:background "inherit"))))
  '(web-mode-html-tag-face        ((t (:foreground "darkblue"))))
  '(web-mode-html-attr-name-face  ((t (:foreground "darkgreen"))))
- '(web-mode-json-key-face        ((t (:foreground "darkgreen")))))
+ '(web-mode-json-key-face        ((t (:foreground "darkgreen"))))
+ '(highlight-function-calls-face ((t (:foreground "blue")))))
 
 
 (provide-theme 'concrete)
