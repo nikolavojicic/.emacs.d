@@ -48,7 +48,7 @@
 
 (when (eq system-type 'windows-nt)
   (unless buffer-file-name
-    (setq default-directory "C:/"))
+    (setq default-directory (concat (getenv "USERPROFILE") "\\")))
   (add-to-list 'exec-path "C:/Program Files/7-Zip")
   (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""))
 
@@ -65,6 +65,17 @@
 (defun disable-themes ()
   (interactive)
   (mapc #'disable-theme custom-enabled-themes))
+
+
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+
+(add-hook 'prog-mode-hook    #'remove-dos-eol)
+(add-hook 'special-mode-hook #'remove-dos-eol)
 
 
 (advice-add 'load-theme :before (lambda (&rest args) (disable-themes)))
