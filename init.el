@@ -239,6 +239,7 @@
 
 
 (setq-default indent-tabs-mode nil)
+(put 'downcase-region 'disabled nil)
 
 
 (setq create-lockfiles                    nil
