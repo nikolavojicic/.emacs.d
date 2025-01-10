@@ -48,7 +48,9 @@
 
 (when (eq system-type 'windows-nt)
   (unless buffer-file-name
-    (setq default-directory (concat (getenv "USERPROFILE") "\\")))
+    (let* ((dir (getenv "USERPROFILE"))
+           (dir (string-replace "\\" "/" dir)))
+      (setq default-directory (concat dir "/"))))
   (add-to-list 'exec-path "C:/Program Files/7-Zip")
   (setq find-program "\"C:/Program Files/Git/usr/bin/find.exe\""))
 
