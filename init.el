@@ -13,6 +13,7 @@
         (magit                    . "melpa-stable")
         (company                  . "melpa-stable")
         (gnuplot                  . "melpa-stable")
+        (jq-mode                  . "melpa-stable")
         (ob-http                  . "melpa-stable")
         (paredit                  . "melpa-stable")
         (flycheck                 . "melpa-stable")
@@ -600,6 +601,7 @@
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((C          . t)
+     (jq         . t)
      (js         . t)
      (dot        . t)
      (sql        . t)
