@@ -586,7 +586,8 @@
       plantuml-default-exec-mode     'jar
       org-agenda-dim-blocked-tasks   t
       org-enforce-todo-dependencies  t
-      org-startup-with-inline-images t)
+      org-startup-with-inline-images t
+      org-latex-src-block-backend    'minted)
 
 
 (with-eval-after-load 'org
@@ -597,6 +598,7 @@
   (define-key org-mode-map (kbd "<f5>" ) (lambda ()
                                            (interactive)
                                            (kill-new (org-id-get-create))))
+  (add-to-list 'org-latex-packages-alist '("" "minted" nil))
   (add-to-list 'org-export-backends 'beamer)
   (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
   (org-babel-do-load-languages
@@ -615,13 +617,19 @@
      (plantuml   . t)
      (emacs-lisp . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
-  (setq org-capture-templates
+  (setq org-babel-python-command
+        "py"
+        org-capture-templates
         `(("t" "Tasks" entry
            (file+headline ,(expand-file-name "org/mobile/tasks.org" (getenv "dropbox")) "Tasks")
-           "* TODO %?\n  %iSCHEDULED: %U\n  %a")))
-  (setq org-babel-js-function-wrapper
-        "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"))
-
+           "* TODO %?\n  %iSCHEDULED: %U\n  %a"))
+        org-babel-js-function-wrapper
+        "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"
+        org-latex-pdf-process
+        '("pdflatex -shell-escape -interaction=nonstopmode -output-directory=%o %f")
+        org-latex-minted-options
+        '(("breaklines" "true")
+          ("breakanywhere" "true"))))
 
 (defun org-remove-all-result-blocks ()
   (interactive)
