@@ -534,9 +534,10 @@
 
 (add-hook 'web-mode-hook
           (lambda ()
-            (setq web-mode-markup-indent-offset 2
-                  web-mode-code-indent-offset   2
-                  web-mode-css-indent-offset    2)))
+            (setq web-mode-markup-indent-offset    2
+                  web-mode-code-indent-offset      2
+                  web-mode-css-indent-offset       2
+                  web-mode-enable-auto-indentation nil)))
 
 
 ;; lsp =========
@@ -608,6 +609,7 @@
      (java       . t)
      (http       . t)
      (shell      . t)
+     (python     . t)
      (fortran    . t)
      (gnuplot    . t)
      (plantuml   . t)
