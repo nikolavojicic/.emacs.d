@@ -311,6 +311,7 @@
 - [[https://github.com/typescript-language-server/typescript-language-server][TypeScript Language Server]]
 - [[https://jqlang.github.io/jq/][jq]]
 - [[https://www.python.org/downloads/windows/][Python]]
+- [[https://gist.github.com/nikolavojicic/2ee308dc772c5b03d78a9f21b64deb45][LaTeX Minted]]
 
 ** Emacs Lisp for Clojure programmers
 
