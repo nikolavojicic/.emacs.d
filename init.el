@@ -626,7 +626,8 @@
         org-babel-js-function-wrapper
         "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"
         org-latex-pdf-process
-        '("pdflatex -shell-escape -interaction=nonstopmode -output-directory=%o %f")
+        '("pdflatex -shell-escape -interaction=nonstopmode -output-directory=%o %f"
+          "pdflatex -shell-escape -interaction=nonstopmode -output-directory=%o %f")
         org-latex-minted-options
         '(("breaklines" "true")
           ("breakanywhere" "true"))))
