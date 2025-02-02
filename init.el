@@ -612,6 +612,7 @@
      (http       . t)
      (shell      . t)
      (python     . t)
+     (clojure    . t)
      (fortran    . t)
      (gnuplot    . t)
      (plantuml   . t)
