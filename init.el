@@ -195,10 +195,12 @@
 
 
 (setq ring-bell-function                 'ignore
+      display-time-format                "%d.%m.%Y. %H:%M (%A)"
       scroll-conservatively              101
       inhibit-startup-message            t
       initial-scratch-message            nil
       display-time-24hr-format           t
+      display-time-day-and-date          t
       mouse-wheel-scroll-amount          '(1)
       custom--inhibit-theme-enable       nil
       mouse-wheel-progressive-speed      nil
