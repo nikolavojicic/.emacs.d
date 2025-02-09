@@ -205,6 +205,7 @@
       custom--inhibit-theme-enable       nil
       mouse-wheel-progressive-speed      nil
       eldoc-echo-area-use-multiline-p    nil
+      display-time-default-load-average  nil
       magit-section-visibility-indicator nil)
 
 
