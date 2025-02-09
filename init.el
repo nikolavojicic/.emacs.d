@@ -189,6 +189,7 @@
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
 (blink-cursor-mode       0)
+(display-time-mode       1)
 (global-hi-lock-mode     1)
 (global-visual-line-mode 1)
 
@@ -196,7 +197,8 @@
 (setq ring-bell-function                 'ignore
       scroll-conservatively              101
       inhibit-startup-message            t
-      initial-scratch-message            ""
+      initial-scratch-message            nil
+      display-time-24hr-format           t
       mouse-wheel-scroll-amount          '(1)
       custom--inhibit-theme-enable       nil
       mouse-wheel-progressive-speed      nil
@@ -627,8 +629,9 @@
         org-babel-js-function-wrapper
         "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"
         org-latex-pdf-process
-        '("pdflatex -shell-escape -interaction=nonstopmode -output-directory=%o %f"
-          "pdflatex -shell-escape -interaction=nonstopmode -output-directory=%o %f")
+        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")
         org-latex-minted-options
         '(("breaklines" "true")
           ("breakanywhere" "true"))))
