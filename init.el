@@ -189,13 +189,11 @@
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
 (blink-cursor-mode       0)
-(display-time-mode       1)
 (global-hi-lock-mode     1)
 (global-visual-line-mode 1)
 
 
 (setq ring-bell-function                 'ignore
-      display-time-format                "%d.%m.%Y. %H:%M (%A)"
       scroll-conservatively              101
       inhibit-startup-message            t
       initial-scratch-message            nil
@@ -207,6 +205,11 @@
       eldoc-echo-area-use-multiline-p    nil
       display-time-default-load-average  nil
       magit-section-visibility-indicator nil)
+
+
+(progn ;; mode must run after setting format
+  (setq display-time-format "%d.%m.%Y. %H:%M (%A)")
+  (display-time-mode 1))
 
 
 (set-face-attribute
