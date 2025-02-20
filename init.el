@@ -125,6 +125,8 @@
              '(fringe                           ((t (:background "inherit"))))
              '(vertical-border                  ((t (:foreground "red"))))
              '(mode-line                        ((t (:foreground "red" :box ,box))))
+             '(highlight                        ((t (:background "blue"))))
+             '(completions-common-part          ((t (:foreground "red"))))
              '(line-number-current-line         ((t (:foreground "red"))))
              '(font-lock-builtin-face           ((t (:foreground "LightSlateBlue"))))
              '(font-lock-function-name-face     ((t (:foreground "MediumSpringGreen"))))
