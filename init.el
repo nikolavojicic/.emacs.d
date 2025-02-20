@@ -572,6 +572,10 @@
 (add-hook 'typescript-mode-hook (lambda () (setq typescript-indent-level 2)))
 
 
+(define-key eglot-mode-map (kbd "C-c M-r") #'eglot-rename)
+(define-key eglot-mode-map (kbd "C-c M-h") #'eldoc)
+
+
 ;; org =============
 ;;   ___  _ __ __ _
 ;;  / _ \| '__/ _` |

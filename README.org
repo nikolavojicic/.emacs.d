@@ -139,6 +139,14 @@
 | TAB   | toggle expand parent |
 | S-TAB | hide expanded        |
 
+*** Eglot
+
+| C-c M-r                | rename         |
+| C-c M-h                | docs           |
+| M-?                    | references     |
+| M-x eglot-code-actions | prompt actions |
+| M-x eglot-reconnect    | reconnect      |
+
 ** Org
 
 *** Outline {*+}
