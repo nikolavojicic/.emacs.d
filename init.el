@@ -147,7 +147,7 @@
              '(dired-subtree-depth-4-face       ((t (:background "inherit"))))
              '(dired-subtree-depth-5-face       ((t (:background "inherit"))))
              '(dired-subtree-depth-6-face       ((t (:background "inherit"))))
-             '(isearch                          ((t (:background "red" :foreground "black"))))
+             '(isearch                          ((t (:background "blue" :foreground "red"))))
              '(lazy-highlight                   ((t (:foreground "red"))))
              '(highlight-function-calls-face    ((t (:foreground "MediumSpringGreen"))))
              '(web-mode-json-key-face           ((t (:foreground "LightSlateBlue"))))
