@@ -369,6 +369,7 @@
 | if-some            | if-let           |
 | inc                | 1+               |
 | into               | append           |
+| last               | last             |
 | let                | let*             |
 | list               | list             |
 | list?              | listp            |
@@ -402,6 +403,7 @@
 | str                | concat           |
 | str/blank?         | string-blank-p   |
 | str/join           | mapconcat        |
+| str/split          | split-string     |
 | subvec             | seq-subseq       |
 | take               | seq-take         |
 | take-while         | seq-take-while   |
