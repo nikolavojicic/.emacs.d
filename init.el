@@ -467,7 +467,7 @@
                   (cider-popup-buffer-display cider-error-buffer))))
   (cider-enable-cider-completion-style)
   ;; TODO https://github.com/clojure-emacs/cider/issues/3775
-  (setq cider-injected-middleware-version "0.50.3"))
+  (setq cider-injected-middleware-version "0.52.1"))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
