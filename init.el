@@ -464,7 +464,10 @@
                 (interactive)
                 (if (get-buffer-window cider-error-buffer)
                     (quit-windows-on   cider-error-buffer)
-                  (cider-popup-buffer-display cider-error-buffer)))))
+                  (cider-popup-buffer-display cider-error-buffer))))
+  (cider-enable-cider-completion-style)
+  ;; TODO https://github.com/clojure-emacs/cider/issues/3775
+  (setq cider-injected-middleware-version "0.50.3"))
 
 
 (add-hook 'cider-mode-hook      #'eldoc-mode)
@@ -480,9 +483,6 @@
 (add-hook 'emacs-lisp-mode-hook      #'paredit-mode)
 (add-hook 'scheme-mode-hook          #'paredit-mode)
 (add-hook 'inferior-scheme-mode-hook #'paredit-mode)
-
-
-(cider-enable-cider-completion-style)
 
 
 (setq cider-use-overlays                     t
