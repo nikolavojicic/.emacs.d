@@ -351,6 +351,7 @@
 
 
 (with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "C-<tab>"  ) #'dired-subtree-cycle)
   (define-key dired-mode-map (kbd "<tab>"    ) #'dired-subtree-toggle)
   (define-key dired-mode-map (kbd "<backtab>") #'dired-subtree-remove)
   (define-key dired-mode-map (kbd "%f"       ) #'find-name-dired)

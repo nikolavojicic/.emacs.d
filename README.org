@@ -88,10 +88,11 @@
 | f       | edit file                    |   | v         | view file                       |
 | o       | open and goto                |   | C-o       | open                            |
 | C-x C-j | goto to dired                |   | C-x 4 C-j | goto to dired new window        |
-| C-x C-q | change file names            |   | C-c C-c   | apply changes                   |
+| C-x C-q | rename files                 |   | C-c C-c   | apply changes                   |
 | q       | close dired buffer           |   | C-u q     | kill dired buffer               |
-| TAB     | toggle subtree               |   | S-TAB     | remove subtree                  |
-| (       | show details                 |   | k         | kill lines (narrow)             |
+| TAB     | toggle subtree               |   | C-TAB     | cycle subtrees                  |
+| S-TAB   | remove child subtrees        |   | k         | kill lines (narrow)             |
+| (       | show details                 |   |           |                                 |
 
 *** Paredit
 
