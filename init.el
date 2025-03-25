@@ -488,6 +488,7 @@
 (add-hook 'emacs-lisp-mode-hook      #'paredit-mode)
 (add-hook 'scheme-mode-hook          #'paredit-mode)
 (add-hook 'inferior-scheme-mode-hook #'paredit-mode)
+(add-hook 'web-mode-hook             #'paredit-mode)
 
 
 (setq cider-use-overlays                     t
