@@ -21,13 +21,13 @@
 *** Window
 
 | q       | quit help                |   | C-x 1   | close all but current  |
-| C-x o   | jump to next             |   | C-x 2   | split up-down          |
+| C-x o   | goto to next             |   | C-x 2   | split up-down          |
 | C-x 0   | close current            |   | C-x 3   | split left-right       |
 | C-x {   | resize window left       |   | C-x }   | resize window right    |
 | C-x ^   | resize window up         |   | C-x v   | resize window down     |
 | C-x +   | equally size windows     |   | C-M-l   | scroll heuristically   |
 | C-M-v   | scroll other window down |   | C-M-V   | scroll other window up |
-| C-x 5 2 | new frame                |   | C-x 5 o | jump to next frame     |
+| C-x 5 2 | new frame                |   | C-x 5 o | goto to next frame     |
 
 *** Move
 
@@ -40,28 +40,38 @@
 | M-<   | buffer start         |   | M->   | buffer end            |
 | C-s   | search forward       |   | C-r   | search backward       |
 | C-M-s | search forward regex |   | C-M-r | search backward regex |
-| M-g g | jump to line         |   | C-l   | center / top / bottom |
+| M-g g | goto to line         |   | C-l   | center / top / bottom |
+| C-'   | avy search timer     |   |       |                       |
+
+*** Cursor
+
+| C-c C-' | mark next                 |   | C-'     | if multiple mark next       |
+| C-c C-; | mark previous             |   | C-;     | if multiple mark previous   |
+| C-"     | if multiple unmark next   |   | C-:     | if multiple unmark previous |
+| C-c C-= | mark all in defun         |   | C-x C-= | mark all                    |
+| C-`     | if multiple cycle forward |   | ENTER   | complete                    |
 
 *** Text
 
-| C-space       | set mark         |   | C-M-h       | select form                    |
-| M-w           | copy selected    |   | C-x h       | select all                     |
-| C-y           | paste latest cut |   | M-y         | replace C-y with previous cut  |
-| C-d           | delete char      |   | C-j         | new line + indent              |
-| M-d           | cut word         |   | M-;         | (un)comment selected           |
-| C-k           | cut text forward |   | M-/         | autocomplete                   |
-| C-S-backspace | cut line         |   | M-\         | clear spaces around point      |
-| M-k           | cut sentence     |   | M-%         | replace                        |
-| C-w           | cut selected     |   | M-l         | lowercase word                 |
-| M-u           | uppercase word   |   | C-x C-l     | lowercase region               |
-| C-x C-u       | uppercase region |   | C-x space   | rectangle region               |
-| C-x r t       | string rectangle |   | C-- C-=     | contract region                |
-| C-=           | expand region    |   | (M-0) F4    | stop / play (until fail) macro |
-| F3            | start macro      |   | C-x C-o     | delete surrounding blank lines |
-| C-M SPACE     | select next word |   | C-u C-c .   | insert timestamp               |
-| C-x w h       | highlight regex  |   | C-x w r     | unhighlight regex              |
-| C-x w .       | highlight symbol |   | C-u C-x w r | unhighlight all                |
-| C-o           | add line below   |   | M-DEL       | cut word backward              |
+| C-space       | set mark          |   | C-M-h       | select form                    |
+| M-w           | copy selected     |   | C-x h       | select all                     |
+| C-y           | paste latest cut  |   | M-y         | replace C-y with previous cut  |
+| C-d           | delete char       |   | C-j         | new line + indent              |
+| M-d           | cut word          |   | M-;         | (un)comment selected           |
+| C-k           | cut text forward  |   | M-/         | autocomplete                   |
+| C-S-backspace | cut line          |   | M-\         | clear spaces around point      |
+| M-k           | cut sentence      |   | M-%         | replace                        |
+| C-w           | cut selected      |   | M-l         | lowercase word                 |
+| M-u           | uppercase word    |   | C-x C-l     | lowercase region               |
+| C-x C-u       | uppercase region  |   | C-x space   | rectangle region               |
+| C-x r t       | string rectangle  |   | C-- C-=     | contract region                |
+| C-=           | expand region     |   | (M-0) F4    | stop / play (until fail) macro |
+| F3            | start macro       |   | C-x C-o     | delete surrounding blank lines |
+| C-M SPACE     | select next word  |   | C-u C-c .   | insert timestamp               |
+| C-x w h       | highlight regex   |   | C-x w r     | unhighlight regex              |
+| C-x w .       | highlight symbol  |   | C-u C-x w r | unhighlight all                |
+| C-o           | add line below    |   | M-DEL       | cut word backward              |
+| M-t           | drag word forward |   | C-c s       | sort lines                     |
 
 *** Dired
 
@@ -77,11 +87,12 @@
 | C       | copy                         |   | ^         | goto parent dir                 |
 | f       | edit file                    |   | v         | view file                       |
 | o       | open and goto                |   | C-o       | open                            |
-| C-x C-j | jump to dired                |   | C-x 4 C-j | jump to dired new window        |
-| C-x C-q | change file names            |   | C-c C-c   | apply changes                   |
+| C-x C-j | goto to dired                |   | C-x 4 C-j | goto to dired new window        |
+| C-x C-q | rename files                 |   | C-c C-c   | apply changes                   |
 | q       | close dired buffer           |   | C-u q     | kill dired buffer               |
-| TAB     | toggle subtree               |   | S-TAB     | remove subtree                  |
-| (       | show details                 |   | k         | kill lines (narrow)             |
+| TAB     | toggle subtree               |   | C-TAB     | cycle subtrees                  |
+| S-TAB   | remove child subtrees        |   | k         | kill lines (narrow)             |
+| (       | show details                 |   |           |                                 |
 
 *** Paredit
 
@@ -91,7 +102,7 @@
 | C-{    | move opening delimiter right |   | C-}   | move closing delimiter left   |
 | M-down | remove next and unwrap       |   | M-up  | remove previous and unwrap    |
 | M-S    | split delimiters             |   | M-J   | join delimiters               |
-| C-M-f  | jump to closing delimiter    |   | C-M-b | jump to opening delimiter     |
+| C-M-f  | goto to closing delimiter    |   | C-M-b | goto to opening delimiter     |
 
 - delimiters: () [] {} ""
 
@@ -105,15 +116,16 @@
 
 *** Cider
 
-| C-c C-k     | eval buffer      |   | C-c M-j     | run and open       |
-| C-c C-e     | eval form, show  |   | C-c M-n M-n | switch repl ns     |
-| C-u C-c C-e | eval form, write |   | C-u C-c C-o | clear buffer       |
-| C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back |
-| C-c M-i     | inspect form     |   | C-u C-c C-c | debug form         |
-| M-.         | go to symbol def |   | M-,         | return back        |
-| C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests  |
-| C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol    |
-| C-c C-j     | jump to error    |   | F7          | toggle cider-error |
+| C-c C-k     | eval buffer      |   | C-c M-j     | run and open        |
+| C-c C-e     | eval form, show  |   | C-c M-n M-n | switch repl ns      |
+| C-u C-c C-e | eval form, write |   | C-u C-c C-o | clear buffer        |
+| C-c C-c     | eval defun       |   | C-c M-;     | eval defun, comment |
+| C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back  |
+| C-c M-i     | inspect form     |   | C-u C-c C-c | debug form          |
+| M-.         | go to symbol def |   | M-,         | return back         |
+| C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests   |
+| C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol     |
+| C-c C-j     | goto to error    |   | F7          | toggle cider-error  |
 
 *** Magit
 
@@ -128,6 +140,14 @@
 | TAB   | toggle expand parent |
 | S-TAB | hide expanded        |
 
+*** Eglot
+
+| C-c M-r                | rename         |
+| C-c M-h                | docs           |
+| M-?                    | references     |
+| M-x eglot-code-actions | prompt actions |
+| M-x eglot-reconnect    | reconnect      |
+
 ** Org
 
 *** Outline {*+}
@@ -141,6 +161,8 @@
 | M-S-UP / DOWN    | move heading up / down   |
 | C-c C-w          | move under another level |
 | S-UP / DOWN      | priority inc / dec       |
+| C-c C-p          | goto previous heading    |
+| C-c C-n          | goto next     heading    |
 
 *** Status {TODO / DONE}
 
@@ -239,7 +261,7 @@
 | C-c C-x C-x            | clock restart                 |
 | C-c C-x C-q            | clock quit                    |
 | C-c C-x C-d            | clock display (C-c C-c close) |
-| C-c C-x C-j            | jump to clocked task          |
+| C-c C-x C-j            | goto to clocked task          |
 | C-c C-x e              | set effort estimate           |
 | C-u C-c C-x C-x        | recently clocked tasks        |
 | M-RIGHT / LEFT         | level inc / dec effort        |
@@ -259,6 +281,8 @@
 | C-c C-e      | export menu                                        |
 | C-c C-,      | insert begin...end block                           |
 | C-c '        | open begin_src in new window                       |
+| C-c M-f      | goto to next src block                             |
+| C-c M-b      | goto to previous src block                         |
 | emphasis     | *bold* /italic/ _underlined_ =verbatim= ~code~ +strikethrough+ |
 
 ** Emacs installation on Windows
@@ -272,6 +296,31 @@
    -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
 5. Clone or download this repository to =C:\home\.emacs.d=
 6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
+
+** External programs needed on Windows for this init.el
+
+- [[https://www.7-zip.org/download.html][7-Zip]]
+- [[https://git-scm.com/download/win][Git]]
+- [[https://www.mingw-w64.org/][MinGW]]
+- [[https://clisp.sourceforge.io/][CLisp]]
+- [[https://scheme.com/download/][Chez Scheme]]
+- [[https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html][Java]]
+- [[https://gist.github.com/nikolavojicic/6081284d4fb5f969a7fabe1f150db73e][Leiningen]]
+- [[https://github.com/clj-kondo/clj-kondo/releases][clj-kondo]]
+- [[https://nodejs.org/en/download/prebuilt-installer][Node.js]]
+- [[https://sourceforge.net/projects/gnuplot/files/gnuplot/][gnuplot]]
+- [[https://graphviz.org/download/][Graphviz]]
+- [[https://plantuml.com/download][PlantUML]]
+- [[https://strawberryperl.com/releases.html][Strawberry Perl]]
+- [[https://miktex.org/][MiKTeX]]
+- [[https://www.libreoffice.org/download/download-libreoffice/][LibreOffice]]
+- [[https://mupdf.com/][MuPDF]]
+- [[https://www.dropbox.com/install][Dropbox]]
+- [[https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700][IBM Plex Mono]]
+- [[https://github.com/typescript-language-server/typescript-language-server][TypeScript Language Server]]
+- [[https://jqlang.github.io/jq/][jq]]
+- [[https://www.python.org/downloads/windows/][Python]]
+- [[https://gist.github.com/nikolavojicic/2ee308dc772c5b03d78a9f21b64deb45][LaTeX Minted]]
 
 ** Emacs Lisp for Clojure programmers
 
@@ -291,6 +340,7 @@
 | ->>                | thread-last      |
 | and                | and              |
 | apply              | apply            |
+| class              | type-of          |
 | compare            | sting< string>   |
 | concat             | seq-concatenate  |
 | cond               | cond             |
@@ -320,6 +370,7 @@
 | if-some            | if-let           |
 | inc                | 1+               |
 | into               | append           |
+| last               | last             |
 | let                | let*             |
 | list               | list             |
 | list?              | listp            |
@@ -337,6 +388,7 @@
 | rand-nth           | seq-random-elt   |
 | range              | number-sequence  |
 | reduce             | seq-reduce       |
+| re-matches         | string-match-p   |
 | remove =           | remove           |
 | remove identical?  | remq             |
 | remove predicate   | seq-remove       |
@@ -352,6 +404,7 @@
 | str                | concat           |
 | str/blank?         | string-blank-p   |
 | str/join           | mapconcat        |
+| str/split          | split-string     |
 | subvec             | seq-subseq       |
 | take               | seq-take         |
 | take-while         | seq-take-while   |
