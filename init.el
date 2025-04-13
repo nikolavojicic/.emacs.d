@@ -346,6 +346,7 @@
 (add-hook 'dired-mode-hook                   #'dired-hide-details-mode)
 (add-hook 'dired-mode-hook                   #'dired-omit-mode)
 (add-hook 'dired-mode-hook                   #'subword-mode)
+(add-hook 'minibuffer-setup-hook             #'subword-mode)
 (add-hook 'dired-subtree-after-insert-hook   #'dired-omit-mode)
 (add-hook 'dired-subtree-after-collapse-hook #'dired-omit-mode)
 (add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
