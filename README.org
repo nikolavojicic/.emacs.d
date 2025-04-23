@@ -114,6 +114,12 @@
 | f1        | see docs for selected   |
 | C-w       | see source for selected |
 
+*** Shell
+
+| C-c M-o | clear all        |
+| C-c C-o | clear previous   |
+| C-c C-c | interrupt subjob |
+
 *** Cider
 
 | C-c C-k     | eval buffer      |   | C-c M-j     | run and open        |
