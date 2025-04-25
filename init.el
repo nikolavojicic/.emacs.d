@@ -489,7 +489,18 @@
 (add-hook 'emacs-lisp-mode-hook      #'paredit-mode)
 (add-hook 'scheme-mode-hook          #'paredit-mode)
 (add-hook 'inferior-scheme-mode-hook #'paredit-mode)
+(add-hook 'js-mode-hook              #'paredit-mode)
 (add-hook 'web-mode-hook             #'paredit-mode)
+(add-hook 'typescript-mode-hook      #'paredit-mode)
+
+
+(with-eval-after-load 'paredit
+  (add-to-list 'paredit-space-for-delimiter-predicates
+               (lambda (endp delimiter)
+                 (or
+                  (bound-and-true-p js-mode)
+                  (bound-and-true-p web-mode)
+                  (bound-and-true-p typescript-mode)))))
 
 
 (setq cider-use-overlays                     t
