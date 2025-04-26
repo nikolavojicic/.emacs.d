@@ -304,6 +304,7 @@
 
 
 (with-eval-after-load 'paredit
+  (define-key paredit-mode-map (kbd "M-?") nil) ;; undefine
   (define-key paredit-mode-map (kbd "M-[") #'paredit-wrap-square)
   (define-key paredit-mode-map (kbd "M-{") #'paredit-wrap-curly))
 
