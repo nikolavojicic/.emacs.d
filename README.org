@@ -73,6 +73,12 @@
 | C-o           | add line below    |   | M-DEL       | cut word backward              |
 | M-t           | drag word forward |   | C-c s       | sort lines                     |
 
+*** Shell
+
+| C-c M-o | clear all        |
+| C-c C-o | clear previous   |
+| C-c C-c | interrupt subjob |
+
 *** Dired
 
 | p       | previous                     |   | n         | next                            |
@@ -114,11 +120,18 @@
 | f1        | see docs for selected   |
 | C-w       | see source for selected |
 
-*** Shell
+*** Magit
 
-| C-c M-o | clear all        |
-| C-c C-o | clear previous   |
-| C-c C-c | interrupt subjob |
+| C-x g | status               |
+| ?     | help                 |
+| C-n   | next     line        |
+| C-p   | previous line        |
+| n     | next     item        |
+| p     | previous item        |
+| M-n   | next     section     |
+| M-p   | previous section     |
+| TAB   | toggle expand parent |
+| S-TAB | hide expanded        |
 
 *** Cider
 
@@ -133,19 +146,6 @@
 | C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol     |
 | C-c C-j     | goto to error    |   | F7          | toggle cider-error  |
 
-*** Magit
-
-| C-x g | status               |
-| ?     | help                 |
-| C-n   | next     line        |
-| C-p   | previous line        |
-| n     | next     item        |
-| p     | previous item        |
-| M-n   | next     section     |
-| M-p   | previous section     |
-| TAB   | toggle expand parent |
-| S-TAB | hide expanded        |
-
 *** Eglot
 
 | C-c M-r                | rename         |
@@ -154,9 +154,9 @@
 | M-x eglot-code-actions | prompt actions |
 | M-x eglot-reconnect    | reconnect      |
 
-** Org
+*** Org
 
-*** Outline {*+}
+**** Outline {*+}
 
 | TAB              | toggle local  visibility |
 | S-TAB            | toggle global visibility |
@@ -170,7 +170,7 @@
 | C-c C-p          | goto previous heading    |
 | C-c C-n          | goto next     heading    |
 
-*** Status {TODO / DONE}
+**** Status {TODO / DONE}
 
 | S-RIGHT / LEFT | cycling                |
 | C-c C-t        | keywords menu          |
@@ -179,7 +179,7 @@
 |                | @ - ts + note on enter |
 |                | ! - ts        on exit  |
 
-*** Agenda
+**** Agenda
 
 | C-C C-s     | schedule                     |
 | C-c C-d     | deadline                     |
@@ -193,32 +193,32 @@
 | f / b       | move forward / back          |
 | t           | change task status           |
 
-*** Repeat {w(eek) d(ay) m(onth) y(ear)}
+**** Repeat {w(eek) d(ay) m(onth) y(ear)}
 
 | +1w  | 1 week                    |
 | ++1w | 1 week in future          |
 | .+1w | 1 week after task is DONE |
 
-*** Checklist {- [ ]}
+**** Checklist {- [ ]}
 
 | C-c C-c   | cycling         |
 | M-S-ENTER | new item        |
 | [/]       | number of done  |
 | [%]       | percent of done |
 
-*** Tag
+**** Tag
 
 | C-c C-q   | assign to headline    |
 | #+TAGS:   | define new tags       |
 | -TAG_NAME | exclude from agenda+m |
 
-*** Archive
+**** Archive
 
 | C-c C-x C-a | internal archive subtree |
 | C-c C-x C-s | move subtree to archive  |
 | #+ARCHIVE:  | define archive file      |
 
-*** Link
+**** Link
 
 | C-c C-l                                 | create / edit link        |
 | C-c C-o                                 | open link                 |
@@ -232,7 +232,7 @@
 | id:d34d34fe-1b76-4e1d-a60d-a119bef6f542 | :PROPERTIES: -> :ID: (F5) |
 | TODO                                    | gnus email                |
 
-*** Table
+**** Table
 
 | TAB                   | next cell                |
 | S-TAB                 | previous cell            |
@@ -250,7 +250,7 @@
 | $colnum @rownum       | references in #+TBLFM:   |
 | #+CONSTANTS:          | constants for formulas   |
 
-*** Timer
+**** Timer
 
 | C-c C-x ;     | timer start countdown         |
 | C-c C-x 0     | timer start relative          |
@@ -260,7 +260,7 @@
 | C-c C-x .     | insert timestamp              |
 | C-c C-x -     | insert timestamp list         |
 
-*** Clock
+**** Clock
 
 | C-c C-x C-i            | clock in                      |
 | C-c C-x C-o            | clock out                     |
@@ -277,7 +277,7 @@
 | #+BEGIN: clocktable    | capture clocking report       |
 | #+BEGIN: columnview    | capture column view           |
 
-*** Various
+**** Various
 
 | #+SETUPFILE  | file wth settings                                  |
 | C-c C-c      | activate #+ line                                   |
