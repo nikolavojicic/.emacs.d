@@ -141,18 +141,20 @@
 | C-c C-c     | eval defun       |   | C-c M-;     | eval defun, comment |
 | C-c C-b     | kill eval        |   | C-c C-z     | go to repl or back  |
 | C-c M-i     | inspect form     |   | C-u C-c C-c | debug form          |
-| M-.         | go to symbol def |   | M-,         | return back         |
+| M-.         | go to symbol def |   | M-,         | go back to symbol   |
 | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests   |
-| C-c C-d C-d | display doc      |   | C-c C-u     | undefine symbol     |
+| C-c C-d C-d | display docs     |   | C-c C-u     | undefine symbol     |
 | C-c C-j     | goto to error    |   | F7          | toggle cider-error  |
 
 *** Eglot
 
-| C-c M-r                | rename         |
-| C-c M-h                | docs           |
-| M-?                    | references     |
-| M-x eglot-code-actions | prompt actions |
-| M-x eglot-reconnect    | reconnect      |
+| C-c M-r                | rename symbol     |
+| C-c M-h                | display docs      |
+| M-?                    | find references   |
+| M-.                    | go to symbol def  |
+| M-,                    | go back to symbol |
+| M-x eglot-code-actions | prompt actions    |
+| M-x eglot-reconnect    | reconnect         |
 
 *** Org
 
