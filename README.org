@@ -133,6 +133,16 @@
 | TAB   | toggle expand parent |
 | S-TAB | hide expanded        |
 
+*** Eglot
+
+| C-c M-r                | rename symbol     |
+| C-c M-h                | display docs      |
+| M-?                    | find references   |
+| M-.                    | go to symbol def  |
+| M-,                    | go back to symbol |
+| M-x eglot-code-actions | prompt actions    |
+| M-x eglot-reconnect    | reconnect         |
+
 *** Cider
 
 | C-c C-k     | eval buffer      |   | C-c M-j     | run and open        |
@@ -145,16 +155,6 @@
 | C-c C-t C-n | run ns tests     |   | C-c C-t C-p | run project tests   |
 | C-c C-d C-d | display docs     |   | C-c C-u     | undefine symbol     |
 | C-c C-j     | goto to error    |   | F7          | toggle cider-error  |
-
-*** Eglot
-
-| C-c M-r                | rename symbol     |
-| C-c M-h                | display docs      |
-| M-?                    | find references   |
-| M-.                    | go to symbol def  |
-| M-,                    | go back to symbol |
-| M-x eglot-code-actions | prompt actions    |
-| M-x eglot-reconnect    | reconnect         |
 
 *** Org
 
@@ -326,6 +326,7 @@
 - [[https://www.dropbox.com/install][Dropbox]]
 - [[https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700][IBM Plex Mono]]
 - [[https://github.com/typescript-language-server/typescript-language-server][TypeScript Language Server]]
+- [[https://github.com/vuejs/language-tools][Vue Language Server]]
 - [[https://jqlang.github.io/jq/][jq]]
 - [[https://www.python.org/downloads/windows/][Python]]
 - [[https://gist.github.com/nikolavojicic/2ee308dc772c5b03d78a9f21b64deb45][LaTeX Minted]]

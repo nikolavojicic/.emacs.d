@@ -28,7 +28,6 @@
         (flycheck-clj-kondo       . "melpa-stable")
         (highlight-function-calls . "melpa-stable")))
 
-
 (package-initialize)
 
 
@@ -552,6 +551,7 @@
 
 
 (require 'web-mode)
+(define-derived-mode vue-mode web-mode "Vue")
 
 
 (setq auto-mode-alist
@@ -560,7 +560,7 @@
                 ("\\.json\\'" . web-mode)
                 ("\\.css\\'"  . web-mode)
                 ("\\.scss\\'" . web-mode)
-                ("\\.vue\\'"  . web-mode)
+                ("\\.vue\\'"  . vue-mode)
                 ("\\.js\\'"   . js-mode)
                 ("\\.ts\\'"   . typescript-mode))
               auto-mode-alist))
@@ -592,8 +592,34 @@
                ("typescript-language-server" "--stdio")))
 
 
+(defun vue-eglot-init-options ()
+  (let ((tsdk (thread-last
+                (shell-command-to-string "npm root -g")
+                (string-trim-right)
+                (expand-file-name "typescript/lib"))))
+    `(:typescript (:tsdk ,tsdk)
+                  :vue              (:hybridMode  :json-false)
+                  :languageFeatures (:completion  (:defaultTagNameCase "both"
+                                                   :defaultAttrNameCase "kebabCase"
+                                                   :getDocumentNameCasesRequest nil
+                                                   :getDocumentSelectionRequest nil)
+                                     :diagnostics (:getDocumentVersionRequest nil))
+                  :documentFeatures (:documentFormatting (:defaultPrintWidth 100
+                                                          :getDocumentPrintWidthRequest nil)
+                                     :documentSymbol t
+                                     :documentColor  t))))
+
+
+(add-to-list 'eglot-server-programs
+             `((vue-mode) .
+               ("vue-language-server" "--stdio"
+                :initializationOptions
+                ,(vue-eglot-init-options))))
+
+
 (add-hook 'js-mode-hook         'eglot-ensure)
 (add-hook 'typescript-mode-hook 'eglot-ensure)
+(add-hook 'vue-mode-hook        'eglot-ensure)
 (add-hook 'js-mode-hook         (lambda () (setq js-indent-level         2)))
 (add-hook 'typescript-mode-hook (lambda () (setq typescript-indent-level 2)))
 
