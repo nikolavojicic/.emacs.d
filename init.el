@@ -20,6 +20,7 @@
         (web-mode                 . "melpa-stable")
         (clojure-mode             . "melpa-stable")
         (expand-region            . "melpa-stable")
+        (ob-typescript            . "melpa"       )
         (plantuml-mode            . "melpa-stable")
         (zenburn-theme            . "melpa-stable")
         (dired-subtree            . "melpa"       )
@@ -680,7 +681,8 @@
      (fortran    . t)
      (gnuplot    . t)
      (plantuml   . t)
-     (emacs-lisp . t)))
+     (emacs-lisp . t)
+     (typescript . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (setq org-babel-python-command
         "py"
@@ -696,7 +698,9 @@
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")
         org-latex-minted-options
         '(("breaklines" "true")
-          ("breakanywhere" "true"))))
+          ("breakanywhere" "true"))
+        org-babel-command:typescript
+        "tsc --lib es2015,dom"))
 
 (defun org-remove-all-result-blocks ()
   (interactive)
