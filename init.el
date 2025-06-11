@@ -104,6 +104,7 @@
              '(org-hide                      ((t (:foreground "#383838"))))
              '(org-block                     ((t (:background "#494949"))))
              '(org-meta-line                 ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
+             '(clojure-keyword-face          ((t (:foreground "#bfebbf"))))
              '(dired-subtree-depth-1-face    ((t (:background "inherit"))))
              '(dired-subtree-depth-2-face    ((t (:background "inherit"))))
              '(dired-subtree-depth-3-face    ((t (:background "inherit"))))
@@ -128,14 +129,17 @@
              '(highlight                        ((t (:background "blue"))))
              '(completions-common-part          ((t (:foreground "red"))))
              '(line-number-current-line         ((t (:foreground "red"))))
-             '(font-lock-builtin-face           ((t (:foreground "LightSlateBlue"))))
-             '(font-lock-function-name-face     ((t (:foreground "MediumSpringGreen"))))
+             '(font-lock-type-face              ((t (:foreground "#019afe"))))
+             '(font-lock-builtin-face           ((t (:foreground "#fee301"))))
+             '(font-lock-function-name-face     ((t (:foreground "#01fe65"))))
+             '(font-lock-variable-name-face     ((t (:foreground "#fe9801"))))
+             '(font-lock-keyword-face           ((t (:foreground "#fe019a"))))
              '(font-lock-comment-face           ((t (:foreground "gray70"))))
              '(font-lock-comment-delimiter-face ((t (:foreground "gray70"))))
              '(org-block                        ((t (:background "gray10"))))
              '(org-meta-line                    ((t (:background "gray20" :foreground "chocolate1"))))
              '(org-hide                         ((t (:foreground "black"))))
-             '(clojure-keyword-face             ((t (:foreground "LightSlateBlue"))))
+             '(clojure-keyword-face             ((t (:foreground "#fee301"))))
              '(cider-repl-stderr-face           ((t (:foreground "red"))))
              '(cider-error-overlay-face         ((t (:background "inherit" :foreground "red"))))
              '(cider-debug-code-overlay-face    (()))
@@ -149,7 +153,7 @@
              '(dired-subtree-depth-6-face       ((t (:background "inherit"))))
              '(isearch                          ((t (:background "blue" :foreground "red"))))
              '(lazy-highlight                   ((t (:foreground "red"))))
-             '(highlight-function-calls-face    ((t (:foreground "MediumSpringGreen"))))
+             '(highlight-function-calls-face    ((t (:foreground "#01fe65"))))
              '(web-mode-json-key-face           ((t (:foreground "LightSlateBlue"))))
              '(web-mode-json-context-face       ((t (:foreground "LightSlateBlue"))))
              '(font-lock-preprocessor-face      ((t (:foreground "CornFlowerBlue"))))
@@ -160,13 +164,14 @@
             (set-face-attribute 'header-line             nil :height 1.0)
             (set-face-attribute 'mode-line-buffer-id     nil :height 1.0 :background "inherit")
             (set-face-attribute 'mode-line-highlight     nil :height 1.0)
-            (set-face-attribute 'mode-line-inactive      nil :height 1.0 :background "inherit")
-            (set-face-attribute 'font-lock-constant-face nil :weight 'normal))
+            (set-face-attribute 'mode-line-inactive      nil :height 1.0 :background "inherit"))
            ("default theme"
             (load-theme 'concrete t))))
-   (set-face-attribute 'font-lock-keyword-face nil :weight 'normal)
-   (set-face-attribute 'font-lock-warning-face nil :weight 'normal)
-   (set-face-attribute 'mode-line-buffer-id    nil :weight 'normal :slant 'italic)))
+   (set-face-attribute 'font-lock-keyword-face  nil :weight 'normal)
+   (set-face-attribute 'font-lock-warning-face  nil :weight 'normal)
+   (set-face-attribute 'mode-line-buffer-id     nil :weight 'normal :slant 'italic)
+   (set-face-attribute 'font-lock-string-face   nil :weight 'normal :foreground nil)
+   (set-face-attribute 'font-lock-constant-face nil :weight 'normal :foreground nil)))
 
 
 (global-set-key
@@ -601,14 +606,14 @@
     `(:typescript (:tsdk ,tsdk)
                   :vue              (:hybridMode  :json-false)
                   :languageFeatures (:completion  (:defaultTagNameCase "both"
-                                                   :defaultAttrNameCase "kebabCase"
-                                                   :getDocumentNameCasesRequest nil
-                                                   :getDocumentSelectionRequest nil)
-                                     :diagnostics (:getDocumentVersionRequest nil))
+                                                                       :defaultAttrNameCase "kebabCase"
+                                                                       :getDocumentNameCasesRequest nil
+                                                                       :getDocumentSelectionRequest nil)
+                                                  :diagnostics (:getDocumentVersionRequest nil))
                   :documentFeatures (:documentFormatting (:defaultPrintWidth 100
-                                                          :getDocumentPrintWidthRequest nil)
-                                     :documentSymbol t
-                                     :documentColor  t))))
+                                                                             :getDocumentPrintWidthRequest nil)
+                                                         :documentSymbol t
+                                                         :documentColor  t))))
 
 
 (add-to-list 'eglot-server-programs
