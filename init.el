@@ -568,6 +568,7 @@
                 ("\\.scss\\'" . web-mode)
                 ("\\.vue\\'"  . vue-mode)
                 ("\\.js\\'"   . js-mode)
+                ("\\.cjs\\'"  . js-mode)
                 ("\\.ts\\'"   . typescript-mode))
               auto-mode-alist))
 
