@@ -605,16 +605,16 @@
                 (string-trim-right)
                 (expand-file-name "typescript/lib"))))
     `(:typescript (:tsdk ,tsdk)
-                  :vue              (:hybridMode  :json-false)
-                  :languageFeatures (:completion  (:defaultTagNameCase "both"
-                                                                       :defaultAttrNameCase "kebabCase"
-                                                                       :getDocumentNameCasesRequest nil
-                                                                       :getDocumentSelectionRequest nil)
-                                                  :diagnostics (:getDocumentVersionRequest nil))
-                  :documentFeatures (:documentFormatting (:defaultPrintWidth 100
-                                                                             :getDocumentPrintWidthRequest nil)
-                                                         :documentSymbol t
-                                                         :documentColor  t))))
+      :vue              (:hybridMode  :json-false)
+      :languageFeatures (:completion  (:defaultTagNameCase "both"
+                                       :defaultAttrNameCase "kebabCase"
+                                       :getDocumentNameCasesRequest nil
+                                       :getDocumentSelectionRequest nil)
+                         :diagnostics (:getDocumentVersionRequest nil))
+      :documentFeatures (:documentFormatting (:defaultPrintWidth 100
+                                              :getDocumentPrintWidthRequest nil)
+                         :documentSymbol t
+                         :documentColor  t))))
 
 
 (add-to-list 'eglot-server-programs
