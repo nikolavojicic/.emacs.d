@@ -604,7 +604,7 @@
                 (shell-command-to-string "npm root -g")
                 (string-trim-right)
                 (expand-file-name "typescript/lib"))))
-    `(:typescript (:tsdk ,tsdk)
+    `(:typescript       (:tsdk        ,tsdk)
       :vue              (:hybridMode  :json-false)
       :languageFeatures (:completion  (:defaultTagNameCase "both"
                                        :defaultAttrNameCase "kebabCase"
