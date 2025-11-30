@@ -20,6 +20,7 @@
         (web-mode                 . "melpa-stable")
         (clojure-mode             . "melpa-stable")
         (expand-region            . "melpa-stable")
+        (ob-typescript            . "melpa"       )
         (plantuml-mode            . "melpa-stable")
         (zenburn-theme            . "melpa-stable")
         (dired-subtree            . "melpa"       )
@@ -110,6 +111,7 @@
              '(org-hide                      ((t (:foreground "#383838"))))
              '(org-block                     ((t (:background "#494949"))))
              '(org-meta-line                 ((t (:background "#3F3F3F" :foreground "#7F9F7F"))))
+             '(clojure-keyword-face          ((t (:foreground "#bfebbf"))))
              '(dired-subtree-depth-1-face    ((t (:background "inherit"))))
              '(dired-subtree-depth-2-face    ((t (:background "inherit"))))
              '(dired-subtree-depth-3-face    ((t (:background "inherit"))))
@@ -134,14 +136,17 @@
              '(highlight                        ((t (:background "blue"))))
              '(completions-common-part          ((t (:foreground "red"))))
              '(line-number-current-line         ((t (:foreground "red"))))
-             '(font-lock-builtin-face           ((t (:foreground "LightSlateBlue"))))
-             '(font-lock-function-name-face     ((t (:foreground "MediumSpringGreen"))))
+             '(font-lock-type-face              ((t (:foreground "#019afe"))))
+             '(font-lock-builtin-face           ((t (:foreground "#fee301"))))
+             '(font-lock-function-name-face     ((t (:foreground "#01fe65"))))
+             '(font-lock-variable-name-face     ((t (:foreground "#fe9801"))))
+             '(font-lock-keyword-face           ((t (:foreground "#fe019a"))))
              '(font-lock-comment-face           ((t (:foreground "gray70"))))
              '(font-lock-comment-delimiter-face ((t (:foreground "gray70"))))
              '(org-block                        ((t (:background "gray10"))))
              '(org-meta-line                    ((t (:background "gray20" :foreground "chocolate1"))))
              '(org-hide                         ((t (:foreground "black"))))
-             '(clojure-keyword-face             ((t (:foreground "LightSlateBlue"))))
+             '(clojure-keyword-face             ((t (:foreground "#fee301"))))
              '(cider-repl-stderr-face           ((t (:foreground "red"))))
              '(cider-error-overlay-face         ((t (:background "inherit" :foreground "red"))))
              '(cider-debug-code-overlay-face    (()))
@@ -155,9 +160,9 @@
              '(dired-subtree-depth-6-face       ((t (:background "inherit"))))
              '(isearch                          ((t (:background "blue" :foreground "red"))))
              '(lazy-highlight                   ((t (:foreground "red"))))
-             '(highlight-function-calls-face    ((t (:foreground "MediumSpringGreen"))))
-             '(web-mode-json-key-face           ((t (:foreground "LightSlateBlue"))))
-             '(web-mode-json-context-face       ((t (:foreground "LightSlateBlue"))))
+             '(highlight-function-calls-face    ((t (:foreground "#01fe65"))))
+             '(web-mode-json-key-face           ((t (:foreground "#fee301"))))
+             '(web-mode-json-context-face       ((t (:foreground "#fee301"))))
              '(font-lock-preprocessor-face      ((t (:foreground "CornFlowerBlue"))))
              '(company-tooltip                  ((t (:background "black"))))
              '(company-tooltip-common           ((t (:foreground "red"))))
@@ -166,13 +171,14 @@
             (set-face-attribute 'header-line             nil :height 1.0)
             (set-face-attribute 'mode-line-buffer-id     nil :height 1.0 :background "inherit")
             (set-face-attribute 'mode-line-highlight     nil :height 1.0)
-            (set-face-attribute 'mode-line-inactive      nil :height 1.0 :background "inherit")
-            (set-face-attribute 'font-lock-constant-face nil :weight 'normal))
+            (set-face-attribute 'mode-line-inactive      nil :height 1.0 :background "inherit"))
            ("default theme"
             (load-theme 'concrete t))))
-   (set-face-attribute 'font-lock-keyword-face nil :weight 'normal)
-   (set-face-attribute 'font-lock-warning-face nil :weight 'normal)
-   (set-face-attribute 'mode-line-buffer-id    nil :weight 'normal :slant 'italic)))
+   (set-face-attribute 'font-lock-keyword-face  nil :weight 'normal)
+   (set-face-attribute 'font-lock-warning-face  nil :weight 'normal)
+   (set-face-attribute 'mode-line-buffer-id     nil :weight 'normal :slant 'italic)
+   (set-face-attribute 'font-lock-string-face   nil :weight 'normal :foreground nil)
+   (set-face-attribute 'font-lock-constant-face nil :weight 'normal :foreground nil)))
 
 
 (global-set-key
@@ -310,6 +316,7 @@
 
 
 (with-eval-after-load 'paredit
+  (define-key paredit-mode-map (kbd "M-?") nil) ;; undefine
   (define-key paredit-mode-map (kbd "M-[") #'paredit-wrap-square)
   (define-key paredit-mode-map (kbd "M-{") #'paredit-wrap-curly))
 
@@ -495,7 +502,18 @@
 (add-hook 'emacs-lisp-mode-hook      #'paredit-mode)
 (add-hook 'scheme-mode-hook          #'paredit-mode)
 (add-hook 'inferior-scheme-mode-hook #'paredit-mode)
+(add-hook 'js-mode-hook              #'paredit-mode)
 (add-hook 'web-mode-hook             #'paredit-mode)
+(add-hook 'typescript-mode-hook      #'paredit-mode)
+
+
+(with-eval-after-load 'paredit
+  (add-to-list 'paredit-space-for-delimiter-predicates
+               (lambda (endp delimiter)
+                 (or
+                  (bound-and-true-p js-mode)
+                  (bound-and-true-p web-mode)
+                  (bound-and-true-p typescript-mode)))))
 
 
 (setq cider-use-overlays                     t
@@ -546,6 +564,7 @@
 
 
 (require 'web-mode)
+(define-derived-mode vue-mode web-mode "Vue")
 
 
 (setq auto-mode-alist
@@ -554,8 +573,9 @@
                 ("\\.json\\'" . web-mode)
                 ("\\.css\\'"  . web-mode)
                 ("\\.scss\\'" . web-mode)
-                ("\\.vue\\'"  . web-mode)
+                ("\\.vue\\'"  . vue-mode)
                 ("\\.js\\'"   . js-mode)
+                ("\\.cjs\\'"  . js-mode)
                 ("\\.ts\\'"   . typescript-mode))
               auto-mode-alist))
 
@@ -586,8 +606,34 @@
                ("typescript-language-server" "--stdio")))
 
 
+(defun vue-eglot-init-options ()
+  (let ((tsdk (thread-last
+                (shell-command-to-string "npm root -g")
+                (string-trim-right)
+                (expand-file-name "typescript/lib"))))
+    `(:typescript       (:tsdk        ,tsdk)
+      :vue              (:hybridMode  :json-false)
+      :languageFeatures (:completion  (:defaultTagNameCase "both"
+                                       :defaultAttrNameCase "kebabCase"
+                                       :getDocumentNameCasesRequest nil
+                                       :getDocumentSelectionRequest nil)
+                         :diagnostics (:getDocumentVersionRequest nil))
+      :documentFeatures (:documentFormatting (:defaultPrintWidth 100
+                                              :getDocumentPrintWidthRequest nil)
+                         :documentSymbol t
+                         :documentColor  t))))
+
+
+(add-to-list 'eglot-server-programs
+             `((vue-mode) .
+               ("vue-language-server" "--stdio"
+                :initializationOptions
+                ,(vue-eglot-init-options))))
+
+
 (add-hook 'js-mode-hook         'eglot-ensure)
 (add-hook 'typescript-mode-hook 'eglot-ensure)
+(add-hook 'vue-mode-hook        'eglot-ensure)
 (add-hook 'js-mode-hook         (lambda () (setq js-indent-level         2)))
 (add-hook 'typescript-mode-hook (lambda () (setq typescript-indent-level 2)))
 
@@ -649,7 +695,8 @@
      (gnuplot    . t)
      (plantuml   . t)
      (emacs-lisp . t)
-     (inf-scheme . t)))
+     (inf-scheme . t)
+     (typescript . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (setq org-babel-python-command
         "py"
@@ -665,7 +712,9 @@
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")
         org-latex-minted-options
         '(("breaklines" "true")
-          ("breakanywhere" "true"))))
+          ("breakanywhere" "true"))
+        org-babel-command:typescript
+        "tsc --lib es2015,dom"))
 
 (defun org-remove-all-result-blocks ()
   (interactive)
