@@ -19,6 +19,7 @@
         (flycheck                 . "melpa-stable")
         (web-mode                 . "melpa-stable")
         (clojure-mode             . "melpa-stable")
+        (sql-indent               . "gnu"         )
         (expand-region            . "melpa-stable")
         (ob-typescript            . "melpa"       )
         (plantuml-mode            . "melpa-stable")
@@ -28,6 +29,7 @@
         (multiple-cursors         . "melpa-stable")
         (flycheck-clj-kondo       . "melpa-stable")
         (highlight-function-calls . "melpa-stable")))
+
 
 (package-initialize)
 
