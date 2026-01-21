@@ -323,6 +323,16 @@
                   (list-flycheck-errors)))))
 
 
+(with-eval-after-load 'flymake
+  (define-key flymake-mode-map (kbd "<f6>")
+              (lambda ()
+                (interactive)
+                (let ((buffer (flymake--diagnostics-buffer-name)))
+                  (if (get-buffer-window buffer)
+                      (quit-windows-on   buffer)
+                    (flymake-show-buffer-diagnostics))))))
+
+
 ;; navigation =========================================
 ;;                     _             _   _
 ;;  _ __   __ ___   __(_) __ _  __ _| |_(_) ___  _ __
@@ -374,7 +384,7 @@
 
 
 (with-eval-after-load 'doc-view
-  (let* ((pdf-program "mutool"))
+  (let ((pdf-program "mutool"))
     (setq doc-view-resolution 300
           doc-view-ghostscript-program pdf-program)))
 
@@ -727,7 +737,7 @@
 
 (defun xspf-playlists-recursively ()
   (interactive)
-  (let* ((root (read-directory-name "Enter root dir for XSPF playlists: ")))
+  (let ((root (read-directory-name "Enter root dir for XSPF playlists: ")))
     (when (y-or-n-p (format "Confirm %s? " root))
       (require 'xml)
       (thread-last
@@ -745,7 +755,7 @@
                                             "mp3" "mp4" "ogg" "opus" "ra" "rm"
                                             "sd2" "tta" "wav" "wma"))))
                               (directory-files dir t)))
-             (let* ((out (expand-file-name "playlist.xspf" dir)))
+             (let ((out (expand-file-name "playlist.xspf" dir)))
                (delete-file out)
                (with-temp-file out
                  (insert "<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
