@@ -356,6 +356,7 @@
 
 
 (setq apropos-do-all             t
+      ls-lisp-dirs-first         t
       recenter-positions         '(top middle bottom)
       dired-listing-switches     "-alFh"
       uniquify-buffer-name-style 'forward)
