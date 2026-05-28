@@ -671,7 +671,8 @@
       org-agenda-dim-blocked-tasks   t
       org-enforce-todo-dependencies  t
       org-startup-with-inline-images t
-      org-latex-src-block-backend    'minted)
+      org-latex-src-block-backend    'minted
+      org-list-allow-alphabetical    t)
 
 
 (with-eval-after-load 'org
