@@ -11,6 +11,7 @@
         (sicp                     . "melpa"       )
         (cider                    . "melpa-stable")
         (magit                    . "melpa-stable")
+        (reazon                   . "melpa-stable")
         (company                  . "melpa-stable")
         (gnuplot                  . "melpa-stable")
         (jq-mode                  . "melpa-stable")
