@@ -232,7 +232,6 @@
  :family  "IBM Plex Mono Medium")
 
 
-(set-frame-parameter nil 'fullscreen 'fullboth)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 
