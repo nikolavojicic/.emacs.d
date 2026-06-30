@@ -659,7 +659,7 @@
 
 
 (setq org-log-done                   'note
-      org-agenda-files               (list (expand-file-name "org/mobile" (getenv "dropbox")))
+      org-agenda-files               (expand-file-name "agenda-files.txt" (getenv "orgmode"))
       plantuml-jar-path              (getenv "plantuml")
       org-log-reschedule             'note
       org-log-into-drawer            'LOGBOOK
@@ -708,9 +708,9 @@
   (setq org-babel-python-command
         "py"
         org-capture-templates
-        `(("t" "Tasks" entry
-           (file+headline ,(expand-file-name "org/mobile/tasks.org" (getenv "dropbox")) "Tasks")
-           "* TODO %?\n  %iSCHEDULED: %U\n  %a"))
+        `(("c" "Capture" entry
+           (file+headline ,(expand-file-name "capture.org" (getenv "orgmode")) "Capture")
+           "* TODO %?\n%iSCHEDULED: %T\n%a"))
         org-babel-js-function-wrapper
         "process.stdout.write(require('util').inspect(function(){\n%s\n}(), { maxArrayLength: null, maxStringLength: null, breakLength: Infinity, compact: true }))"
         org-latex-pdf-process
