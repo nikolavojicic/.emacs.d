@@ -607,6 +607,13 @@
 (require 'eglot)
 
 
+(setq eglot-report-progress nil) ;; calm down
+
+
+(add-to-list 'eglot-server-programs
+             '((java-mode) . ("jdtls")))
+
+
 (add-to-list 'eglot-server-programs
              '((js-mode typescript-mode) .
                ("typescript-language-server" "--stdio")))
@@ -637,6 +644,7 @@
                 ,(vue-eglot-init-options))))
 
 
+(add-hook 'java-mode-hook       'eglot-ensure)
 (add-hook 'js-mode-hook         'eglot-ensure)
 (add-hook 'typescript-mode-hook 'eglot-ensure)
 (add-hook 'vue-mode-hook        'eglot-ensure)
