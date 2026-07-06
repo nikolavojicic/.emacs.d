@@ -607,7 +607,9 @@
 (require 'eglot)
 
 
-(setq eglot-report-progress nil) ;; calm down
+(setq eglot-report-progress             nil
+      eglot-events-buffer-size          0
+      eglot-ignored-server-capabilities '(:inlayHintProvider))
 
 
 (add-to-list 'eglot-server-programs
