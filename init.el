@@ -522,7 +522,8 @@
                   (bound-and-true-p typescript-mode)))))
 
 
-(setq cider-use-overlays                     t
+(setq scheme-program-name                    "petite"
+      cider-use-overlays                     t
       cider-enrich-classpath                 nil ;; set to t when needed
       inferior-lisp-program                  "clisp"
       cider-repl-wrap-history                t
@@ -669,10 +670,10 @@
 
 (setq org-log-done                   'note
       org-agenda-files               (expand-file-name "agenda-files.txt" (getenv "orgmode"))
-      plantuml-jar-path              (getenv "plantuml")
+      plantuml-jar-path              (getenv "scripts")
       org-log-reschedule             'note
       org-log-into-drawer            'LOGBOOK
-      org-plantuml-jar-path          (getenv "plantuml")
+      org-plantuml-jar-path          (getenv "scripts")
       org-latex-caption-above        nil
       org-src-fontify-natively       t
       org-hide-emphasis-markers      t

@@ -297,39 +297,64 @@
 
 1. [[http://ftp.gnu.org/gnu/emacs/windows/][Download the latest version]]
    (=i686= for 32-bit, =x86_64= for 64-bit) and extract it to =C:\emacs-version=
-2. Computer -> Properties -> Advanced system settings -> Environment Variables\\
-   -> System variables -> Path -> Edit -> add =C:\emacs-version\bin=
+2. Computer -> Properties -> Advanced system settings -> Environment Variables -> System variables -> Path -> Edit -> add =C:\emacs-version\bin=
 3. Create folder =C:\home=
-4. Computer -> Properties -> Advanced system settings -> Environment Variables\\
-   -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
+4. Computer -> Properties -> Advanced system settings -> Environment Variables -> System variables -> New -> Variable name: =HOME= Variable value: =C:\home=
 5. Clone or download this repository to =C:\home\.emacs.d=
 6. =C:\emacs-version\bin\runemacs.exe= -> Send to -> Desktop (create shortcut)
 
-** External programs needed on Windows for this init.el
+** External programs
 
+- [[https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700][IBM Plex Mono]]
 - [[https://www.7-zip.org/download.html][7-Zip]]
 - [[https://git-scm.com/download/win][Git]]
-- [[https://www.mingw-w64.org/][MinGW]]
-- [[https://clisp.sourceforge.io/][CLisp]]
+- [[https://sourceforge.net/projects/mingw/][MinGW]]
+- [[https://sourceforge.net/projects/clisp/][CLisp]]
 - [[https://scheme.com/download/][Chez Scheme]]
-- [[https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html][Java]]
+- [[https://docs.aws.amazon.com/corretto/][Java]]
+- [[https://www.python.org/downloads/windows/][Python]]
+- [[https://nodejs.org/en/download/prebuilt-installer][Node.js]]
 - [[https://gist.github.com/nikolavojicic/6081284d4fb5f969a7fabe1f150db73e][Leiningen]]
 - [[https://github.com/clj-kondo/clj-kondo/releases][clj-kondo]]
-- [[https://nodejs.org/en/download/prebuilt-installer][Node.js]]
 - [[https://sourceforge.net/projects/gnuplot/files/gnuplot/][gnuplot]]
 - [[https://graphviz.org/download/][Graphviz]]
 - [[https://plantuml.com/download][PlantUML]]
 - [[https://strawberryperl.com/releases.html][Strawberry Perl]]
 - [[https://miktex.org/][MiKTeX]]
+- [[https://gist.github.com/nikolavojicic/2ee308dc772c5b03d78a9f21b64deb45][LaTeX Minted]]
 - [[https://www.libreoffice.org/download/download-libreoffice/][LibreOffice]]
 - [[https://mupdf.com/][MuPDF]]
-- [[https://fonts.google.com/share?selection.family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700][IBM Plex Mono]]
+- [[https://jqlang.github.io/jq/][jq]]
+- [[https://download.eclipse.org/jdtls/milestones/][Java Language Server]]
 - [[https://github.com/typescript-language-server/typescript-language-server][TypeScript Language Server]]
 - [[https://github.com/vuejs/language-tools][Vue Language Server]]
-- [[https://jqlang.github.io/jq/][jq]]
-- [[https://www.python.org/downloads/windows/][Python]]
-- [[https://gist.github.com/nikolavojicic/2ee308dc772c5b03d78a9f21b64deb45][LaTeX Minted]]
-- [[https://download.eclipse.org/jdtls/milestones/][Java Language Server]]
+
+Ensure Environment Variables -> System variables -> Path:
+- C:\Program Files\emacs\bin
+- C:\Program Files\7-Zip
+- C:\Program Files\Git\cmd
+- C:\Program Files\Git\usr\bin
+- C:\Program Files\scripts (put =clj-kondo=, =jq=, =mupdf=, =mutool=, =plantuml=, and other executables here)
+- C:\MinGW\bin
+- C:\Program Files\clisp
+- C:\Program Files (x86)\Chez Scheme\bin\i3nt
+- C:\Program Files\Java\jdk_latest\bin
+- C:\Program Files\Python
+- C:\Program Files\Python\Scripts
+- C:\Program Files\nodejs
+- C:\Program Files\gnuplot\bin
+- C:\Program Files\Graphviz\bin
+- C:\Strawberry\c\bin
+- C:\Strawberry\perl\bin
+- C:\Strawberry\perl\site\bin
+- C:\Program Files\Java\jdt-language-server\bin
+- C:\Program Files\MiKTeX\miktex\bin\x64\
+- C:\Program Files\PostgreSQL\14\bin
+
+| Variable name | Variable value                   |
+|---------------+----------------------------------|
+| scripts       | C:\Program Files\scripts         |
+| JAVA_HOME     | C:\Program Files\Java\jdk_latest |
 
 ** Emacs Lisp for Clojure programmers
 
