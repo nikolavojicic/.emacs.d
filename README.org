@@ -334,11 +334,11 @@ Ensure Environment Variables -> System variables -> Path:
 - C:\Program Files\7-Zip
 - C:\Program Files\Git\cmd
 - C:\Program Files\Git\usr\bin
-- C:\Program Files\scripts (put =clj-kondo=, =jq=, =mupdf=, =mutool=, =plantuml=, and other executables here)
+- %scripts% (put =clj-kondo=, =jq=, =mupdf=, =mutool=, =plantuml=, and other simple executables here)
 - C:\MinGW\bin
 - C:\Program Files\clisp
 - C:\Program Files (x86)\Chez Scheme\bin\i3nt
-- C:\Program Files\Java\jdk_latest\bin
+- %JAVA_HOME%\bin
 - C:\Program Files\Python
 - C:\Program Files\Python\Scripts
 - C:\Program Files\nodejs
@@ -356,6 +356,8 @@ Ensure Environment Variables -> System variables -> Path:
 | System        | scripts       | C:\Program Files\scripts         |
 | System        | JAVA_HOME     | C:\Program Files\Java\jdk_latest |
 | User          | orgmode       | %USERPROFILE%\workspace\orgmode  |
+
+Consider adding most of these (and other programming-related dirs like jdtls and npm in %USERPROFILE%\AppData) to Windows Security -> Virus & threat protection settings -> Manage settings -> Add or remove exclusions.
 
 ** Emacs Lisp for Clojure programmers
 
