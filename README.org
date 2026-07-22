@@ -351,6 +351,10 @@ Ensure Environment Variables -> System variables -> Path:
 - C:\Program Files\MiKTeX\miktex\bin\x64\
 - C:\Program Files\PostgreSQL\14\bin
 
+Ensure Environment Variables -> User variables for ... -> Path:
+- %USERPROFILE%\.lein\bin
+- %USERPROFILE%\AppData\Roaming\npm
+
 | Variable type | Variable name | Variable value                   |
 |---------------+---------------+----------------------------------|
 | System        | scripts       | C:\Program Files\scripts         |
