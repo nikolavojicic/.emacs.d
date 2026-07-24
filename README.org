@@ -28,6 +28,7 @@
 | C-x +   | equally size windows     |   | C-M-l   | scroll heuristically   |
 | C-M-v   | scroll other window down |   | C-M-V   | scroll other window up |
 | C-x 5 2 | new frame                |   | C-x 5 o | goto to next frame     |
+| f11     | maximize frame           |   | M-f11   | fullscreen frame       |
 
 *** Move
 

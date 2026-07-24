@@ -89,7 +89,7 @@
 
 
 (global-set-key
- [f12]
+ (kbd "<f12>")
  (lambda ()
    (interactive)
    (let* ((theme (car custom-enabled-themes))
@@ -199,6 +199,10 @@
        (enlarge-window-horizontally (- delta))))))
 
 
+(global-set-key (kbd "<f11>"  ) #'toggle-frame-maximized)
+(global-set-key (kbd "M-<f11>") #'toggle-frame-fullscreen)
+
+
 (menu-bar-mode          -1)
 (tool-bar-mode          -1)
 (scroll-bar-mode        -1)
@@ -300,7 +304,7 @@
 
 
 (global-set-key
- [f2]
+ (kbd "<f2>")
  (lambda ()
    (interactive)
    (save-excursion
